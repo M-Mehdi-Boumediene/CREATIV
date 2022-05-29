@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Apropos</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ apropo.id }}</td>
+            </tr>
+            <tr>
+                <th>Titre1</th>
+                <td>{{ apropo.titre1 }}</td>
+            </tr>
+            <tr>
+                <th>Text1</th>
+                <td>{{ apropo.text1 }}</td>
+            </tr>
+            <tr>
+                <th>Titre2</th>
+                <td>{{ apropo.titre2 }}</td>
+            </tr>
+            <tr>
+                <th>Text2</th>
+                <td>{{ apropo.text2 }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_about_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('admin_about_edit', { 'id': apropo.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

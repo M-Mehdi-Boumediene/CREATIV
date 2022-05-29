@@ -1,0 +1,158 @@
+<?php
+
+namespace Cosanit\CosanitBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * trs
+ *
+ * @ORM\Table(name="trs")
+ * @ORM\Entity(repositoryClass="Cosanit\CosanitBundle\Repository\trsRepository")
+ */
+class Trs
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="taux3mois", type="string", length=255, nullable=true)
+     */
+    private $taux3mois;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="valeur3mois", type="string", length=255, nullable=true)
+     */
+    private $valeur3mois;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="taux6mois", type="string", length=255, nullable=true)
+     */
+    private $taux6mois;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="valeur6mois", type="string", length=255, nullable=true)
+     */
+    private $valeur6mois;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="taux1an", type="string", length=255, nullable=true)
+     */
+    private $taux1an;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="valeur1an", type="string", length=255, nullable=true)
+     */
+    private $valeur1an;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Categories", inversedBy="trs", cascade={"persist"})
+     * @ORM\JoinColumn(name="trs_id", referencedColumnName="id")
+     */
+    private $categories;
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+
+
+
+
+    /**
+     * Set categories
+     *
+     * @param \Cosanit\CosanitBundle\Entity\Categories $categories
+     *
+     * @return Trs
+     */
+    public function setCategories(\Cosanit\CosanitBundle\Entity\Categories $categories = null)
+    {
+        $this->categories = $categories;
+
+        return $this;
+    }
+
+    /**
+     * Get categories
+     *
+     * @return \Cosanit\CosanitBundle\Entity\Categories
+     */
+    public function getCategories()
+    {
+        return $this->categories;
+    }
+
+    /**
+     * Set taux3mois
+     *
+     * @param string $taux3mois
+     *
+     * @return Trs
+     */
+    public function setTaux3mois($taux3mois)
+    {
+        $this->taux3mois = $taux3mois;
+
+        return $this;
+    }
+
+    /**
+     * Get taux3mois
+     *
+     * @return string
+     */
+    public function getTaux3mois()
+    {
+        return $this->taux3mois;
+    }
+
+    /**
+     * Set valeur3mois
+     *
+     * @param string $valeur3mois
+     *
+     * @return Trs
+     */
+    public function setValeur3mois($valeur3mois)
+    {
+        $this->valeur3mois = $valeur3mois;
+
+        return $this;
+    }
+
+    /**
+     * Get valeur3mois
+     *
+     * @return string
+     */
+    public function getValeur3mois()
+    {
+        return $this->valeur3mois;
+    }
+}

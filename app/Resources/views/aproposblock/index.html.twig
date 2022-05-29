@@ -1,0 +1,39 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block body %}
+    <h1>Aproposblock list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Text</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for aproposblock in aproposblocks %}
+            <tr>
+                <td><a href="{{ path('admin_apropos_show', { 'id': aproposblock.id }) }}">{{ aproposblock.id }}</a></td>
+                <td>{{ aproposblock.text }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('admin_apropos_show', { 'id': aproposblock.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('admin_apropos_edit', { 'id': aproposblock.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_apropos_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

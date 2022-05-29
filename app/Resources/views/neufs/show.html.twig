@@ -1,0 +1,168 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Neufs</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ neuf.id }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ neuf.titre }}</td>
+            </tr>
+            <tr>
+                <th>Exclusive</th>
+                <td>{{ neuf.exclusive }}</td>
+            </tr>
+            <tr>
+                <th>Typebien</th>
+                <td>{{ neuf.typebien }}</td>
+            </tr>
+            <tr>
+                <th>Ref</th>
+                <td>{{ neuf.ref }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ neuf.type }}</td>
+            </tr>
+            <tr>
+                <th>Text1</th>
+                <td>{{ neuf.text1 }}</td>
+            </tr>
+            <tr>
+                <th>Text2</th>
+                <td>{{ neuf.text2 }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ neuf.prix }}</td>
+            </tr>
+            <tr>
+                <th>Surface</th>
+                <td>{{ neuf.surface }}</td>
+            </tr>
+            <tr>
+                <th>Pieces</th>
+                <td>{{ neuf.pieces }}</td>
+            </tr>
+            <tr>
+                <th>Chambres</th>
+                <td>{{ neuf.chambres }}</td>
+            </tr>
+            <tr>
+                <th>Ascenseur</th>
+                <td>{{ neuf.ascenseur }}</td>
+            </tr>
+            <tr>
+                <th>Gardien</th>
+                <td>{{ neuf.gardien }}</td>
+            </tr>
+            <tr>
+                <th>Interphone</th>
+                <td>{{ neuf.interphone }}</td>
+            </tr>
+            <tr>
+                <th>Sdb</th>
+                <td>{{ neuf.sdb }}</td>
+            </tr>
+            <tr>
+                <th>Chauffage</th>
+                <td>{{ neuf.chauffage }}</td>
+            </tr>
+            <tr>
+                <th>Construction</th>
+                <td>{{ neuf.construction }}</td>
+            </tr>
+            <tr>
+                <th>Mecanisme</th>
+                <td>{{ neuf.mecanisme }}</td>
+            </tr>
+            <tr>
+                <th>Stationnement</th>
+                <td>{{ neuf.stationnement }}</td>
+            </tr>
+            <tr>
+                <th>Annee</th>
+                <td>{{ neuf.annee }}</td>
+            </tr>
+            <tr>
+                <th>Surfacet</th>
+                <td>{{ neuf.surfacet }}</td>
+            </tr>
+            <tr>
+                <th>Saledebain</th>
+                <td>{{ neuf.saledebain }}</td>
+            </tr>
+            <tr>
+                <th>Terrasse</th>
+                <td>{{ neuf.terrasse }}</td>
+            </tr>
+            <tr>
+                <th>Disponible</th>
+                <td>{% if neuf.disponible %}{{ neuf.disponible|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Garages</th>
+                <td>{{ neuf.garages }}</td>
+            </tr>
+            <tr>
+                <th>Standing</th>
+                <td>{{ neuf.standing }}</td>
+            </tr>
+            <tr>
+                <th>Anneeconst</th>
+                <td>{{ neuf.anneeconst }}</td>
+            </tr>
+            <tr>
+                <th>Consommation</th>
+                <td>{{ neuf.consommation }}</td>
+            </tr>
+            <tr>
+                <th>Etage</th>
+                <td>{{ neuf.etage }}</td>
+            </tr>
+            <tr>
+                <th>Wc</th>
+                <td>{{ neuf.wc }}</td>
+            </tr>
+            <tr>
+                <th>Cuisine</th>
+                <td>{{ neuf.cuisine }}</td>
+            </tr>
+            <tr>
+                <th>Piscine</th>
+                <td>{{ neuf.piscine }}</td>
+            </tr>
+            <tr>
+                <th>Mandat</th>
+                <td>{{ neuf.mandat }}</td>
+            </tr>
+            <tr>
+                <th>Rcs</th>
+                <td>{{ neuf.rcs }}</td>
+            </tr>
+            <tr>
+                <th>Alaune</th>
+                <td>{% if neuf.alaune %}Yes{% else %}No{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_neufs_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('admin_neufs_edit', { 'id': neuf.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

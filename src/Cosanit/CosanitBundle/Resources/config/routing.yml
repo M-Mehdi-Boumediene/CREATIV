@@ -1,0 +1,295 @@
+
+
+cosanit_homepage:
+    path:     /
+    defaults: { _controller: CosanitBundle:Default:index }
+    methods:  [GET, POST]
+
+cosanit_devis:
+    path:     /devis-prix-site-web-algerie
+    defaults: { _controller: CosanitBundle:Default:devis }
+    methods:  [GET, POST]
+
+cosanit_devisid:
+    path:     /devis-prix-site-web-algerie/{id}/
+    defaults: { _controller: CosanitBundle:Default:devisid }
+    methods:  [GET, POST]
+
+cosanit_produits:
+    path:     /algérie/granite/céramique/marbre/
+    defaults: { _controller: CosanitBundle:Default:produits }
+
+
+
+cosanit_produits_categorie:
+  path:     /algérie/fabricant/céramique/{id}/
+  defaults: { _controller: CosanitBundle:Default:produitscategorie }
+  methods:  [GET, POST]
+
+cosanit_services:
+    path:     /céramique/algérie/projets360
+    defaults: { _controller: CosanitBundle:Default:services }
+
+cosanit_contact:
+    path:     /contact
+    defaults: { _controller: CosanitBundle:Default:contact }
+
+cosanit_apropos:
+    path:     /apropos
+    defaults: { _controller: CosanitBundle:Default:apropos }
+
+cosanit_alert:
+    path:     /creer-alerte
+    defaults: { _controller: CosanitBundle:Default:alert }
+    methods:  [GET, POST]
+
+cosanit_show:
+    path:     /algérie/céramique/{categorie}/{id}/
+    defaults: { _controller: CosanitBundle:Default:show }
+
+cosanit_neufshow:
+    path:     /céramique/algérie/projets360/{id}/
+    defaults: { _controller: CosanitBundle:Investissements:show }
+
+
+
+cosanit_partenaires_categorie:
+    path:     /partenaires-{id}
+    defaults: { _controller: CosanitBundle:Default:partenairescategorie }
+    methods:  [GET, POST]
+
+
+
+
+
+cosanit_garantie:
+    path:     /mentionslégales
+    defaults: { _controller: CosanitBundle:Default:mentions }
+
+
+
+cosanit_packs:
+    path:     /Assurance-Automobile-algérie
+    defaults: { _controller: CosanitBundle:Default:packs }
+
+
+cosanit_entreprise:
+    path:     /Assurance-voyages-algérie
+    defaults: { _controller: CosanitBundle:Default:entreprise }
+
+cosanit_commment:
+    path:     /comparateur-assurances-algérie/
+    defaults: { _controller: CosanitBundle:Default:docs }
+
+
+
+cosanit_recrutement:
+    path:     /recrutement
+    defaults: { _controller: CosanitBundle:Recrutement:index }
+    methods:  [GET, POST]
+
+
+
+cosanit_devisauto:
+    path:     /devis/automobile/
+    defaults: { _controller: CosanitBundle:Devisautos:index }
+    methods:  [GET, POST]
+
+cosanit_resultdevisauto:
+    path:     /devis/automobile/{nom}/{telephone}/{garantie}/{duree}/{puissance}/{valeur}/{vols}/{incendies}/{bris}/{assistance1}/{assistance2}/{assistance3}/{defences}
+    defaults: { _controller: CosanitBundle:Devisautos:result }
+    methods:  [GET, POST]
+
+
+cosanit_envoisoffre:
+    path:     /devis/automobile/envois/{assurance}/{nom}/{telephone}/{garantie}/{duree}/{puissance}/{valeur}/{vols}/{incendies}/{bris}/{assistance1}/{assistance2}/{assistance3}/{defences}
+    defaults: { _controller: CosanitBundle:Devisautos:envoisoffre }
+    methods:  [GET, POST]
+
+cosanit_uploads:
+    path:     /immobilier/vendre/uploads/
+    defaults: { _controller: CosanitBundle:Ventes:uploadtofs }
+    methods:  [GET, POST]
+
+cosanit_del_uploads:
+    path:     /immobilier/vendre/uploads/del/
+    defaults: { _controller: CosanitBundle:Ventes:deleteresource }
+    methods:  [GET, POST]
+
+cosanit_admin_bannieres:
+  resource: "@CosanitBundle/Resources/config/routing/bannieres.yml"
+  prefix:   /admin/
+
+cosanit_admin_neufs:
+  resource: "@CosanitBundle/Resources/config/routing/neufs.yml"
+  prefix:   /admin/neufs
+
+
+cosanit_admin_produits:
+  resource: "@CosanitBundle/Resources/config/routing/produits.yml"
+  prefix:   /admin/produits
+
+cosanit_admin_media:
+  resource: "@CosanitBundle/Resources/config/routing/media.yml"
+  prefix:   /admin/medias
+
+cosanit_admin_categories:
+  resource: "@CosanitBundle/Resources/config/routing/categories.yml"
+  prefix:   /admin/categories
+
+
+cosanit_admin_parents:
+  resource: "@CosanitBundle/Resources/config/routing/parents.yml"
+  prefix:   /admin/parents
+
+cosanit_admin_activations:
+  resource: "@CosanitBundle/Resources/config/routing/activations.yml"
+  prefix:   /admin/activations
+  methods:  [GET, POST]
+
+cosanit_admin_types:
+  resource: "@CosanitBundle/Resources/config/routing/types.yml"
+  prefix:   /admin/types
+
+cosanit_admin_messagerie:
+  resource: "@CosanitBundle/Resources/config/routing/messagerie.yml"
+  prefix:   /admin/messagerie
+
+cosanit_admin_serials:
+  resource: "@CosanitBundle/Resources/config/routing/serials.yml"
+  prefix:   /admin/serials
+
+cosanit_admin_partenaires:
+  resource: "@CosanitBundle/Resources/config/routing/partenaires.yml"
+  prefix:   /admin/partenaires
+
+cosanit_admin_about:
+  resource: "@CosanitBundle/Resources/config/routing/apropos.yml"
+  prefix:   /admin/about
+
+
+cosanit_admin_logos:
+  resource: "@CosanitBundle/Resources/config/routing/logos.yml"
+  prefix:   /admin/logos
+
+
+cosanit_admin_users:
+  resource: "@CosanitBundle/Resources/config/routing/user.yml"
+  prefix:   /admin/users
+
+
+cosanit_admin_apropos:
+  resource: "@CosanitBundle/Resources/config/routing/aproposblock.yml"
+  prefix:   /admin/apropos
+
+
+cosanit_statestique:
+  path:     /admin/statestiques
+  defaults: { _controller: "CosanitBundle:Statestiques:index" }
+  methods:  [GET, POST]
+
+
+cosanit_admin_trs:
+  resource: "@CosanitBundle/Resources/config/routing/trs.yml"
+  prefix:   /admin/trs
+
+cosanit_admin_trs2:
+  resource: "@CosanitBundle/Resources/config/routing/trs2.yml"
+  prefix:   /admin/trs2
+
+cosanit_admin_trs3:
+  resource: "@CosanitBundle/Resources/config/routing/trs3.yml"
+  prefix:   /admin/trs3
+
+cosanit_admin_dc10:
+  resource: "@CosanitBundle/Resources/config/routing/dc10.yml"
+  prefix:   /admin/dc10
+
+cosanit_admin_dc20:
+  resource: "@CosanitBundle/Resources/config/routing/dc20.yml"
+  prefix:   /admin/dc20
+
+cosanit_admin_dc30:
+  resource: "@CosanitBundle/Resources/config/routing/dc30.yml"
+  prefix:   /admin/dc30
+
+cosanit_admin_dc50:
+  resource: "@CosanitBundle/Resources/config/routing/dc50.yml"
+  prefix:   /admin/dc50
+
+
+cosanit_admin_dc40:
+  resource: "@CosanitBundle/Resources/config/routing/dc40.yml"
+  prefix:   /admin/dc40
+
+cosanit_admin_venals:
+  resource: "@CosanitBundle/Resources/config/routing/venals.yml"
+  prefix:   /admin/venals
+
+cosanit_admin_rc3:
+  resource: "@CosanitBundle/Resources/config/routing/rc3.yml"
+  prefix:   /admin/rc3
+
+cosanit_admin_rc5:
+  resource: "@CosanitBundle/Resources/config/routing/rc5.yml"
+  prefix:   /admin/rc5
+
+cosanit_admin_rc7:
+  resource: "@CosanitBundle/Resources/config/routing/rc7.yml"
+  prefix:   /admin/rc7
+
+cosanit_admin_rc10:
+  resource: "@CosanitBundle/Resources/config/routing/rc10.yml"
+  prefix:   /admin/rc10
+
+cosanit_admin_rc15:
+  resource: "@CosanitBundle/Resources/config/routing/rc15.yml"
+  prefix:   /admin/rc15
+
+cosanit_admin_vols:
+  resource: "@CosanitBundle/Resources/config/routing/vols.yml"
+  prefix:   /admin/vols
+
+cosanit_admin_incendies:
+  resource: "@CosanitBundle/Resources/config/routing/incendies.yml"
+  prefix:   /admin/incendies
+
+cosanit_admin_defences:
+  resource: "@CosanitBundle/Resources/config/routing/defences.yml"
+  prefix:   /admin/defences
+
+cosanit_admin_bris:
+  resource: "@CosanitBundle/Resources/config/routing/bris.yml"
+  prefix:   /admin/bris
+
+cosanit_admin_assistance1:
+  resource: "@CosanitBundle/Resources/config/routing/assistance1.yml"
+  prefix:   /admin/assistance1
+
+cosanit_admin_assistance2:
+  resource: "@CosanitBundle/Resources/config/routing/assistance2.yml"
+  prefix:   /admin/assistance2
+
+
+cosanit_admin_assistance3:
+  resource: "@CosanitBundle/Resources/config/routing/assistance3.yml"
+  prefix:   /admin/assistance
+
+cosanit_admin_pubs:
+  resource: "@CosanitBundle/Resources/config/routing/pubs.yml"
+  prefix:   /admin/pubs
+
+cosanit_admin_entreprise:
+  resource: "@CosanitBundle/Resources/config/routing/entreprises.yml"
+  prefix:   /admin/entreprise
+
+cosanit_admin_docs:
+  resource: "@CosanitBundle/Resources/config/routing/docs.yml"
+  prefix:   /admin/doncs
+
+cosanit_admin_mentions:
+  resource: "@CosanitBundle/Resources/config/routing/mentions.yml"
+  prefix:   /admin/mentions
+
+
+

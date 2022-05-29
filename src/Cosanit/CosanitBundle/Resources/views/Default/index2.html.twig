@@ -1,0 +1,1169 @@
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <style>
+        .principal-cta, .secondary-cta, .fake-cta {
+            border-bottom: 3px solid;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.125rem;
+            line-height: 3.25rem;
+            margin-bottom: 10px;
+            outline: none;
+            padding: 0 10px 0 1.0rem !important;
+            position: relative;
+            text-decoration: none;
+            text-align: left;
+        }
+        .gwt-Button{
+            border:none !important;
+        }
+        .toggle-view .cell-container .cell-informations .cell-tarif-card .cell-top {
+            margin-top: 0;
+            font-size: 40px !important;
+        }
+        #preloader {
+            background-color: #fff;
+        }
+        .spinner {
+            width: 200px;
+            height: 130px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+        }
+    </style>
+    <div id="preloader">
+        <div class="spinner">
+            <img src="{{ asset('logos.gif') }}" width="200" height="130">
+        </div>
+        <div class="preloader-cancel-btn-wraper"> <span class="btn btn-primary preloader-cancel-btn">Cancel Preloader</span></div>
+    </div>
+    <div class="ekit-template-content-markup ekit-template-content-header ekit-template-content-theme-support">
+        <div data-elementor-type="wp-post" data-elementor-id="26" class="elementor elementor-26" data-elementor-settings="[]">
+            <div class="elementor-inner">
+                <div class="elementor-section-wrap">
+                    <section class="hidden-sm elementor-element elementor-element-121aa97 ts-topbar topbar-bg elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="121aa97" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-element elementor-element-08a4ead elementor-column elementor-col-33 elementor-top-column" data-id="08a4ead" data-element_type="column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-3fb9687 elementor-widget elementor-widget-elementskit-social-media" data-id="3fb9687" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="elementskit-social-media.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="ekit-wid-con">
+                                                        <ul class="ekit_social_media">
+                                                            <li class="elementor-repeater-item-0099aa1">
+                                                                <a href="https://facebook.com/" class="facebook"> <i class="icon icon-facebook" aria-hidden="true"></i> </a>
+                                                            </li>
+                                                            <li class="elementor-repeater-item-f6eb7ef">
+                                                                <a href="https://facebook.com/" class="twitter"> <i class="icon icon-twitter" aria-hidden="true"></i> </a>
+                                                            </li>
+                                                            <li class="elementor-repeater-item-95105d3">
+                                                                <a href="https://facebook.com/" class="linkedin"> <i class="icon icon-linkedin" aria-hidden="true"></i> </a>
+                                                            </li>
+                                                            <li class="elementor-repeater-item-ca58922">
+                                                                <a href="https://facebook.com/" class="1"> <i class="icon icon-instagram-1" aria-hidden="true"></i> </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" elementor-element elementor-element-a4032c0 elementor-column elementor-col-66 elementor-top-column" data-id="a4032c0" data-element_type="column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-f265490 elementor-icon-list--layout-inline elementor-align-right elementor-mobile-align-center elementor-widget elementor-widget-icon-list" data-id="f265490" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="icon-list.default">
+                                                <div class="elementor-widget-container">
+                                                    <ul class="elementor-icon-list-items elementor-inline-items">
+
+                                                        <li class="elementor-icon-list-item">
+                                                            <a href=""> <span class="elementor-icon-list-text">Publicité</span> </a>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <a href=""> <span class="elementor-icon-list-text">Actualités</span> </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="elementor-element elementor-element-84fde99 elementor-section-content-middle header-top-info elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="84fde99" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-element elementor-element-9742e77 elementor-column elementor-col-25 elementor-top-column" data-id="9742e77" data-element_type="column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-f2f60b1 elementor-widget elementor-widget-instive-logo" data-id="f2f60b1" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="instive-logo.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="instive-widget-logo">
+                                                        <a href="{{ path('cosanit_homepage') }}"> <img src="{{ asset('wp-content/uploads/2019/09/logo.svg') }}" alt="Instive"> </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-ddeb951 elementor-column elementor-col-25 elementor-top-column" data-id="ddeb951" data-element_type="column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-f48a41b elementor-widget elementor-widget-elementskit-icon-box" data-id="f48a41b" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="elementskit-icon-box.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="ekit-wid-con">
+                                                        <div class="elementskit-infobox text-left icon-lef-right-aligin elementor-animation- media ">
+                                                            <div class="elementskit-box-header elementor-animation-">
+                                                                <div class="elementskit-info-box-icon text-center"> <i class="fa fa-envelope-open elementkit-infobox-icon" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div class="box-body">
+                                                                <h3 class="elementskit-info-box-title"> info@ncomparer.com</h3>
+                                                                <p>Écrivez-nous</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-e0c929a elementor-column elementor-col-25 elementor-top-column" data-id="e0c929a" data-element_type="column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-67eb265 elementor-widget elementor-widget-elementskit-icon-box" data-id="67eb265" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="elementskit-icon-box.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="ekit-wid-con">
+                                                        <div class="elementskit-infobox text-left icon-lef-right-aligin elementor-animation- media ">
+                                                            <div class="elementskit-box-header elementor-animation-">
+                                                                <div class="elementskit-info-box-icon text-center"> <i class="fa fa-phone elementkit-infobox-icon" aria-hidden="true"></i></div>
+                                                            </div>
+                                                            <div class="box-body">
+                                                                <h3 class="elementskit-info-box-title">+ 213 (0) 561 630 322</h3>
+                                                                <p>Appellez-nous</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-0b040db elementor-column elementor-col-25 elementor-top-column" data-id="0b040db" data-element_type="column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-baf44ee elementor-align-right elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="baf44ee" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="button.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-button-wrapper">
+                                                        <a href="{{ path('cosanit_devisauto') }}" class="elementor-button-link elementor-button elementor-size-sm" role="button"> <span class="elementor-button-content-wrapper"> <span class="elementor-button-icon elementor-align-icon-left"> <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 16 16"><title>get_a_qoute</title><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik%3A500%2C400%2C700%2C900%7COpen%20Sans%3A800%2C%2C400%2C700%2C900%7CRubik%3A300%2C300i%2C400%2C400i%2C500%2C500i%2C700%2C700i%2C900%2C900i%26amp%3Bdisplay%3Dswap%7COpen%20Sans%3A300%2C300i%2C400%2C400i%2C700%2C700i%2C800%2C900%2C900i%7COpen%20Sans%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRubik%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%3A400%7COpen%20Sans%3A700%2C800%2C400%2C600&amp;display=swap" /><path d="M14,0H2A2,2,0,0,0,0,2V14a2,2,0,0,0,2,2H14a2,2,0,0,0,2-2V2A2,2,0,0,0,14,0ZM13,9H3V7H13ZM9,13H3V11H9Zm4-8H3V3H13Z"></path></svg> </span> <span class="elementor-button-text">Obtenez un devis</span> </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="elementor-element elementor-element-010ec24 main-nav elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="010ec24" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-element elementor-element-52c606e elementor-column elementor-col-100 elementor-top-column" data-id="52c606e" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <section class="elementor-element elementor-element-5116ce0 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="5116ce0" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_sticky&quot;:&quot;top&quot;,&quot;ekit_sticky_on&quot;:[&quot;desktop&quot;],&quot;ekit_sticky_offset&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;ekit_sticky_effect_offset&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]}}">
+                                                <div class="elementor-container elementor-column-gap-default">
+                                                    <div class="elementor-row">
+                                                        <div class="elementor-element elementor-element-430c3a2 elementor-column elementor-col-33 elementor-inner-column" data-id="430c3a2" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-032e77b elementor-widget elementor-widget-ekit-nav-menu" data-id="032e77b" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="ekit-nav-menu.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="ekit-wid-con">
+                                                                                <div id="ekit-megamenu-main-menu" class="elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default elementskit_line_arrow ekit-nav-menu-one-page-no">
+                                                                                    <ul id="main-menu" class="elementskit-navbar-nav elementskit-menu-po-left">
+                                                                                        <li id="menu-item-13" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-13 nav-item elementskit-dropdown-has elementskit-mobile-builder-content active">
+                                                                                            <a href="{{ path('cosanit_homepage') }}" class="ekit-menu-nav-link ekit-menu-dropdown-toggle active">
+                                                                                                Accueil</a>
+
+                                                                                        </li>
+                                                                                        <li id="menu-item-2620" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2620 nav-item elementskit-dropdown-has elementskit-mobile-builder-content"><a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Assurances<i class="elementskit-submenu-indicator"></i></a>
+                                                                                            <ul class="elementskit-dropdown elementskit-submenu-panel">
+
+                                                                                                <li id="menu-item-2625" class="menu-item menu-item-type-post_type menu-item-object-instive-insurance menu-item-2624 nav-item elementskit-mobile-builder-content">
+                                                                                                    <a href="{{ path('cosanit_devisauto') }}" class=" dropdown-item">
+                                                                                                        <button type="submit" class="ekit-mail-submit butt" name="ekit_mail_chimp">  Comparer les <br>assurances auto</button>
+                                                                                                    </a>
+                                                                                                </li>
+
+
+
+                                                                                            </ul>
+                                                                                        </li>
+
+                                                                                        <li id="menu-item-103" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-103 nav-item elementskit-dropdown-has elementskit-mobile-builder-content"><a href="" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Actualités<i class="elementskit-submenu-indicator"></i></a>
+                                                                                            <ul class="elementskit-dropdown elementskit-submenu-panel">
+                                                                                                <li id="menu-item-3034" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3034 nav-item elementskit-mobile-builder-content"><a href="" class=" dropdown-item">Notre actualité</a>
+                                                                                                <li id="menu-item-3033" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-3033 nav-item elementskit-mobile-builder-content"><a href="" class=" dropdown-item">Espace publicité</a></ul>
+                                                                                        </li>
+
+
+                                                                                        <li id="menu-item-2628" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2628 nav-item elementskit-dropdown-has elementskit-mobile-builder-content"><a href="" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Qui sommes nous ?<i class="elementskit-submenu-indicator"></i></a>
+                                                                                            <ul class="elementskit-dropdown elementskit-submenu-panel">
+                                                                                                <li id="menu-item-2631" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2631 nav-item elementskit-mobile-builder-content"><a href="{{ path('cosanit_apropos') }}" class=" dropdown-item">Présentation</a>
+                                                                                                <li id="menu-item-3134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3134 nav-item elementskit-mobile-builder-content"><a href="#" class=" dropdown-item">Nos partenaires</a>
+                                                                                            </ul>
+                                                                                        </li>
+                                                                                        <li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-106 nav-item elementskit-mobile-builder-content"><a href="" class="ekit-menu-nav-link">Contact</a></li>
+                                                                                    </ul>
+                                                                                    <div class="elementskit-nav-identity-panel">
+                                                                                        <div class="elementskit-site-title">
+                                                                                            <a class="elementskit-nav-logo" href="{{ path('cosanit_homepage') }}" target="_self" rel=""> <img src="{{ asset('wp-content/uploads/2019/08/logo.svg') }}" alt=""> </a>
+                                                                                        </div>
+                                                                                        <button class="elementskit-menu-close elementskit-menu-toggler" type="button">X</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-element elementor-element-8652702 elementor-column elementor-col-33 elementor-inner-column" data-id="8652702" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-7e45152 elementor-widget elementor-widget-instive-search" data-id="7e45152" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="instive-search.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="ts-search-box">
+                                                                                <form method="get" action="http://demo.themewinter.com/wp/instive/" class="instive-serach xs-search-group">
+                                                                                    <div class="input-group">
+                                                                                        <input type="search" class="form-control" name="s" placeholder="Search..." value="">
+                                                                                        <button class="input-group-btn search-button"><i class="fa fa-search"></i></button>
+                                                                                    </div>
+                                                                                </form>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-element elementor-element-f2ecfec elementor-column elementor-col-33 elementor-inner-column" data-id="f2ecfec" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-d2e5690 elementor-widget elementor-widget-elementskit-header-offcanvas" data-id="d2e5690" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="elementskit-header-offcanvas.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="ekit-wid-con">
+                                                                                <div class="ekit-offcanvas-toggle-wraper">
+                                                                                    <a href="#" class="ekit_navSidebar-button ekit_offcanvas-sidebar"> <i class="icon icon-menu-9" aria-hidden="true"></i> </a>
+                                                                                </div>
+                                                                                <div class="ekit-sidebar-group info-group">
+                                                                                    <div class="ekit-overlay ekit-bg-black"></div>
+                                                                                    <div class="ekit-sidebar-widget">
+                                                                                        <div class="ekit_sidebar-widget-container">
+                                                                                            <div class="ekit_widget-heading">
+                                                                                                <a href="#" class="ekit_close-side-widget"> <i aria-hidden="true" class="fas fa-times"></i> </a>
+                                                                                            </div>
+                                                                                            <div class="ekit_sidebar-textwidget">
+                                                                                                <div class="widgetarea_warper widgetarea_warper_editable" data-elementskit-widgetarea-key="1708bef" data-elementskit-widgetarea-index="99">
+                                                                                                    <div class="widgetarea_warper_edit" data-elementskit-widgetarea-key="1708bef" data-elementskit-widgetarea-index="99"> <i class="eicon-edit" aria-hidden="true"></i> <span class="elementor-screen-only">Edit</span></div>
+                                                                                                    <div class="elementor-widget-container">
+                                                                                                        <div data-elementor-type="wp-post" data-elementor-id="968" class="elementor elementor-968" data-elementor-settings="[]">
+                                                                                                            <div class="elementor-inner">
+                                                                                                                <div class="elementor-section-wrap">
+                                                                                                                    <section class="elementor-element elementor-element-8077bdd elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="8077bdd" data-element_type="section">
+                                                                                                                        <div class="elementor-container elementor-column-gap-default">
+                                                                                                                            <div class="elementor-row">
+                                                                                                                                <div class="elementor-element elementor-element-f79e31b elementor-column elementor-col-100 elementor-top-column" data-id="f79e31b" data-element_type="column">
+                                                                                                                                    <div class="elementor-column-wrap elementor-element-populated">
+                                                                                                                                        <div class="elementor-widget-wrap">
+                                                                                                                                            <div class="elementor-element elementor-element-83d6c1e elementor-widget elementor-widget-image" data-id="83d6c1e" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="image.default">
+                                                                                                                                                <div class="elementor-widget-container">
+                                                                                                                                                    <div class="elementor-image">
+                                                                                                                                                        <a href="" data-elementor-open-lightbox=""> <img width="356" height="92" src="{{ asset('wp-content/uploads/2019/09/logo.svg') }}" class="attachment-full size-full" alt="" srcset="{{ asset('wp-content/uploads/2019/09/logo.svg') }} 356w, {{ asset('wp-content/uploads/2019/09/logo.svg') }} 300w" sizes="(max-width: 356px) 100vw, 356px" /> </a>
+                                                                                                                                                    </div>
+                                                                                                                                                </div>
+                                                                                                                                            </div>
+                                                                                                                                            <div class="elementor-element elementor-element-1bfc3c7 elementor-widget elementor-widget-heading" data-id="1bfc3c7" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                                                                                                                <div class="elementor-widget-container">
+                                                                                                                                                    <h2 class="elementor-heading-title elementor-size-default">À PROPOS</h2></div>
+                                                                                                                                            </div>
+                                                                                                                                            <div class="elementor-element elementor-element-3f6da04 elementor-widget elementor-widget-text-editor" data-id="3f6da04" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+                                                                                                                                                <div class="elementor-widget-container">
+                                                                                                                                                    <div class="elementor-text-editor elementor-clearfix">
+                                                                                                                                                        <p>Nous sommes une société de courtage d'assurance et gestion des risques, agréée par arrêté du ministaire des finances de puis 1988 et nous disposons d'une équipe pluridisciplinaire spécialisée dans la gestion des risques d'entreprises.</p>
+                                                                                                                                                    </div>
+                                                                                                                                                </div>
+                                                                                                                                            </div>
+                                                                                                                                            <div class="elementor-element elementor-element-021b604 elementor-widget elementor-widget-elementskit-button" data-id="021b604" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="elementskit-button.default">
+                                                                                                                                                <div class="elementor-widget-container">
+                                                                                                                                                    <div class="ekit-wid-con">
+                                                                                                                                                        <div class="ekit-btn-wraper"> <a href="#" target="_blank" rel="nofollow" class="elementskit-btn "> Contactez-nous </a></div>
+                                                                                                                                                    </div>
+                                                                                                                                                </div>
+                                                                                                                                            </div>
+                                                                                                                                            <div class="elementor-element elementor-element-b32bb6c elementor-widget elementor-widget-heading" data-id="b32bb6c" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                                                                                                                <div class="elementor-widget-container">
+                                                                                                                                                    <h2 class="elementor-heading-title elementor-size-default">Contact</h2></div>
+                                                                                                                                            </div>
+                                                                                                                                            <div class="elementor-element elementor-element-6ae0212 elementor-align-left elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list" data-id="6ae0212" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="icon-list.default">
+                                                                                                                                                <div class="elementor-widget-container">
+                                                                                                                                                    <ul class="elementor-icon-list-items">
+                                                                                                                                                        <li class="elementor-icon-list-item"> <span class="elementor-icon-list-icon"> <i aria-hidden="true" class="fab fa-telegram-plane"></i> </span> <span class="elementor-icon-list-text">contact@wafassurance.com</span></li>
+
+                                                                                                                                                        <li class="elementor-icon-list-item"> <span class="elementor-icon-list-icon"> <i aria-hidden="true" class="far fa-building"></i> </span> <span class="elementor-icon-list-text">33,Rue DJELLAT Habib Oran Algérie</span></li>
+                                                                                                                                                        <li class="elementor-icon-list-item">
+                                                                                                                                                            <a href="tel:+213560287112"> <span class="elementor-icon-list-icon"> <i aria-hidden="true" class="fas fa-phone-alt"></i> </span> <span class="elementor-icon-list-text">+213 (0) 560 287 112</span> </a>
+                                                                                                                                                        </li>
+                                                                                                                                                        <li class="elementor-icon-list-item"> <span class="elementor-icon-list-icon"> <i aria-hidden="true" class="far fa-building"></i> </span> <span class="elementor-icon-list-text">39, Rue de la Madeleine Hydra Alger Algérie</span></li>
+                                                                                                                                                        <li class="elementor-icon-list-item">
+                                                                                                                                                            <a href="tel:+213561630322"> <span class="elementor-icon-list-icon"> <i aria-hidden="true" class="fas fa-phone-alt"></i> </span> <span class="elementor-icon-list-text">+213 (0) 561 630 322</span> </a>
+                                                                                                                                                        </li>
+                                                                                                                                                    </ul>
+                                                                                                                                                </div>
+                                                                                                                                            </div>
+                                                                                                                                        </div>
+                                                                                                                                    </div>
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </section>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-elementor-type="wp-page" data-elementor-id="7" class="elementor elementor-7" data-elementor-settings="[]">
+        <div class="elementor-inner">
+            <div class="elementor-section-wrap">
+
+
+
+
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="filters-wrapper">
+                                {{ garantie }}
+                                <div class="filters-message content"> <span style="color:#003478;">Voici les <strong>6 meilleures offres</strong> pour votre <strong>vehicule</strong>, classées par prix croissants et de façon impartiale.&nbsp;</span> <span class="gwt-InlineHTML"></span> </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        {% if garantie == 'Tout risque' and duree == '3mois' %}
+
+                            {% for tr in trs3mois %}
+                                {% set total = valeur * tr.taux3mois|number_format(1) / 100  %}
+
+                                <div class="formule-container " id="assu2000-2-container">
+                                    <div class="cell-container col-md-6">
+                                        <div class="cell-informations"><span class="inline-block cell-assureur cell">
+                                                <img class="gwt-Image" src="{{ asset('photos_produits/'~tr.categories.photo[0].path) }}" title="Formule F120"></span>
+                                            <div class="cell-tarif-card cell">
+                                                <div class="cell-top"><span class="gwt-InlineHTML">{{ total|number_format(2, ',', ' ') }} <strong>DA</strong></span><span class="split"> / 3mois</span></div>
+                                                <div class="cell-bottom"><span class="gwt-InlineLabel prime-details">Frais de dossier gratuits</span>
+                                                    <button type="button" class="gwt-Button details-formule icon-lesfurets after " id="assu2000-2-details-over"><span>Plus de détails <i class="fa fa-chevron-down"></i></span></button>
+                                                </div>
+                                            </div>
+                                            <div class="cell-tarif-card cell" aria-hidden="true" style="display: none;">
+                                                <div class="cell-top"><span class="gwt-InlineHTML">58 <strong>DA</strong></span><span class="split"> / mois</span></div>
+                                                <div class="cell-bottom"><span class="gwt-InlineHTML cell-bottom">Tarif annuel : 658 DA</span>
+                                                    <button type="button" class="gwt-Button details-formule icon-lesfurets after " id="assu2000-2-details-over"><span>Plus de détails <i class="fa fa-chevron-down"></i></span></button>
+                                                </div>
+                                            </div>
+                                            <div class="cell-card-tick cell cell-assistance-panne"><span class="inline-block cell-top"><span class="gwt-InlineLabel cell-franchise">50</span><span class="gwt-InlineLabel cell-franchise-suffix"> km</span></span><span class="gwt-InlineHTML cell-bottom">Assistance panne</span></div>
+                                            <div class="cell-card-tick cell disabled"><span class="gwt-InlineLabel icon-lesfurets icon-close cell-top"></span><span class="gwt-InlineHTML cell-bottom">Véhicule de remplacement</span></div>
+                                            <div class="cell-card-tick cell"><span class="gwt-InlineLabel icon-lesfurets icon-tick cell-top"></span><span class="gwt-InlineHTML cell-bottom">Bris de glace</span></div>
+                                            <div class="cell-franchise-card cell"><span class="inline-block cell-top"><span class="gwt-InlineLabel cell-franchise">170</span><span class="gwt-InlineLabel cell-franchise-suffix"> DA</span></span><span class="gwt-InlineLabel cell-bottom">Franchise vol et incendie</span></div>
+                                            <div class="cell-card-tick cell disabled" aria-hidden="true" style="display: none;"><span class="gwt-InlineLabel icon-lesfurets icon-close cell-top"></span><span class="gwt-InlineHTML cell-bottom">Protection du conducteur</span></div>
+                                        </div>
+                                        <div class="cell-actions"><span class="inline-block cell-ctas cell" id="assu2000-2"><button type="button" class="gwt-Button icon-lesfurets principal-cta deux-lignes " id="assu2000-2-SOUSC" data-gacategory="PPS_auto" data-gaaction="SOUSC" data-galabel="assu2000"><span data-gacategory="PPS_auto" data-gaaction="SOUSC" data-galabel="assu2000">Poursuivre sur le site de l'assureur <i class="fa fa-chevron-right"></i></span></button>
+                                <button type="button" class="gwt-Button icon-lesfurets link-cta " id="assu2000-2-RAPPEL" data-gacategory="PPS_auto" data-gaaction="RAPPEL" data-galabel="assu2000"><span data-gacategory="PPS_auto" data-gaaction="RAPPEL" data-galabel="assu2000"><i class="fa fa-phone"></i> Être rappelé par l'assureur</span></button>
+                                <button type="button" class="gwt-Button icon-lesfurets link-cta " id="assu2000-2-DEVIS" data-gacategory="PPS_auto" data-gaaction="DEVIS" data-galabel="assu2000"><span data-gacategory="PPS_auto" data-gaaction="DEVIS" data-galabel="assu2000"><i class="fa fa-envelope"></i> Devis par email</span></button>
+                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+
+                        {% elseif garantie == 'Tout risque' and duree == '6mois' %}
+
+                            {% for tr in trs6mois %}
+                                {% set total = valeur * tr.taux3mois|number_format(1) / 100  %}
+
+                                <div class="formule-container" id="assu2000-2-container">
+                                    <div class="cell-container">
+                                        <div class="cell-informations"><span class="inline-block cell-assureur cell">
+                                                <img class="gwt-Image" src="{{ asset('photos_produits/'~tr.categories.photo[0].path) }}" title="Formule F120"></span>
+                                            <div class="cell-tarif-card cell">
+                                                <div class="cell-top"><span class="gwt-InlineHTML">{{ total|number_format(2, ',', ' ') }} <strong>DA</strong></span><span class="split"> / 6mois</span></div>
+                                                <div class="cell-bottom"><span class="gwt-InlineLabel prime-details">Frais de dossier gratuits</span>
+                                                    <button type="button" class="gwt-Button details-formule icon-lesfurets after " id="assu2000-2-details-over"><span>Plus de détails <i class="fa fa-chevron-down"></i></span></button>
+                                                </div>
+                                            </div>
+                                            <div class="cell-tarif-card cell" aria-hidden="true" style="display: none;">
+                                                <div class="cell-top"><span class="gwt-InlineHTML">58 <strong>DA</strong></span><span class="split"> / mois</span></div>
+                                                <div class="cell-bottom"><span class="gwt-InlineHTML cell-bottom">Tarif annuel : 658 DA</span>
+                                                    <button type="button" class="gwt-Button details-formule icon-lesfurets after " id="assu2000-2-details-over"><span>Plus de détails <i class="fa fa-chevron-down"></i></span></button>
+                                                </div>
+                                            </div>
+                                            <div class="cell-card-tick cell cell-assistance-panne"><span class="inline-block cell-top"><span class="gwt-InlineLabel cell-franchise">50</span><span class="gwt-InlineLabel cell-franchise-suffix"> km</span></span><span class="gwt-InlineHTML cell-bottom">Assistance panne</span></div>
+                                            <div class="cell-card-tick cell disabled"><span class="gwt-InlineLabel icon-lesfurets icon-close cell-top"></span><span class="gwt-InlineHTML cell-bottom">Véhicule de remplacement</span></div>
+                                            <div class="cell-card-tick cell"><span class="gwt-InlineLabel icon-lesfurets icon-tick cell-top"></span><span class="gwt-InlineHTML cell-bottom">Bris de glace</span></div>
+                                            <div class="cell-franchise-card cell"><span class="inline-block cell-top"><span class="gwt-InlineLabel cell-franchise">170</span><span class="gwt-InlineLabel cell-franchise-suffix"> DA</span></span><span class="gwt-InlineLabel cell-bottom">Franchise vol et incendie</span></div>
+                                            <div class="cell-card-tick cell disabled" aria-hidden="true" style="display: none;"><span class="gwt-InlineLabel icon-lesfurets icon-close cell-top"></span><span class="gwt-InlineHTML cell-bottom">Protection du conducteur</span></div>
+                                        </div>
+                                        <div class="cell-actions"><span class="inline-block cell-ctas cell" id="assu2000-2"><button type="button" class="gwt-Button icon-lesfurets principal-cta deux-lignes " id="assu2000-2-SOUSC" data-gacategory="PPS_auto" data-gaaction="SOUSC" data-galabel="assu2000"><span data-gacategory="PPS_auto" data-gaaction="SOUSC" data-galabel="assu2000">Poursuivre sur le site de l'assureur <i class="fa fa-chevron-right"></i></span></button>
+                                <button type="button" class="gwt-Button icon-lesfurets link-cta " id="assu2000-2-RAPPEL" data-gacategory="PPS_auto" data-gaaction="RAPPEL" data-galabel="assu2000"><span data-gacategory="PPS_auto" data-gaaction="RAPPEL" data-galabel="assu2000"><i class="fa fa-phone"></i> Être rappelé par l'assureur</span></button>
+                                <button type="button" class="gwt-Button icon-lesfurets link-cta " id="assu2000-2-DEVIS" data-gacategory="PPS_auto" data-gaaction="DEVIS" data-galabel="assu2000"><span data-gacategory="PPS_auto" data-gaaction="DEVIS" data-galabel="assu2000"><i class="fa fa-envelope"></i> Devis par email</span></button>
+                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+
+                        {% elseif garantie == 'Tout risque' and duree == '1an' %}
+
+                            {% for tr in trs1an %}
+                                {% set total = valeur * tr.taux3mois|number_format(1) / 100  %}
+
+                                <div class="formule-container" id="assu2000-2-container">
+                                    <div class="cell-container">
+                                        <div class="cell-informations"><span class="inline-block cell-assureur cell">
+                                                <img class="gwt-Image" src="{{ asset('photos_produits/'~tr.categories.photo[0].path) }}" title="Formule F120"></span>
+                                            <div class="cell-tarif-card cell">
+                                                <div class="cell-top"><span class="gwt-InlineHTML">{{ total|number_format(2, ',', ' ') }} <strong>DA</strong></span><span class="split"> / an</span></div>
+                                                <div class="cell-bottom"><span class="gwt-InlineLabel prime-details">Frais de dossier gratuits</span>
+                                                    <button type="button" class="gwt-Button details-formule icon-lesfurets after " id="assu2000-2-details-over"><span>Plus de détails <i class="fa fa-chevron-down"></i></span></button>
+                                                </div>
+                                            </div>
+                                            <div class="cell-tarif-card cell" aria-hidden="true" style="display: none;">
+                                                <div class="cell-top"><span class="gwt-InlineHTML">58 <strong>DA</strong></span><span class="split"> / mois</span></div>
+                                                <div class="cell-bottom"><span class="gwt-InlineHTML cell-bottom">Tarif annuel : 658 DA</span>
+                                                    <button type="button" class="gwt-Button details-formule icon-lesfurets after " id="assu2000-2-details-over"><span>Plus de détails <i class="fa fa-chevron-down"></i></span></button>
+                                                </div>
+                                            </div>
+                                            <div class="cell-card-tick cell cell-assistance-panne"><span class="inline-block cell-top"><span class="gwt-InlineLabel cell-franchise">50</span><span class="gwt-InlineLabel cell-franchise-suffix"> km</span></span><span class="gwt-InlineHTML cell-bottom">Assistance panne</span></div>
+                                            <div class="cell-card-tick cell disabled"><span class="gwt-InlineLabel icon-lesfurets icon-close cell-top"></span><span class="gwt-InlineHTML cell-bottom">Véhicule de remplacement</span></div>
+                                            <div class="cell-card-tick cell"><span class="gwt-InlineLabel icon-lesfurets icon-tick cell-top"></span><span class="gwt-InlineHTML cell-bottom">Bris de glace</span></div>
+                                            <div class="cell-franchise-card cell"><span class="inline-block cell-top"><span class="gwt-InlineLabel cell-franchise">170</span><span class="gwt-InlineLabel cell-franchise-suffix"> DA</span></span><span class="gwt-InlineLabel cell-bottom">Franchise vol et incendie</span></div>
+                                            <div class="cell-card-tick cell disabled" aria-hidden="true" style="display: none;"><span class="gwt-InlineLabel icon-lesfurets icon-close cell-top"></span><span class="gwt-InlineHTML cell-bottom">Protection du conducteur</span></div>
+                                        </div>
+                                        <div class="cell-actions"><span class="inline-block cell-ctas cell" id="assu2000-2"><button type="button" class="gwt-Button icon-lesfurets principal-cta deux-lignes " id="assu2000-2-SOUSC" data-gacategory="PPS_auto" data-gaaction="SOUSC" data-galabel="assu2000"><span data-gacategory="PPS_auto" data-gaaction="SOUSC" data-galabel="assu2000">Poursuivre sur le site de l'assureur <i class="fa fa-chevron-right"></i></span></button>
+                                <button type="button" class="gwt-Button icon-lesfurets link-cta " id="assu2000-2-RAPPEL" data-gacategory="PPS_auto" data-gaaction="RAPPEL" data-galabel="assu2000"><span data-gacategory="PPS_auto" data-gaaction="RAPPEL" data-galabel="assu2000"><i class="fa fa-phone"></i> Être rappelé par l'assureur</span></button>
+                                <button type="button" class="gwt-Button icon-lesfurets link-cta " id="assu2000-2-DEVIS" data-gacategory="PPS_auto" data-gaaction="DEVIS" data-galabel="assu2000"><span data-gacategory="PPS_auto" data-gaaction="DEVIS" data-galabel="assu2000"><i class="fa fa-envelope"></i> Devis par email</span></button>
+                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+
+
+                        {% elseif garantie == 'DommageCollision10000DA' and duree == '3mois' %}
+
+                            {% if puissance == '3a4CH' %}
+                                {% set totalrc3 = 0 %}
+                                {% for tr in rc33mois %}
+                                    {% set totalrc3 =+ tr.valeur3mois * tr.taux3mois|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% endif %}
+                            {% if puissance == '5a6CH' %}
+                                {% set totalrc3 = 0 %}
+                                {% for tr in rc53mois %}
+                                    {% set totalrc3 =+ tr.valeur3mois * tr.taux3mois|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% endif %}
+                            {% if puissance == '7a10CH' %}
+                                {% set totalrc3 = 0 %}
+                                {% for tr in rc73mois %}
+                                    {% set totalrc3 =+ tr.valeur3mois * tr.taux3mois|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% endif %}
+
+                            {% if puissance == '10a14CH' %}
+                                {% set totalrc3 = 0 %}
+                                {% for tr in rc103mois %}
+                                    {% set totalrc3 =+ tr.valeur3mois * tr.taux3mois|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% endif %}
+
+                            {% if puissance == '15etplus' %}
+                                {% set totalrc3 = 0 %}
+                                {% for tr in rc153mois %}
+                                    {% set totalrc3 =+ tr.valeur3mois * tr.taux3mois|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% endif %}
+
+                            {% if puissance == 0 %}
+                                {% set totalrc3 = 0 %}
+                                {% set totalrc5 = 0 %}
+                                {% set totalrc7 = 0 %}
+                                {% set totalrc10 = 0 %}
+                                {% set totalrc15 = 0 %}
+
+                            {% endif %}
+
+
+
+                            {% if vols == 1 %}
+                                {% set totalvols = 0 %}
+                                {% for tr in vols3mois %}
+                                    {% set totalvols =+ tr.valeur3mois * tr.taux3mois|number_format(1) / 100 %}
+                                {% endfor %}
+
+                            {% else %}
+                                {% set totalvols = 0 %}
+                            {% endif %}
+
+                            {% if incendies == 1 %}
+                                {% set totalincendies = 0 %}
+                                {% for tr in incendies3mois %}
+                                    {% set totalincendies =+ tr.valeur3mois * tr.taux3mois|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% else %}
+                                {% set totalincendies = 0 %}
+                            {% endif %}
+
+                            {% if bris == 1 %}
+                                {% set totalbris = 0 %}
+                                {% for tr in bris3mois %}
+                                    {% set totalbris =+ tr.valeur3mois * tr.taux3mois|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% else %}
+                                {% set totalbris = 0 %}
+                            {% endif %}
+
+                            {% if assistance1 == 1 %}
+                                {% set totalassistance1 = 0 %}
+                                {% for tr in assistance13mois %}
+                                    {% set totalassistance1 =+ tr.valeur3mois * tr.taux3mois|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% else %}
+                                {% set totalassistance1 = 0 %}
+                            {% endif %}
+
+                            {% if assistance1 == 1 %}
+                                {% set totalassistance2 = 0 %}
+                                {% for tr in assistance23mois %}
+                                    {% set totalassistance2 =+ tr.valeur3mois * tr.taux3mois|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% else %}
+                                {% set totalassistance2 = 0 %}
+                            {% endif %}
+
+                            {% if defences == 1 %}
+                                {% set totaldefences = 0 %}
+                                {% for tr in defences3mois %}
+                                    {% set totaldefences =+ tr.valeur3mois * tr.taux3mois|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% else %}
+                                {% set totaldefences = 0 %}
+                            {% endif %}
+                            {% for tr in dc103mois %}
+
+
+                                {% set total = tr.valeur3mois * tr.taux3mois|number_format(1) / 100 + totalrc3 + totalvols + totalincendies + totalbris + totalassistance1 + totalassistance2 + totaldefences %}
+
+                                <div class="formule-container" id="assu2000-2-container">
+                                    <div class="cell-container">
+                                        <div class="cell-informations"><span class="inline-block cell-assureur cell">
+                                                <img class="gwt-Image" src="{{ asset('photos_produits/'~tr.categories.photo[0].path) }}" title="Formule F120"></span>
+                                            <div class="cell-tarif-card cell">
+                                                <div class="cell-top"><span class="gwt-InlineHTML">{{ total|number_format(2, ',', ' ') }} <strong>DA</strong></span><span class="split"> / an</span></div>
+                                                <div class="cell-bottom"><span class="gwt-InlineLabel prime-details">Frais de dossier gratuits</span>
+                                                    <button type="button" class="gwt-Button details-formule icon-lesfurets after " id="assu2000-2-details-over"><span>Plus de détails <i class="fa fa-chevron-down"></i></span></button>
+                                                </div>
+                                            </div>
+                                            <div class="cell-tarif-card cell" aria-hidden="true" style="display: none;">
+                                                <div class="cell-top"><span class="gwt-InlineHTML">58 <strong>DA</strong></span><span class="split"> / mois</span></div>
+                                                <div class="cell-bottom"><span class="gwt-InlineHTML cell-bottom">Tarif annuel : 658 DA</span>
+                                                    <button type="button" class="gwt-Button details-formule icon-lesfurets after " id="assu2000-2-details-over"><span>Plus de détails <i class="fa fa-chevron-down"></i></span></button>
+                                                </div>
+                                            </div>
+                                            <div class="cell-card-tick cell cell-assistance-panne"><span class="inline-block cell-top"><span class="gwt-InlineLabel cell-franchise">50</span><span class="gwt-InlineLabel cell-franchise-suffix"> km</span></span><span class="gwt-InlineHTML cell-bottom">Assistance panne</span></div>
+                                            <div class="cell-card-tick cell disabled"><span class="gwt-InlineLabel icon-lesfurets icon-close cell-top"></span><span class="gwt-InlineHTML cell-bottom">Véhicule de remplacement</span></div>
+                                            <div class="cell-card-tick cell"><span class="gwt-InlineLabel icon-lesfurets icon-tick cell-top"></span><span class="gwt-InlineHTML cell-bottom">Bris de glace</span></div>
+                                            <div class="cell-franchise-card cell"><span class="inline-block cell-top"><span class="gwt-InlineLabel cell-franchise">170</span><span class="gwt-InlineLabel cell-franchise-suffix"> DA</span></span><span class="gwt-InlineLabel cell-bottom">Franchise vol et incendie</span></div>
+                                            <div class="cell-card-tick cell disabled" aria-hidden="true" style="display: none;"><span class="gwt-InlineLabel icon-lesfurets icon-close cell-top"></span><span class="gwt-InlineHTML cell-bottom">Protection du conducteur</span></div>
+                                        </div>
+                                        <div class="cell-actions"><span class="inline-block cell-ctas cell" id="assu2000-2"><button type="button" class="gwt-Button icon-lesfurets principal-cta deux-lignes " id="assu2000-2-SOUSC" data-gacategory="PPS_auto" data-gaaction="SOUSC" data-galabel="assu2000"><span data-gacategory="PPS_auto" data-gaaction="SOUSC" data-galabel="assu2000">Poursuivre sur le site de l'assureur <i class="fa fa-chevron-right"></i></span></button>
+                                <button type="button" class="gwt-Button icon-lesfurets link-cta " id="assu2000-2-RAPPEL" data-gacategory="PPS_auto" data-gaaction="RAPPEL" data-galabel="assu2000"><span data-gacategory="PPS_auto" data-gaaction="RAPPEL" data-galabel="assu2000"><i class="fa fa-phone"></i> Être rappelé par l'assureur</span></button>
+                                <button type="button" class="gwt-Button icon-lesfurets link-cta " id="assu2000-2-DEVIS" data-gacategory="PPS_auto" data-gaaction="DEVIS" data-galabel="assu2000"><span data-gacategory="PPS_auto" data-gaaction="DEVIS" data-galabel="assu2000"><i class="fa fa-envelope"></i> Devis par email</span></button>
+                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            {% endfor %}
+
+                        {% elseif garantie == 'DommageCollision10000DA' and duree == '6mois' %}
+
+                            {% if puissance == '3a4CH' %}
+                                {% set totalrc3 = 0 %}
+                                {% for tr in rc36mois %}
+                                    {% set totalrc3 =+ tr.valeur6mois * tr.taux6mois|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% endif %}
+                            {% if puissance == '5a6CH' %}
+                                {% set totalrc3 = 0 %}
+                                {% for tr in rc56mois %}
+                                    {% set totalrc3 =+ tr.valeur6mois * tr.taux6mois|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% endif %}
+                            {% if puissance == '7a10CH' %}
+                                {% set totalrc3 = 0 %}
+                                {% for tr in rc76mois %}
+                                    {% set totalrc3 =+ tr.valeur6mois * tr.taux6mois|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% endif %}
+
+                            {% if puissance == '10a14CH' %}
+                                {% set totalrc3 = 0 %}
+                                {% for tr in rc106mois %}
+                                    {% set totalrc3 =+ tr.valeur6mois * tr.taux6mois|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% endif %}
+
+                            {% if puissance == '15etplus' %}
+                                {% set totalrc3 = 0 %}
+                                {% for tr in rc156mois %}
+                                    {% set totalrc3 =+ tr.valeur6mois * tr.taux6mois|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% endif %}
+
+                            {% if puissance == 0 %}
+                                {% set totalrc3 = 0 %}
+                                {% set totalrc5 = 0 %}
+                                {% set totalrc7 = 0 %}
+                                {% set totalrc10 = 0 %}
+                                {% set totalrc15 = 0 %}
+
+                            {% endif %}
+
+
+
+                            {% if vols == 1 %}
+                                {% set totalvols = 0 %}
+                                {% for tr in vols6mois %}
+                                    {% set totalvols =+ tr.valeur6mois * tr.taux6mois|number_format(1) / 100 %}
+                                {% endfor %}
+
+                            {% else %}
+                                {% set totalvols = 0 %}
+                            {% endif %}
+
+                            {% if incendies == 1 %}
+                                {% set totalincendies = 0 %}
+                                {% for tr in incendies6mois %}
+                                    {% set totalincendies =+ tr.valeur6mois * tr.taux6mois|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% else %}
+                                {% set totalincendies = 0 %}
+                            {% endif %}
+
+                            {% if bris == 1 %}
+                                {% set totalbris = 0 %}
+                                {% for tr in bris6mois %}
+                                    {% set totalbris =+ tr.valeur6mois * tr.taux6mois|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% else %}
+                                {% set totalbris = 0 %}
+                            {% endif %}
+
+                            {% if assistance1 == 1 %}
+                                {% set totalassistance1 = 0 %}
+                                {% for tr in assistance16mois %}
+                                    {% set totalassistance1 =+ tr.valeur6mois * tr.taux6mois|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% else %}
+                                {% set totalassistance1 = 0 %}
+                            {% endif %}
+
+                            {% if assistance2 == 1 %}
+                                {% set totalassistance2 = 0 %}
+                                {% for tr in assistance26mois %}
+                                    {% set totalassistance2 =+ tr.valeur6mois * tr.taux6mois|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% else %}
+                                {% set totalassistance2 = 0 %}
+                            {% endif %}
+
+                            {% if defences == 1 %}
+                                {% set totaldefences = 0 %}
+                                {% for tr in defences6mois %}
+                                    {% set totaldefences =+ tr.valeur6mois * tr.taux6mois|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% else %}
+                                {% set totaldefences = 0 %}
+                            {% endif %}
+
+                            {% for tr in dc106mois %}
+
+
+                                {% set total = tr.valeur6mois * tr.taux6mois|number_format(1) / 100 + totalrc3 + totalvols + totalincendies + totalbris + totalassistance1 + totalassistance2 + totaldefences %}
+
+                                <div class="formule-container" id="assu2000-2-container">
+                                    <div class="cell-container">
+                                        <div class="cell-informations"><span class="inline-block cell-assureur cell">
+                                                <img class="gwt-Image" src="{{ asset('photos_produits/'~tr.categories.photo[0].path) }}" title="Formule F120"></span>
+                                            <div class="cell-tarif-card cell">
+                                                <div class="cell-top"><span class="gwt-InlineHTML">{{ total|number_format(2, ',', ' ') }} <strong>DA</strong></span><span class="split"> / an</span></div>
+                                                <div class="cell-bottom"><span class="gwt-InlineLabel prime-details">Frais de dossier gratuits</span>
+                                                    <button type="button" class="gwt-Button details-formule icon-lesfurets after " id="assu2000-2-details-over"><span>Plus de détails <i class="fa fa-chevron-down"></i></span></button>
+                                                </div>
+                                            </div>
+                                            <div class="cell-tarif-card cell" aria-hidden="true" style="display: none;">
+                                                <div class="cell-top"><span class="gwt-InlineHTML">58 <strong>DA</strong></span><span class="split"> / mois</span></div>
+                                                <div class="cell-bottom"><span class="gwt-InlineHTML cell-bottom">Tarif annuel : 658 DA</span>
+                                                    <button type="button" class="gwt-Button details-formule icon-lesfurets after " id="assu2000-2-details-over"><span>Plus de détails <i class="fa fa-chevron-down"></i></span></button>
+                                                </div>
+                                            </div>
+                                            <div class="cell-card-tick cell cell-assistance-panne"><span class="inline-block cell-top"><span class="gwt-InlineLabel cell-franchise">50</span><span class="gwt-InlineLabel cell-franchise-suffix"> km</span></span><span class="gwt-InlineHTML cell-bottom">Assistance panne</span></div>
+                                            <div class="cell-card-tick cell disabled"><span class="gwt-InlineLabel icon-lesfurets icon-close cell-top"></span><span class="gwt-InlineHTML cell-bottom">Véhicule de remplacement</span></div>
+                                            <div class="cell-card-tick cell"><span class="gwt-InlineLabel icon-lesfurets icon-tick cell-top"></span><span class="gwt-InlineHTML cell-bottom">Bris de glace</span></div>
+                                            <div class="cell-franchise-card cell"><span class="inline-block cell-top"><span class="gwt-InlineLabel cell-franchise">170</span><span class="gwt-InlineLabel cell-franchise-suffix"> DA</span></span><span class="gwt-InlineLabel cell-bottom">Franchise vol et incendie</span></div>
+                                            <div class="cell-card-tick cell disabled" aria-hidden="true" style="display: none;"><span class="gwt-InlineLabel icon-lesfurets icon-close cell-top"></span><span class="gwt-InlineHTML cell-bottom">Protection du conducteur</span></div>
+                                        </div>
+                                        <div class="cell-actions"><span class="inline-block cell-ctas cell" id="assu2000-2"><button type="button" class="gwt-Button icon-lesfurets principal-cta deux-lignes " id="assu2000-2-SOUSC" data-gacategory="PPS_auto" data-gaaction="SOUSC" data-galabel="assu2000"><span data-gacategory="PPS_auto" data-gaaction="SOUSC" data-galabel="assu2000">Poursuivre sur le site de l'assureur <i class="fa fa-chevron-right"></i></span></button>
+                                <button type="button" class="gwt-Button icon-lesfurets link-cta " id="assu2000-2-RAPPEL" data-gacategory="PPS_auto" data-gaaction="RAPPEL" data-galabel="assu2000"><span data-gacategory="PPS_auto" data-gaaction="RAPPEL" data-galabel="assu2000"><i class="fa fa-phone"></i> Être rappelé par l'assureur</span></button>
+                                <button type="button" class="gwt-Button icon-lesfurets link-cta " id="assu2000-2-DEVIS" data-gacategory="PPS_auto" data-gaaction="DEVIS" data-galabel="assu2000"><span data-gacategory="PPS_auto" data-gaaction="DEVIS" data-galabel="assu2000"><i class="fa fa-envelope"></i> Devis par email</span></button>
+                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            {% endfor %}
+
+
+                        {% elseif garantie == 'DommageCollision10000DA' and duree == '1an' %}
+
+                            {% if puissance == '3a4CH' %}
+                                {% set totalrc3 = 0 %}
+                                {% for tr in rc31an %}
+                                    {% set totalrc3 =+ tr.valeur1an * tr.taux1an|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% endif %}
+                            {% if puissance == '5a6CH' %}
+                                {% set totalrc3 = 0 %}
+                                {% for tr in rc51an %}
+                                    {% set totalrc3 =+ tr.valeur1an * tr.taux1an|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% endif %}
+                            {% if puissance == '7a10CH' %}
+                                {% set totalrc3 = 0 %}
+                                {% for tr in rc71an %}
+                                    {% set totalrc3 =+ tr.valeur1an * tr.taux1an|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% endif %}
+
+                            {% if puissance == '10a14CH' %}
+                                {% set totalrc3 = 0 %}
+                                {% for tr in rc101an %}
+                                    {% set totalrc3 =+ tr.valeur1an * tr.taux1an|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% endif %}
+
+                            {% if puissance == '15etplus' %}
+                                {% set totalrc3 = 0 %}
+                                {% for tr in rc151an %}
+                                    {% set totalrc3 =+ tr.valeur1an * tr.taux1an|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% endif %}
+
+                            {% if puissance == 0 %}
+                                {% set totalrc3 = 0 %}
+                                {% set totalrc5 = 0 %}
+                                {% set totalrc7 = 0 %}
+                                {% set totalrc10 = 0 %}
+                                {% set totalrc15 = 0 %}
+
+                            {% endif %}
+
+
+
+                            {% if vols == 1 %}
+                                {% set totalvols = 0 %}
+                                {% for tr in vols1an %}
+                                    {% set totalvols =+ tr.valeur1an * tr.taux1an|number_format(1) / 100 %}
+                                {% endfor %}
+
+                            {% else %}
+                                {% set totalvols = 0 %}
+                            {% endif %}
+
+                            {% if incendies == 1 %}
+                                {% set totalincendies = 0 %}
+                                {% for tr in incendies1an %}
+                                    {% set totalincendies =+ tr.valeur1an * tr.taux1an|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% else %}
+                                {% set totalincendies = 0 %}
+                            {% endif %}
+
+                            {% if bris == 1 %}
+                                {% set totalbris = 0 %}
+                                {% for tr in bris1an%}
+                                    {% set totalbris =+ tr.valeur1an * tr.taux1an|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% else %}
+                                {% set totalbris = 0 %}
+                            {% endif %}
+
+                            {% if assistance1 == 1 %}
+                                {% set totalassistance1 = 0 %}
+                                {% for tr in assistance11an %}
+                                    {% set totalassistance1 =+ tr.valeur1an * tr.taux1an|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% else %}
+                                {% set totalassistance1 = 0 %}
+                            {% endif %}
+
+                            {% if assistance2 == 1 %}
+                                {% set totalassistance2 = 0 %}
+                                {% for tr in assistance21an %}
+                                    {% set totalassistance2 =+ tr.valeur1an * tr.taux1an|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% else %}
+                                {% set totalassistance2 = 0 %}
+                            {% endif %}
+
+                            {% if defences == 1 %}
+                                {% set totaldefences = 0 %}
+                                {% for tr in defences1an %}
+                                    {% set totaldefences =+ tr.valeur1an * tr.taux1an|number_format(1) / 100 %}
+                                {% endfor %}
+                            {% else %}
+                                {% set totaldefences = 0 %}
+                            {% endif %}
+
+                            {% for tr in dc101an%}
+
+
+                                {% set total = tr.valeur1an * tr.taux1an|number_format(1) / 100 + totalrc3 + totalvols + totalincendies + totalbris + totalassistance1 + totalassistance2 + totaldefences %}
+
+                                <div class="formule-container" id="assu2000-2-container">
+                                    <div class="cell-container">
+                                        <div class="cell-informations"><span class="inline-block cell-assureur cell">
+                                                <img class="gwt-Image" src="{{ asset('photos_produits/'~tr.categories.photo[0].path) }}" title="Formule F120"></span>
+                                            <div class="cell-tarif-card cell">
+                                                <div class="cell-top"><span class="gwt-InlineHTML">{{ total|number_format(2, ',', ' ') }} <strong>DA</strong></span><span class="split"> / an</span></div>
+                                                <div class="cell-bottom"><span class="gwt-InlineLabel prime-details">Frais de dossier gratuits</span>
+                                                    <button type="button" class="gwt-Button details-formule icon-lesfurets after " id="assu2000-2-details-over"><span>Plus de détails <i class="fa fa-chevron-down"></i></span></button>
+                                                </div>
+                                            </div>
+                                            <div class="cell-tarif-card cell" aria-hidden="true" style="display: none;">
+                                                <div class="cell-top"><span class="gwt-InlineHTML">58 <strong>DA</strong></span><span class="split"> / mois</span></div>
+                                                <div class="cell-bottom"><span class="gwt-InlineHTML cell-bottom">Tarif annuel : 658 DA</span>
+                                                    <button type="button" class="gwt-Button details-formule icon-lesfurets after " id="assu2000-2-details-over"><span>Plus de détails <i class="fa fa-chevron-down"></i></span></button>
+                                                </div>
+                                            </div>
+                                            <div class="cell-card-tick cell cell-assistance-panne"><span class="inline-block cell-top"><span class="gwt-InlineLabel cell-franchise">50</span><span class="gwt-InlineLabel cell-franchise-suffix"> km</span></span><span class="gwt-InlineHTML cell-bottom">Assistance panne</span></div>
+                                            <div class="cell-card-tick cell disabled"><span class="gwt-InlineLabel icon-lesfurets icon-close cell-top"></span><span class="gwt-InlineHTML cell-bottom">Véhicule de remplacement</span></div>
+                                            <div class="cell-card-tick cell"><span class="gwt-InlineLabel icon-lesfurets icon-tick cell-top"></span><span class="gwt-InlineHTML cell-bottom">Bris de glace</span></div>
+                                            <div class="cell-franchise-card cell"><span class="inline-block cell-top"><span class="gwt-InlineLabel cell-franchise">170</span><span class="gwt-InlineLabel cell-franchise-suffix"> DA</span></span><span class="gwt-InlineLabel cell-bottom">Franchise vol et incendie</span></div>
+                                            <div class="cell-card-tick cell disabled" aria-hidden="true" style="display: none;"><span class="gwt-InlineLabel icon-lesfurets icon-close cell-top"></span><span class="gwt-InlineHTML cell-bottom">Protection du conducteur</span></div>
+                                        </div>
+                                        <div class="cell-actions"><span class="inline-block cell-ctas cell" id="assu2000-2"><button type="button" class="gwt-Button icon-lesfurets principal-cta deux-lignes " id="assu2000-2-SOUSC" data-gacategory="PPS_auto" data-gaaction="SOUSC" data-galabel="assu2000"><span data-gacategory="PPS_auto" data-gaaction="SOUSC" data-galabel="assu2000">Poursuivre sur le site de l'assureur <i class="fa fa-chevron-right"></i></span></button>
+                                <button type="button" class="gwt-Button icon-lesfurets link-cta " id="assu2000-2-RAPPEL" data-gacategory="PPS_auto" data-gaaction="RAPPEL" data-galabel="assu2000"><span data-gacategory="PPS_auto" data-gaaction="RAPPEL" data-galabel="assu2000"><i class="fa fa-phone"></i> Être rappelé par l'assureur</span></button>
+                                <button type="button" class="gwt-Button icon-lesfurets link-cta " id="assu2000-2-DEVIS" data-gacategory="PPS_auto" data-gaaction="DEVIS" data-galabel="assu2000"><span data-gacategory="PPS_auto" data-gaaction="DEVIS" data-galabel="assu2000"><i class="fa fa-envelope"></i> Devis par email</span></button>
+                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            {% endfor %}
+                        {% else %}
+
+                            Aucune offre ne répond à votre besoin.
+
+                        {% endif %}
+
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            1 of 2
+                        </div>
+                        <div class="col-md-3">
+                            2 of 2
+                        </div>
+                        <div class="col-md-3">
+                            2 of 2
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="ekit-template-content-markup ekit-template-content-footer ekit-template-content-theme-support">
+        <div data-elementor-type="wp-post" data-elementor-id="176" class="elementor elementor-176" data-elementor-settings="[]">
+            <div class="elementor-inner">
+                <div class="elementor-section-wrap">
+                    <section class="elementor-element elementor-element-2216195 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="2216195" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-element elementor-element-e9e7883 elementor-column elementor-col-25 elementor-top-column" data-id="e9e7883" data-element_type="column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-1027f00 elementor-widget elementor-widget-heading" data-id="1027f00" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h3 class="elementor-heading-title elementor-size-default">Notre compagnie</h3></div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-0a7f838 elementor-align-left blo-list-icon-center elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list" data-id="0a7f838" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="icon-list.default">
+                                                <div class="elementor-widget-container">
+                                                    <ul class="elementor-icon-list-items">
+                                                        <li class="elementor-icon-list-item">
+                                                            <a href="#"> <span class="elementor-icon-list-icon"> </span> <span class="elementor-icon-list-text">Présentation</span> </a>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <a href="#"> <span class="elementor-icon-list-icon"> </span> <span class="elementor-icon-list-text">Actualités</span> </a>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <a href="#"> <span class="elementor-icon-list-icon"> </span> <span class="elementor-icon-list-text">Services</span> </a>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <a href="#"> <span class="elementor-icon-list-icon"> </span> <span class="elementor-icon-list-text">Notre équipe</span> </a>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <a href="#"> <span class="elementor-icon-list-icon"> </span> <span class="elementor-icon-list-text">Nos partenaires</span> </a>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <a href="#"> <span class="elementor-icon-list-icon"> </span> <span class="elementor-icon-list-text">Contact</span> </a>
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-4743411 elementor-column elementor-col-25 elementor-top-column" data-id="4743411" data-element_type="column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-b4e25b9 elementor-widget elementor-widget-heading" data-id="b4e25b9" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h3 class="elementor-heading-title elementor-size-default">Assurances</h3></div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-5febffe elementor-align-left blo-list-icon-center elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list" data-id="5febffe" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="icon-list.default">
+                                                <div class="elementor-widget-container">
+                                                    <ul class="elementor-icon-list-items">
+                                                        <li class="elementor-icon-list-item">
+                                                            <a href="#"> <span class="elementor-icon-list-icon"> </span> <span class="elementor-icon-list-text">Assurance automobile</span> </a>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <a href="#"> <span class="elementor-icon-list-icon"> </span> <span class="elementor-icon-list-text">Assurance voyage</span> </a>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <a href="#"> <span class="elementor-icon-list-icon"> </span> <span class="elementor-icon-list-text">Catastrophe naturelle</span> </a>
+                                                        </li>
+
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-ea19f28 elementor-column elementor-col-25 elementor-top-column" data-id="ea19f28" data-element_type="column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-66e1559 elementor-widget elementor-widget-heading" data-id="66e1559" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h3 class="elementor-heading-title elementor-size-default">Contactez-nous</h3></div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-6f5e985 elementor-widget elementor-widget-text-editor" data-id="6f5e985" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-text-editor elementor-clearfix">
+                                                        <p>Nous sommes ici pour vous:</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-b1cfbc7 elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list" data-id="b1cfbc7" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="icon-list.default">
+                                                <div class="elementor-widget-container">
+                                                    <ul class="elementor-icon-list-items">
+                                                        <li class="elementor-icon-list-item"> <span class="elementor-icon-list-icon"> <i aria-hidden="true" class="far fa-building"></i> </span> <span class="elementor-icon-list-text">33,Rue DJELLAT Habib Oran Algérie</span></li>
+                                                        <li class="elementor-icon-list-item"> <span class="elementor-icon-list-icon"> <i aria-hidden="true" class="far fa-building"></i> </span> <span class="elementor-icon-list-text">39, Rue de la Madeleine Hydra Alger Algérie</span></li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <a href="tel:+213560287112"> <span class="elementor-icon-list-icon"> <i aria-hidden="true" class="fas fa-phone-alt"></i> </span> <span class="elementor-icon-list-text"><b>+213 (0) 560 287 112</b></span> </a>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <a href="tel:+213561630322"> <span class="elementor-icon-list-icon"> <i aria-hidden="true" class="fas fa-phone-alt"></i> </span> <span class="elementor-icon-list-text"><b>+213 (0) 561 630 322</b></span> </a>
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-655c699 elementor-column elementor-col-25 elementor-top-column" data-id="655c699" data-element_type="column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-402e214 elementor-widget elementor-widget-heading" data-id="402e214" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h3 class="elementor-heading-title elementor-size-default">Newsletter</h3></div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-64e5550 elementor-widget elementor-widget-text-editor" data-id="64e5550" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-text-editor elementor-clearfix">
+                                                        <p>Recevez toute l'actualité de waffassurance. Vous pouvez annuler à tout moment.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-03dd3ad text-center elementor-widget elementor-widget-elementskit-mail-chimp" data-id="03dd3ad" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="elementskit-mail-chimp.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="ekit-wid-con">
+                                                        <div class="ekit-mail-chimp">
+                                                            <form method="post" class="ekit-mailChimpForm" data-listed="" data-success-message="Successfully listed this email">
+                                                                <div class="ekit-mail-message"></div>
+                                                                <div class="elementskit_form_wraper ">
+                                                                    <div class="ekit-mail-chimp-email elementskit_input_wraper elementskit_input_container">
+                                                                        <div class="elementskit_form_group">
+                                                                            <div class="elementskit_input_element_container ">
+                                                                                <input type="email" name="email" class="ekit_mail_email ekit_form_control " placeholder="Votre Email" required />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="ekit_submit_input_holder elementskit_input_wraper">
+                                                                        <button type="submit" class="ekit-mail-submit" name="ekit_mail_chimp"> <i class="fa fa-check-circle" aria-hidden="true"></i> Abonnez-vous maintenant</button>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="elementor-element elementor-element-efa6ebe elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="efa6ebe" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-element elementor-element-bc20519 elementor-column elementor-col-33 elementor-top-column" data-id="bc20519" data-element_type="column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-07a9809 elementor-widget elementor-widget-text-editor" data-id="07a9809" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-text-editor elementor-clearfix">
+                                                        <p>© 2020, WAFASSURANCE
+                                                            All Rights Reserved. <br />Développement web : CREATIV</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-b09610a elementor-column elementor-col-33 elementor-top-column" data-id="b09610a" data-element_type="column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-dbd7d8f elementor-widget elementor-widget-image" data-id="dbd7d8f" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="image.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-image">
+                                                        <a href="index.html" data-elementor-open-lightbox=""> <img width="230"  src="wp-content/uploads/2019/09/logo2.svg" alt="" /> </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-ae83954 elementor-column elementor-col-33 elementor-top-column" data-id="ae83954" data-element_type="column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-88a1f97 elementor-widget elementor-widget-elementskit-social-media" data-id="88a1f97" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="elementskit-social-media.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="ekit-wid-con">
+                                                        <ul class="ekit_social_media">
+                                                            <li class="elementor-repeater-item-a318456">
+                                                                <a href="https://facebook.com/" class="facebook"> <i class="icon icon-facebook" aria-hidden="true"></i> </a>
+                                                            </li>
+                                                            <li class="elementor-repeater-item-15d420d">
+                                                                <a href="https://facebook.com/" class="linkedin"> <i class="icon icon-linkedin" aria-hidden="true"></i> </a>
+                                                            </li>
+                                                            <li class="elementor-repeater-item-41ad09b">
+                                                                <a href="https://facebook.com/" class="v"> <i class="icon icon-youtube-v" aria-hidden="true"></i> </a>
+                                                            </li>
+                                                            <li class="elementor-repeater-item-6756370">
+                                                                <a href="https://facebook.com/" class="envelope1"> <i class="icon icon-envelope1" aria-hidden="true"></i> </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="elementor-element elementor-element-ed87453 elementor-section-full_width elementor-hidden-phone elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="ed87453" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-no">
+                            <div class="elementor-row">
+                                <div class="elementor-element elementor-element-5e9c433 elementor-column elementor-col-100 elementor-top-column" data-id="5e9c433" data-element_type="column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-ee3f72b elementor-widget__width-initial elementor-absolute elementor-widget elementor-widget-instive-back-to-top" data-id="ee3f72b" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="instive-back-to-top.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="ts-scroll-box">
+                                                        <div class="scroll-button">
+                                                            <a href="#" class="scroll-top" aria-hidden="true"> <i class="tsicon tsicon-arrow-up"></i> </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

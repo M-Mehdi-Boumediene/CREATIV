@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Partenaires list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Countviews</th>
+                <th>Exclusive</th>
+                <th>Titre</th>
+                <th>Text1</th>
+                <th>Text2</th>
+                <th>Text3</th>
+                <th>Alaune</th>
+                <th>Slug</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for partenaire in partenaires %}
+            <tr>
+                <td><a href="{{ path('admin_partenaires_show', { 'id': partenaire.id }) }}">{{ partenaire.id }}</a></td>
+                <td>{{ partenaire.countViews }}</td>
+                <td>{{ partenaire.exclusive }}</td>
+                <td>{{ partenaire.titre }}</td>
+                <td>{{ partenaire.text1 }}</td>
+                <td>{{ partenaire.text2 }}</td>
+                <td>{{ partenaire.text3 }}</td>
+                <td>{% if partenaire.alaune %}Yes{% else %}No{% endif %}</td>
+                <td>{{ partenaire.slug }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('admin_partenaires_show', { 'id': partenaire.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('admin_partenaires_edit', { 'id': partenaire.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_partenaires_new') }}">Create a new partenaire</a>
+        </li>
+    </ul>
+{% endblock %}

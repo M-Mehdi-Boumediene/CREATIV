@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Apropos list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre1</th>
+                <th>Text1</th>
+                <th>Titre2</th>
+                <th>Text2</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for apropo in apropos %}
+            <tr>
+                <td><a href="{{ path('admin_about_show', { 'id': apropo.id }) }}">{{ apropo.id }}</a></td>
+                <td>{{ apropo.titre1 }}</td>
+                <td>{{ apropo.text1 }}</td>
+                <td>{{ apropo.titre2 }}</td>
+                <td>{{ apropo.text2 }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('admin_about_show', { 'id': apropo.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('admin_about_edit', { 'id': apropo.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_about_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,888 @@
+
+{% extends 'base.html.twig' %}
+{% block body %}
+    <style>
+        .select2-container{
+            width: 188px !important;
+        }
+        .light nav.main_menu>ul>li>a, .light nav.main_menu>ul>li>a:hover, .light nav.main_menu>ul>li.active>a {
+            color: #000;
+        }
+        .filter-bar .select2-container {
+            width: 215px;
+            min-height: 50px;
+            padding: 8px;
+            margin-bottom: 20px;
+            /* padding-bottom: 20px; */
+        }
+        section#section-bar-1 .unit-wrap input {
+            height: 50px;
+        }
+        .filter-bar .select2-container {
+            width: 215px;
+            min-height: 50px;
+            padding: 8px;
+            margin-bottom: 20px;
+            /* padding-bottom: 20px; */
+        }
+        #search_type2_types {
+            background: #fff;
+            border: 1px solid #dfdfdf;
+            padding: 0 15px;
+            outline: none;
+            width: 260px !important;
+            min-height: 50px;
+            line-height: 50px;
+            font-size: 16px;
+            color: #7b7b7b;
+            transition: .3s ease;
+            margin-bottom: 15px;
+
+
+        }
+        #search_type2_nc {
+            background: #fff;
+            border: 1px solid #dfdfdf;
+            padding: 0 15px;
+            outline: none;
+            width: 260px !important;
+            min-height: 50px;
+            line-height: 50px;
+            font-size: 16px;
+            color: #7b7b7b;
+            transition: .3s ease;
+            margin-bottom: 15px;
+
+
+        }
+        #search_type2_np {
+            background: #fff;
+            border: 1px solid #dfdfdf;
+            padding: 0 15px;
+            outline: none;
+            width: 260px !important;
+            min-height: 50px;
+            line-height: 50px;
+            font-size: 16px;
+            color: #7b7b7b;
+            transition: .3s ease;
+            margin-bottom: 15px;
+
+
+        }
+        #search_type2_transaction{
+            background: #fff;
+            border: 1px solid #dfdfdf;
+            padding: 0 15px;
+            outline: none;
+            width: 260px !important;
+            min-height: 50px;
+            line-height: 50px;
+            font-size: 16px;
+            color: #7b7b7b;
+            transition: .3s ease;
+            margin-bottom: 15px;
+
+
+        }
+        #search_type2_duree{
+            background: #fff;
+            border: 1px solid #dfdfdf;
+            padding: 0 15px;
+            outline: none;
+            width: 260px !important;
+            min-height: 50px;
+            line-height: 50px;
+            font-size: 16px;
+            color: #7b7b7b;
+            transition: .3s ease;
+            margin-bottom: 15px;
+
+
+        }
+        #search_type2_categories{
+            background: #fff;
+            border: 1px solid #dfdfdf;
+            padding: 0 15px;
+            outline: none;
+            width: 260px !important;
+            min-height: 50px;
+            line-height: 50px;
+            font-size: 16px;
+            color: #7b7b7b;
+            transition: .3s ease;
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+        .filter-bar .select2-container {
+            width: 215px;
+            min-height: 50px;
+            padding: 0px;
+        }
+        .filter-bar .select2-container--default .select2-selection--single .select2-selection__arrow b {
+            background: none;
+            height: 8px;
+        }
+        .filter-bar.auto .select2-selection {
+            box-sizing: border-box;
+            border: 1px solid #dfdfdf;
+            border-radius: 0;
+            padding: 0;
+            width: 260px;
+            min-height: 52px;
+        }
+        .multi-inner {
+            max-width: 990px;
+            display: table;
+            flex-wrap: wrap;
+            padding: 0px;
+        }
+    </style>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/plugins/LayerSlider/static/js/greensock.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-includes/js/jquery/jquery.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/plugins/LayerSlider/static/js/layerslider.kreaturamedia.jquery.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/plugins/LayerSlider/static/js/layerslider.transitions.js'></script>
+
+
+    <div class="wrapper">
+        <div class="wrapper_inner">
+
+
+            <header class="page_header   regular  light  scroll_header_top_area" style=" position: absolute;">
+                <div class="header_inner clearfix">
+
+                    <div class="header_top_bottom_holder">
+                        <div class="header_bottom clearfix" style=" background-color:#fff; border-color:#fff;">
+                            <div class="container">
+                                <div class="container_inner clearfix">
+                                    <div class="header_inner_left">
+                                        <div class="mobile_menu_button">
+                                            <div class="mobile_menu_button_hamburger">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                        <div class="logo_wrapper">
+                                            <div class="q_logo"><a href="/" style="height: 75px; visibility: visible;"><img class="normal" src="{{ asset('img/logo2.svg') }}" alt="Logo" style="height: auto;"><img class="light" src="{{ asset('img/logo2.svg') }}" alt="Logo" style="height: auto;"><img class="dark" src="{{ asset('img/logo2.svg') }}" alt="Logo" style="height: auto;" ><img class="sticky" src="{{ asset('img/logo2.svg') }}" alt="Logo" style="height: auto;"></a></div>
+
+                                        </div>
+                                    </div>
+                                    <div class="header_inner_right">
+                                        <div class="side_menu_button_wrapper right">
+                                            <div class="side_menu_button">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a title="GLS immobilier contact" href="{{ path('cosanit_contact') }}" class="header-contactLink-mobile">Nous contacter</a>
+                                    <nav class="main_menu drop_down right">
+                                        <ul id="menu-main-navigation" class="">
+                                            <li id="nav-menu-item-70754" class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a href="{{ path('cosanit_homepage') }}" title="GlS Location & Vente Immobilier Algérie"  class=""><i class="menu_icon fa blank"></i><span>Accueil</span></a></li>
+
+                                            <li id="nav-menu-item-70754" class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a href="{{ path('cosanit_immobilier') }}" title="Location & Vente Immobilier Algérie"  class=""><i class="menu_icon fa blank"></i><span>Immobilier</span></a></li>
+                                            <li id="nav-menu-item-61438" class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a  href="{{ path('cosanit_achats') }}" title="Vente Immobilier  Algérie " class=""><i class="menu_icon fa blank"></i><span>Acheter</span></a></li>
+                                            <li id="nav-menu-item-70754" class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a href="{{ path('cosanit_ventes') }}  "title="Immobilier Algérie vendre"  class=""><i class="menu_icon fa blank"></i><span>Vendre</span></a></li>
+                                            <li id="nav-menu-item-3554598" class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a href="{{ path('cosanit_location') }} " title="Immobilier Location Algérie" class=""><i class="menu_icon fa blank"></i><span>Louer</span></a></li>
+                                            <li id="nav-menu-item-70763" class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a href="{{ path('cosanit_investissement') }}"  title="Immobilier Programe neuf Algérie" class=""><i class="menu_icon fa blank"></i><span>Programmes Neufs</span></a></li>
+                                            <li id="nav-menu-item-70777" class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a href="{{ path('cosanit_internationals') }} "  title="Immobilier International " class=""><i class="menu_icon fa blank"></i><span>International</span></a></li>
+
+                                            <li id="nav-menu-item-70761" class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a href="{{ path('cosanit_contact') }}" title="Global Lxury Services Contact " class=""><i class="menu_icon fa blank"></i><span>Nous contacter</span></a></li>
+                                        </ul>
+                                    </nav>
+                                    <nav class="mobile_menu">
+                                        <ul id="menu-main-navigation-1" class=""><li id="mobile-menu-item-61438" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{{ path('cosanit_achats') }}" title="Immobilier Achat Vente Algérie " class=""><span>Acheter</span><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></a></li>
+                                            <li id="mobile-menu-item-70754" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{{ path('cosanit_ventes') }}" title="Immobilier vendre Algérie "class=""><span>Vendre</span><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></a></li>
+                                            <li id="mobile-menu-item-3554598" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{{ path('cosanit_location') }}"  title="Immobilier Location Algérie " class=""><span>Louer</span><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></a></li>
+                                            <li id="mobile-menu-item-70763" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{{ path('cosanit_investissement') }}"title="Immobilier Programme Neuf Algérie "  class=""><span>Programmes Neufs</span><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></a></li>
+                                            <li id="mobile-menu-item-70777" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{{ path('cosanit_internationals') }}"title="Immobilier International"  class=""><span>International</span><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></a></li>
+                                            <li id="mobile-menu-item-8222" class="qtranxs-lang-menu qtranxs-lang-menu-en menu-item menu-item-type-custom menu-item-object-custom "><a title="Arabic" href="" class=""><span><img src="{{ asset('img/algeria.png') }}" alt="Arabic"></span><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></a></li>
+                                            <li id="mobile-menu-item-70761" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{{ path('cosanit_contact') }}"title="Global Lxury Services contact"  class=""><span>Nous contacter</span><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></a></li>
+                                        </ul>					</nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <a id="back_to_top" href="#" class="off">
+			<span class="fa-stack">
+				<i class="fa fa-angle-up " style=""></i>
+			</span>
+            </a>
+
+
+            <div class="content ">
+                <div class="content_inner  ">
+                    <style type="text/css">
+                        .header_top .left .inner > div,
+                        .header_top .left .inner > div:last-child,
+                        .header_top .right .inner > div:first-child,
+                        .header_top .right .inner > div,
+                        header .header_top .q_social_icon_holder,
+                        .header_menu_bottom
+                        { border-color:rgba(234, 234, 234, 0); }
+
+                    </style>
+                    <div id="sticky-wrapper" class="sticky-wrapper mobile-hide" style="height: 61px;">
+                        <div class="mf-advanced-search mobile-hide ">
+                            <div class="filter-bar auto">
+                                <div class="filter-bar-inner">
+                                    <section>
+
+                                        {{ form_start(form2, {'attr': {'id': 'prop-search','methode': 'GET'} }) }}
+                                        <div class="tabs tabs-style-bar">
+                                            <nav>
+                                                <div class="logo-search" style="    margin-top: 17px;"><a href="{{ path('cosanit_homepage') }}">
+
+                                                        <img class="normal" src="{{ asset('img/logo2.svg') }}" alt="Logo" style="    width: 100%;
+       margin-top: -26px;;">
+
+                                                    </a>
+
+
+
+
+
+
+                                                </div>
+                                                <ul>
+
+                                                    <li><a href="#section-bar-1" class="city"><span>Rechercher par secteur</span><i class="fa fa-chevron-down"></i></a></li>
+                                                    {% if trans == 'Louer: ' %}
+                                                        <li><a href="#section-bar-6" class="plus"><span>Durée</span><i class="fa fa-chevron-down"></i></a></li>
+                                                    {% endif %}
+                                                    <li><a href="#section-bar-2" class="type"><span>Type de bien</span><i class="fa fa-chevron-down"></i></a></li>
+                                                    <li><a href="#section-bar-3" class="budget"><span>Budget</span><i class="fa fa-chevron-down"></i></a></li>
+                                                    <li><a href="#section-bar-4" class="surface"><span>Surface</span><i class="fa fa-chevron-down"></i></a></li>
+                                                    <li><a href="#section-bar-5" class="plus"><span>Plus</span><i class="fa fa-chevron-down"></i></a></li>
+                                                </ul>
+                                                <input class="btn-search" type="submit" value="Rechercher"/>
+
+
+
+                                            </nav>
+                                            <div class="content-wrap">
+                                                <section id="section-bar-1">
+                                                    <div class="two-input-wrap">
+
+
+                                                        {{ form_widget(form2.categories,{'attr': {'class': 'select2 select2-container select2-container--default select2-container--focus',}}) }}
+                                                        {{ form_errors(form2.categories) }}
+                                                        <div class="unit-wrap">
+                                                            {{ form_widget(form2.ref,{'attr': {'class': 'form-control',}}) }}
+                                                            {{ form_errors(form2.ref) }}
+                                                        </div>
+
+
+
+
+                                                        <div class="button-wrap">
+                                                            <input type="submit" class="red-btn" value="Nouvelle recherche"/>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                {% if trans == 'Louer: ' %}
+                                                    <section id="section-bar-6">
+                                                        <div class="two-input-wrap">
+
+                                                            {{ form_widget(form2.duree,{'attr': {'class': 'select2 select2-container select2-container--default select2-container--focus',}}) }}
+                                                            {{ form_errors(form2.duree) }}
+                                                            <div class="button-wrap">
+                                                                <input type="submit" class="red-btn" value="Nouvelle recherche"/>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                {% endif %}
+                                                <section id="section-bar-2">
+                                                    <div class="two-input-wrap">
+
+
+                                                        {{ form_widget(form2.types,{'attr': {'class': 'multi-wrap '}}) }}
+                                                        {{ form_errors(form2.types) }}
+
+
+                                                        <div class="button-wrap">
+                                                            <input type="submit" class="red-btn" value="Nouvelle recherche"/>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <section id="section-bar-3">
+                                                    <div class="two-input-wrap">
+
+
+                                                        <div class="unit-wrap">
+                                                            {{ form_widget(form2.prixmin,{'attr': {'class': 'form-control',}}) }}
+                                                            {{ form_errors(form2.prixmin) }}
+                                                            <span>DA</span>
+                                                        </div>
+
+                                                        <div class="unit-wrap">
+                                                            {{ form_widget(form2.prixmax,{'attr': {'class': 'form-control',}}) }}
+                                                            {{ form_errors(form2.prixmax) }}
+                                                            <span>DA</span>
+                                                        </div>
+
+
+
+                                                        <div class="button-wrap">
+                                                            <input type="submit" class="red-btn" value="Nouvelle recherche"/>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <section id="section-bar-4">
+                                                    <div class="two-input-wrap">
+                                                        <div class="unit-wrap">
+                                                            {{ form_widget(form2.surfacemin,{'attr': {'class': 'form-control',}}) }}
+                                                            {{ form_errors(form2.surfacemin) }}
+                                                            <span><span class="superscript">2</span>m</span>
+                                                        </div>
+                                                        <div class="unit-wrap">
+                                                            {{ form_widget(form2.surfacemax,{'attr': {'class': 'form-control',}}) }}
+                                                            {{ form_errors(form2.surfacemax) }}
+                                                            <span><span class="superscript">2</span>m</span>
+                                                        </div>
+                                                        <div class="button-wrap">
+                                                            <input type="submit" class="red-btn" value="Nouvelle recherche"/>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <section id="section-bar-5">
+                                                    <div class="inner-wrap">
+                                                        <div class="row-wrapper">
+                                                            <div class="left-col">
+                                                                <p><span class="order-num">1</span>Type de transaction</p>
+                                                                {{ form_widget(form2.transaction,{'attr': {'class': 'select2 select2-container select2-container--default select2-container--focus',}}) }}
+                                                                {{ form_errors(form2.transaction) }}
+                                                                <br><br>
+
+                                                                {{ form_widget(form2.duree,{'attr': {'class': 'select2 select2-container select2-container--default select2-container--focus',}}) }}
+                                                                {{ form_errors(form2.duree) }}
+
+                                                            </div>
+                                                            <div class="left-col">
+                                                            </div>
+                                                            <div class="right-col">
+                                                                <p><span class="order-num">2</span>Nombre de chambres</p>
+                                                                <div class="row-wrap">
+                                                                    <label>Nombre de chambres</label>
+                                                                    <div class="multi-sel">
+                                                                        <div class="multi-inner">
+                                                                            {{ form_widget(form2.nc,{'attr': {'class': ' multi-wrap'}}) }}
+                                                                            {{ form_errors(form2.nc) }}
+
+                                                                        </div>
+
+
+
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row-wrap">
+                                                                    <label>Nombre de pièces</label>
+                                                                    <div class="multi-sel">
+                                                                        <div class="multi-wrap">
+                                                                            {{ form_widget(form2.np,{'attr': {'class': ' multi-wrap'}}) }}
+                                                                            {{ form_errors(form2.np) }}
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="button-wrap">
+                                                            <input type="submit" class="red-btn" value="Nouvelle recherche"/>
+                                                        </div>
+                                                    </div>
+
+                                                </section>
+                                            </div><!-- /content -->
+                                        </div><!-- /tabs -->
+                                        {{ form_end(form2) }}
+
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="mf-advanced-search--mobile" id="search-mobile" style="display: none;">
+                        <div class="mf-advanced-search--mobile--header">
+                            <a class="link-left" id="back-search" href="#">Fermer</a>
+                            <a id="refresh-form" class="link-right reset-search-mobile">Reset</a>
+                        </div>
+                        <div class="mf-advanced-search--mobile--body">
+                            {{ form_start(formmobile, {'attr': {'id': 'prop-search','class':'cbp-mc-form'} }) }}
+
+                            <div class="cbp-mc-column">
+                                <p><span class="order-num">1</span>City</p>
+                                {{ form_widget(formmobile.categories,{'attr': {'class': 'select2 select2-container select2-container--default select2-container--focus',}}) }}
+                                {{ form_errors(formmobile.categories) }}
+
+                                {{ form_widget(formmobile.ref,{'attr': {'class': 'form-control',}}) }}
+                                {{ form_errors(formmobile.ref) }}
+
+
+                                <p><span class="order-num">2</span>Type de bien</p>
+                                <div class="multi-inner two-cols">
+
+                                    <div class="multi-wrap">
+
+                                        {{ form_widget(formmobile.types,{'attr': {'class': 'select2 select2-container select2-container--default select2-container--focus'}}) }}
+                                        {{ form_errors(formmobile.types) }}
+                                    </div>
+
+                                </div>
+                                <p><span class="order-num">3</span>Budget</p>
+                                <div class="multi-sel two-cols">
+
+
+                                    <div class="unit-wrap">
+                                        {{ form_widget(formmobile.prixmin,{'attr': {'class': 'form-control',}}) }}
+                                        {{ form_errors(formmobile.prixmin) }}
+                                        <span>DA</span>
+                                    </div>
+
+                                    <div class="unit-wrap">
+                                        {{ form_widget(formmobile.prixmax,{'attr': {'class': 'form-control',}}) }}
+                                        {{ form_errors(formmobile.prixmax) }}
+                                        <span>DA</span>
+                                    </div>
+
+                                </div>
+
+                                <p><span class="order-num">4</span>Surface</p>
+                                <div class="multi-sel two-cols">
+
+                                    <div class="unit-wrap">
+                                        {{ form_widget(formmobile.surfacemin,{'attr': {'class': 'form-control',}}) }}
+                                        {{ form_errors(formmobile.surfacemin) }}
+                                        <span><span class="superscript">2</span>m</span>
+                                    </div>
+                                    <div class="unit-wrap">
+                                        {{ form_widget(formmobile.surfacemax,{'attr': {'class': 'form-control',}}) }}
+                                        {{ form_errors(formmobile.surfacemax) }}
+                                        <span><span class="superscript">2</span>m</span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="cbp-mc-column">
+                                <div class="multi-sel">
+                                    <p><span class="order-num">5</span>Type de transaction</p>
+                                    {{ form_widget(formmobile.transaction,{'attr': {'class': 'select2 select2-container select2-container--default select2-container--focus',}}) }}
+                                    {{ form_errors(formmobile.transaction) }}
+
+                                    {{ form_widget(formmobile.duree,{'attr': {'class': 'multi-wrap',}}) }}
+                                    {{ form_errors(formmobile.duree) }}
+                                </div>
+                                <div class="clearfix"></div>
+                                <p style="display: inline-block; margin-top: 20px;"><span class="order-num">6</span>Nombre de chambres</p>
+                                <div class="multi-sel three-col">
+
+
+                                    <label>Nombre de chambres</label>
+                                    <div class="cbp-mc-column">
+                                        <div class="multi-wrap">
+                                            {{ form_widget(formmobile.nc,{'attr': {'class': ' multi-wrap'}}) }}
+                                            {{ form_errors(formmobile.nc) }}
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="clearfix"></div>
+
+
+                                <div class="multi-sel three-col">
+                                    <label>Nombre de pièces</label>
+                                    <div class="cbp-mc-column">
+                                        <div class="multi-wrap">
+                                            {{ form_widget(formmobile.np,{'attr': {'class': ' multi-wrap'}}) }}
+                                            {{ form_errors(formmobile.np) }}
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="clearfix"></div>
+
+
+                            </div>
+
+
+
+                        </div>
+
+
+                        <div class="cbp-mc-submit-wrap"><input class="cbp-mc-submit cbp-mc-btn" type="submit" value="Rechercher"></div>
+
+                        {{ form_end(formmobile) }}
+
+                    </div>
+                    <a class="btn-open-search-mobile" id="btn-open-search-mobile" href="#">Filtre</a>
+                    <div class="container">
+
+                        <div class="home_container_space clearfix">
+
+
+                            {% if produits %}
+
+                                <div class="vc_row wpb_row vc_row-fluid grid_section">
+                                    <div class="section_inner clearfix">
+                                        <div class="section_inner_margin clearfix">
+                                            <div class="vc_col-sm-4 wpb_column vc_column_container ">
+                                                <div class="wpb_wrapper">
+
+                                                    <div class="title-block left-title-block">
+                                                        {% set nombre = produits|length %}
+
+                                                        <a id="btn-switch" title="Recherche par photos" class="btn-switch" href="#">
+                                                            <i class="fa fa-th-large"></i>
+                                                            <i class="fa fa-th"></i>
+                                                            <span id="photo">Recherche par photos</span>
+                                                            <span id="grid">Vue grille</span>
+                                                        </a>
+
+                                                        <a class="alert-link" href="{{ path('cosanit_alert') }}"><span class="create-alert">Créer une alerte</span></a>
+
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="vc_col-sm-4 wpb_column vc_column_container ">
+                                                <div class="wpb_wrapper">
+
+                                                    <div class="title-block center-title-block">
+                                                        <h2> {{ nombre }} résultats</h2>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="vc_col-sm-4 wpb_column vc_column_container ">
+                                                <div class="wpb_wrapper">
+
+                                                    <div class="title-block right-title-block">
+
+                                                        <div id="dd" class="wrapper-dropdown-2" tabindex="1"><span>Trier par<i class="fa fa-chevron-down"></i></span>
+                                                            <ul class="dropdown">
+                                                                <li><a class=""  id="date-acs">Date <span>(Plus récents)</span></a></li>
+                                                                <li><a class=""  id="date-desc">Date <span>( Moins récents)</span></a></li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="vc_row wpb_row vc_row-fluid grid_section">
+                                    <div class="section_inner clearfix">
+                                        <div class="section_inner_margin clearfix">
+
+
+
+                                            {% for produit in produits %}
+
+                                                <div class="vc_col-sm-4 vc_col-xs-6 wpb_column vc_column_container clearfix result-item">
+                                                    <div class="wpb_wrapper">
+
+                                                        <div class="offer-list-item">
+
+                                                            <div class="oli-image" style="background-image:url({{ asset('photos_produits/')~ produit.image1[0].path }});">
+                                                                <a title="{{ produit.titre }}" href="{{ path('cosanit_show', { 'id': produit.slug }) }}">
+                                                                </a>
+
+
+                                                            </div>
+
+
+                                                            <div class="oli-details oli-details--normal">
+                                                                <div class="oli-caption">
+                                                                    <div class="oli-ref">Réf {{ produit.ref }}</div>
+                                                                    <div class="oli-photos-count">{{ produit.image1|length }} photos</div>
+
+                                                                </div>
+                                                                <a href="{{ path('cosanit_show', { 'id': produit.slug }) }}">
+                                                                    <h3 class="oli-title">
+                                                                        {{ produit.titre }}
+                                                                    </h3>
+                                                                </a>
+                                                                <a href="{{ path('cosanit_show', { 'id': produit.slug }) }}">{% if produit.type == 'Location' %} à louer {{ produit.duree }} {% else %} en vente{% endif %}</a>
+
+                                                                <div class="oli-description">
+                                                                    {{ produit.type }}  {{ produit.types }}, <span class="mf-city">{{ produit.categories.nom }}</span>, {% if produit.surface %}  {{ produit.surface }} m<sup>2</sup>  {% endif %}                          </div>
+
+
+                                                                <div class="oli-price oli-price-euro lower">
+                                                                    {% if produit.prix %}
+                                                                        {{ produit.prix }}
+
+                                                                    {% else %}
+
+                                                                        Prix ​​sur demande
+                                                                    {% endif %}
+
+
+                                                                </div>
+
+
+
+                                                            </div>
+                                                            <!-- Infos display when you are in gallery mode-->
+                                                            <div class="oli-details oli-details--grid">
+                                                                <a title="{{ produit.titre }}" href="{{ path('cosanit_show', { 'id': produit.slug }) }}">
+                                                                <div class="oli-details-container">
+                                                                    <h3 class="oli-title">
+                                                                        {{ produit.titre }}
+                                                                    </h3>
+                                                                    <div class="oli-price oli-price-euro">
+
+                                                                        {% if produit.prix %}
+                                                                            {{ produit.prix }}
+
+
+                                                                        {% else %}
+
+                                                                            Prix ​​sur demande
+                                                                        {% endif %}
+
+                                                                    </div>
+
+                                                                    <div class="oli-ref">Réf {{ produit.ref }}</div>
+                                                                    <div class="oli-photos-count">{{ produit.image1|length }} photos</div>
+                                                                </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            {% endfor %}
+
+
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {% else %}
+
+                                    <div class="vc_row wpb_row vc_row-fluid grid_section">
+                                        <div class="section_inner clearfix">
+                                            <div class="section_inner_margin clearfix">
+                                                <h2>Nous n'avons pas d'offre correspondant à vos critères.</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                            {% endif %}
+
+
+
+
+
+
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+
+
+                <div class="vc_row wpb_row vc_row-fluid grid_section news social-blocks">
+                    <div class="section_inner clearfix">
+                        <div class="section_inner_margin clearfix">
+                            <div class="vc_col-lg-12 wpb_column vc_column_container ">
+                                <h2 class="margin-top">Nos Réseaux Sociaux</h2>
+                            </div>
+                            <center>
+                                <div class="vc_col-lg-3 vc_col-md-6 vc_col-sm-6 vc_col-xs-12 wpb_column vc_column_container ">
+
+                                    <a href="https://www.facebook.com/glsoran/" target="_blank" class="mf-col-inner news-item" style="background-image: url({{ asset('img/facebook.jpg') }})">
+                                        <div class="readmore"><i class="fa fa-facebook fa-6" aria-hidden="true"></i></div>
+
+
+                                        <div class="overlay"></div>
+                                    </a>
+
+                                </div>
+
+
+                                <div class="vc_col-lg-3 vc_col-md-6 vc_col-sm-6 vc_col-xs-12 wpb_column vc_column_container ">
+                                    <a href="https://www.instagram.com/globalluxuryservices/" target="_blank" class="mf-col-inner news-item" style="background-image: url({{ asset('img/instagram.jpg') }})">
+                                        <div class="readmore">
+                                            <i class="fa fa-instagram fa-6" aria-hidden="true"></i>
+                                        </div>
+
+
+                                        <div class="overlay"></div>
+                                    </a>
+                                </div>
+                                <div class="vc_col-lg-3 vc_col-md-6 vc_col-sm-6 vc_col-xs-12 wpb_column vc_column_container ">
+                                    <a href="https://www.pinterest.com/globalluxuryservices/" target="_blank" class="mf-col-inner news-item" style="background-image: url({{ asset('img/pinterest.jpg') }})">
+                                        <div class="readmore">
+                                            <i class="fa fa-pinterest fa-6" aria-hidden="true"></i>
+                                        </div>
+
+
+                                        <div class="overlay"></div>
+                                    </a>
+                                </div>
+                                <div class="vc_col-lg-3 vc_col-md-6 vc_col-sm-6 vc_col-xs-12 wpb_column vc_column_container ">
+                                    <a href="https://twitter.com/GLS_Oran" target="_blank" class="mf-col-inner news-item" style="background-image: url({{ asset('img/twitter.jpg') }})">
+                                        <div class="readmore">
+                                            <i class="fa fa-twitter fa-6" aria-hidden="true"></i>
+                                        </div>
+
+
+                                        <div class="overlay"></div>
+                                    </a>
+                                </div>
+
+                            </center>
+
+
+                        </div><!-- section_inner_margin -->
+                    </div>
+                </div><!-- news -->
+
+                <div class="home-separator-4"></div>
+                            <!-- Newsletter / Rcruitment -->
+                            <div class="vc_row wpb_row vc_row-fluid grid_section nl_rc">
+                                <div class="section_inner clearfix">
+                                    <div class="section_inner_margin clearfix">
+                                        <div class="vc_col-sm-6 wpb_column vc_column_container ">
+                                            <div class="wpb_wrapper">
+
+                                                <div class="newsletter-block mf-table">
+                                                    <div class="mf-table-cell" style="    text-align: center;">
+                                                        <h2>Newsletter</h2>
+                                                        <p>Recevez par email toutes les informations et <br> dernières annonces Global Luxury Services.</p>
+                                                        <!-- MailChimp for WordPress v2.3.18 - https://wordpress.org/plugins/mailchimp-for-wp/ --><div id="mc4wp-form-1" class="form mc4wp-form"><form method="post"><input class="nl-email" type="email" name="EMAIL" placeholder="Email" required="required">
+
+                                                                <input class="nl-btn" type="submit" value="OK"><div style="display: none;"><input type="text" name="_mc4wp_ho_b22713e89e30cb18669337f81df50424" value="" tabindex="-1" autocomplete="off"></div><input type="hidden" name="_mc4wp_timestamp" value="1518977793"><input type="hidden" name="_mc4wp_form_id" value="0"><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1"><input type="hidden" name="_mc4wp_form_submit" value="1"><input type="hidden" name="_mc4wp_form_nonce" value="9ef3b8b7a9"></form></div><!-- / MailChimp for WordPress Plugin -->	                	</div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="vc_col-sm-6 wpb_column vc_column_container ">
+                                            <div class="wpb_wrapper">
+                                                <div class="recruitment-block mf-table">
+                                                    <a href="" target="_blank" class="mf-table-cell">
+                                                        <h2>Découvrez notre<br> catalogue interactif</h2>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="home-separator-4"></div>
+
+
+
+
+
+                        </div>
+                    </div>
+                    <div class="content_bottom">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var yith_infs = {"navSelector":"nav.pagination","nextSelector":"nav.pagination a.next","itemSelector":".result-item","contentSelector":"#infinite-scroll-container","loader":"https:\/\/www.marcfoujols.com\/wp-content\/uploads\/2015\/08\/preloader_mf.gif","shop":""};
+        /* ]]> */
+    </script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var mfLike = {"ajaxurl":"https:\/\/www.marcfoujols.com\/wp-admin\/admin-ajax.php"};
+        /* ]]> */
+    </script>
+    <script type="text/javascript" src="https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js"></script>
+
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/themes/marcfoujols/js/select2.min.js'></script>
+
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/themes/marcfoujols/js/plugins.js'></script>
+    <script type='text/javascript' src='https://www.marcfoujols.com/wp-content/themes/marcfoujols/js/default_dynamic.php'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/themes/marcfoujols/js/default.min.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/themes/marcfoujols/js/marc_foujols.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/themes/marcfoujols/js/custom_js.php'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/themes/marcfoujols/js/select2-fr.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/themes/marcfoujols/js/i18n/fr.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/themes/marcfoujols/js/autoNumeric-min.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/themes/marcfoujols/js/cbpFWTabs.js'></script>
+
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/themes/marcfoujols/js/mf-search.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/themes/marcfoujols/js/modal/classie.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/themes/marcfoujols/js/modal/modalEffects.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/themes/marcfoujols/js/light-gallery/lightgallery-all.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/themes/marcfoujols/js/jquery.mousewheel.min.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-includes/js/comment-reply.min.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/plugins/js_composer-4.11/assets/js/dist/js_composer_front.min.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-includes/js/jquery/ui/core.min.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-includes/js/jquery/ui/position.min.js'></script>
+    <script type="text/javascript" src="https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/plugins/popup-maker/assets/js/site.min.js?defer" defer="defer"></script>
+    <script type="text/javascript" src="https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-includes/js/wp-embed.min.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function(){
+            jQuery("#search_types").select2({
+                placeholder: "Type de bien",
+                allowClear: false,
+                minimumResultsForSearch: Infinity
+            });
+
+        })
+
+
+
+    </script>
+    <script type="text/javascript">
+        jQuery(document).ready(function(){
+            jQuery("#search_types_np").select2({
+                placeholder: "Nombre de piéces",
+                allowClear: false,
+                minimumResultsForSearch: Infinity
+            });
+
+        })
+
+
+
+    </script>
+
+
+{% endblock %}

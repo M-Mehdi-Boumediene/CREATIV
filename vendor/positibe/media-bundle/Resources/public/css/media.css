@@ -1,0 +1,62 @@
+.form-image, .form-media {
+    padding-top: 7px;
+}
+
+.form-image .fileupload-preview {
+    max-width: 144px;
+    max-height: 144px;
+    line-height: 20px;
+}
+
+.form-media .fileinput-button, .form-image .fileinput-button {
+    padding: 8px 6px;
+    margin: 6px 0 1px;
+}
+
+.form-image .btn-file-remove, .form-image .btn-file-remove {
+    padding-left: 5px;
+}
+
+.form-media .fileupload-preview.form-control {
+    max-width: 100%;
+    height: 28px;
+    line-height: 28px;
+    margin-bottom: 0;
+    margin-top: 6px;
+}
+
+.form-media .btn-file-remove label, .form-media .btn-file-remove label{
+    top: 5px;
+    padding-right: 0;
+}
+
+.form-media .btn-file-remove .col-form-label, .form-media .btn-file-remove .col-form-label {
+    font-size: .6rem;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.form-gallery .card {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+.form-gallery .form-collection-remove-button {
+    margin-top: 12px;
+}
+
+.form-gallery .form-media {
+    height: 50px;
+}
+
+.form-gallery .form-media .fileinput-button {
+    margin-bottom: 9px;
+}
+
+.form-gallery .form-control {
+    margin-bottom: 0;
+}
+
+.form-gallery .form-image .col-form-label {
+    text-align: left;
+}

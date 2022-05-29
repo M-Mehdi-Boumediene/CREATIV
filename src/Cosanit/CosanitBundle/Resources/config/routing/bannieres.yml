@@ -1,0 +1,24 @@
+admin_bannieres_index:
+    path:     /
+    defaults: { _controller: "CosanitBundle:Bannieres:index" }
+    methods:  [GET, POST]
+
+admin_bannieres_show:
+    path:     /{id}/show
+    defaults: { _controller: "CosanitBundle:Bannieres:show" }
+    methods:  GET
+
+admin_bannieres_new:
+    path:     /new
+    defaults: { _controller: "CosanitBundle:Bannieres:new" }
+    methods:  [GET, POST]
+
+admin_bannieres_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CosanitBundle:Bannieres:edit" }
+    methods:  [GET, POST]
+
+admin_bannieres_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CosanitBundle:Bannieres:delete" }
+    methods:  DELETE

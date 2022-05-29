@@ -1,0 +1,264 @@
+{% extends 'baseAdmin.html.twig' %}
+{% block body %}
+    <style>
+        .add_tag_link{
+            padding: 8px;
+            background: #00b180;
+            color: white;
+
+        }
+    </style>
+    <!-- page content -->
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>Nouveau produit</h3>
+                </div>
+
+
+                <div class="title_right">
+                    <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                        <div class="input-group">
+
+                    <span class="input-group-btn">
+
+                    </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <form action="{{ path('admin_partenaires_new') }}" method="POST" {{ form_start(form) }}
+
+                    <div class="x_panel">
+                        <div class="x_title">
+
+                            <div class="row">
+
+
+                                <div class="col-md-2 col-sm-12 col-xs-12 form-group">
+
+                                    <label for="factures_lieu">Categorie </label> <span class="requis" style="color:#ff3224;">*</span>
+
+                                    {{ form_widget(form.types,{'attr': {'class': 'form-control'}}) }}
+                                    {{ form_errors(form.types) }}
+                                </div>
+
+                                <div class="col-md-2 col-sm-12 col-xs-12 form-group">
+
+                                    <label for="factures_lieu">Offre exclusive </label>
+
+                                    {{ form_widget(form.exclusive,{'attr': {'class': 'form-control'}}) }}
+                                    {{ form_errors(form.exclusive) }}
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                                    <label for="factures_type" class="required">Titre   </label>
+                                    {{ form_widget(form.titre,{'attr': {'class': 'form-control'}}) }}
+                                    {{ form_errors(form.titre) }}
+                                </div>
+                                <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                                    <label for="factures_type" class="required">Sous-titre   </label>
+                                    {{ form_widget(form.text1,{'attr': {'class': 'form-control'}}) }}
+                                    {{ form_errors(form.text1) }}
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                    <label for="factures_type" class="required">Description  </label>
+                                    {{ form_widget(form.text2,{'attr': {'class': 'form-control'}}) }}
+                                    {{ form_errors(form.text2) }}
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                    <label for="factures_type" class="required">Texte gauche  </label>
+                                    {{ form_widget(form.text3,{'attr': {'class': 'form-control'}}) }}
+                                    {{ form_errors(form.text3) }}
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+                            <div class="row">
+                                <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                                    <ul class="tags"  data-prototype="{{ form_widget(form.image1.vars.prototype)|e('html_attr') }}">
+
+                                        {{ form_widget(form.image1) }}
+                                        {{ form_errors(form.image1) }}
+
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+
+                            <br><br>
+                            <div class="del"></div>
+                            <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+
+
+                                <br><br>
+
+                                <button type="submit" class="btn btn-primary">Sauvegarder</button>
+                                <a href="{{ path('admin_partenaires_index') }}"> ou Annuler</a>
+                            </div>
+                            <div class="col-md-2 col-sm-12 col-xs-12 form-group">
+
+
+                            </div>
+
+                        </div>
+                        {{ form_end(form) }}
+
+
+
+
+
+
+                    </div>
+
+
+
+                </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- /page content -->
+
+    <!-- footer content -->
+    <footer>
+        <div class="pull-right">
+            © 2020 ‐ NDWI Tout droits réservés.
+
+        </div>
+        <div class="clearfix"></div>
+    </footer>
+
+
+    <script type="text/javascript" src="{{ asset('vendors/jquery/dist/jquery.min.js') }}"></script>
+
+
+
+    <script>
+        var $collectionHolder2;
+
+        // setup an "add a tag" link
+        var $addTagLink2 = $(' <br><a href="#" class="add_tag_link"><i class="fa fa-plus"></i> Ajouter une photo</a>');
+        var $newLinkLi2 = $('<div></div>').append($addTagLink2);
+
+        jQuery(document).ready(function() {
+            // Get the ul that holds the collection of tags
+            $collectionHolder2 = $('ul.tags');
+
+            // add the "add a tag" anchor and li to the tags ul
+            $('.del').append($newLinkLi2);
+
+            // count the current form inputs we have (e.g. 2), use that as the new
+            // index when inserting a new item (e.g. 2)
+            $collectionHolder2.data('index', $collectionHolder2.find(':input').length);
+
+            $addTagLink2.on('click', function(e) {
+                // prevent the link from creating a "#" on the URL
+                e.preventDefault();
+
+                // add a new tag form (see next code block)
+                addTagForm2($collectionHolder2, $newLinkLi2);
+            });
+
+            $collectionHolder2.find('ul.tags').each(function() {
+                addTagFormDeleteLink2($(this));
+            });
+
+        });
+
+        function addTagForm2($collectionHolder2, $newLinkLi2) {
+            // Get the data-prototype explained earlier
+            var prototype2 = $collectionHolder2.data('prototype');
+
+            // get the new index
+            var index2 = $collectionHolder2.data('index');
+
+            // Replace '__name__' in the prototype's HTML to
+            // instead be a number based on how many items we have
+            var newForm2 = prototype2.replace(/__name__/g, index2);
+
+            // increase the index with one for the next item
+            $collectionHolder2.data('index', index2 + 1);
+
+            // Display the form in the page in an li, before the "Add a tag" link li
+            var $newFormLi2 = $('<div></div>').append(newForm2);
+            $newLinkLi2.before($newFormLi2);
+
+            addTagFormDeleteLink2($newFormLi2);
+        }
+
+        function addTagFormDeleteLink2($tagFormLi2) {
+            var $removeFormA2 = $('<a href="#" style="color: red;">supprimer</a>');
+            $tagFormLi2.append($removeFormA2);
+
+            $removeFormA2.on('click', function(e) {
+                // prevent the link from creating a "#" on the URL
+                e.preventDefault();
+
+                // remove the li for the tag form
+                $tagFormLi2.remove();
+            });
+        }
+
+
+    </script>
+
+    <script>
+
+
+
+        $('#produits_duree,.duree').hide();
+        $('label.lab').hide();
+
+        $('#produits_type').change(function(){
+            if($(this).val() == 'Location'){ // or this.value == 'volvo'
+
+                $('#produits_duree,.duree').show();
+                $('label.lab').show();
+
+            }
+            if($(this).val() == 'Vente'){ // or this.value == 'volvo'
+
+                $('#produits_duree,.duree').hide();
+                $('label.lab').hide();
+
+            }
+            if($('#produits_type').val() == 'Vente'){ // or this.value == 'volvo'
+                $('#produits_type').val() == null;
+                $('#produits_duree,.duree').hide();
+                $('label.lab').hide();
+
+            }
+        });
+
+
+    </script>
+{% endblock %}
+
+
+
+
+

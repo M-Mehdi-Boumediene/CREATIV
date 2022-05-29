@@ -1,0 +1,185 @@
+
+{% extends 'baseAdmin.html.twig' %}
+
+{% block body %}
+    <style>
+        #types_texte{
+            margin: 0px -353px 10px 0px;
+            width: 686px;
+            height: 173px;
+        }
+    </style>
+    <body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+
+
+            <!-- page content -->
+            <div class="right_col" role="main">
+                <div class="">
+                    <div class="page-title">
+
+
+
+                        <div class="title_right">
+                            <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                                <div class="input-group">
+
+                    <span class="input-group-btn">
+
+                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <h2>Modifier type de bien </h2>
+
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+
+
+
+
+
+                                 {{ form_start(edit_form) }}
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+
+                                            {{ form_label(edit_form.nom, "Nom") }}
+                                            {{ form_widget(edit_form.nom,{'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(edit_form.nom) }}
+
+                                            {{ form_label(edit_form.texte, "Description") }}
+                                            {{ form_widget(edit_form.texte,{'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(edit_form.texte) }}
+
+                                            <ul class="tags"  data-prototype="{{ form_widget(edit_form.photo.vars.prototype)|e('html_attr') }}">
+
+                                                {{ form_widget(edit_form.photo) }}
+                                                {{ form_errors(edit_form.photo) }}
+
+                                            </ul>
+                                            <button type="submit" class="btn btn-success">Sauvegarder</button>
+
+                                        </div>
+
+
+
+                                    </div>
+
+                                    {{ form_end(edit_form) }}
+
+
+
+                                    <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                        {{ form_start(delete_form) }}
+                                        <button type="submit" class="btn btn-danger pull-right ">Supprimer </button>
+                                        {{ form_end(delete_form) }}
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /page content -->
+
+    <!-- footer content -->
+    <footer>
+        <div class="pull-right">
+
+        </div>
+        <div class="clearfix"></div>
+    </footer>
+    <!-- /footer content -->
+    </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="{{ asset('vendors/jquery/dist/jquery.min.js') }}"></script>
+
+    <script>
+        var $collectionHolder;
+
+        // setup an "add a tag" link
+        var $addTagLink = $('<a href="#" class="add_tag_link">Ajouter photo</a>');
+        var $newLinkLi = $('<li></li>').append($addTagLink);
+
+        jQuery(document).ready(function() {
+            // Get the ul that holds the collection of tags
+            $collectionHolder = $('ul.tags');
+
+            // add the "add a tag" anchor and li to the tags ul
+            $collectionHolder.append($newLinkLi);
+
+            // count the current form inputs we have (e.g. 2), use that as the new
+            // index when inserting a new item (e.g. 2)
+            $collectionHolder.data('index', $collectionHolder.find(':input').length);
+
+            $addTagLink.on('click', function(e) {
+                // prevent the link from creating a "#" on the URL
+                e.preventDefault();
+
+                // add a new tag form (see next code block)
+                addTagForm($collectionHolder, $newLinkLi);
+            });
+        });
+
+        function addTagForm($collectionHolder, $newLinkLi) {
+            // Get the data-prototype explained earlier
+            var prototype = $collectionHolder.data('prototype');
+
+            // get the new index
+            var index = $collectionHolder.data('index');
+
+            // Replace '__name__' in the prototype's HTML to
+            // instead be a number based on how many items we have
+            var newForm = prototype.replace(/__name__/g, index);
+
+            // increase the index with one for the next item
+            $collectionHolder.data('index', index + 1);
+
+            // Display the form in the page in an li, before the "Add a tag" link li
+            var $newFormLi = $('<li></li>').append(newForm);
+            $newLinkLi.before($newFormLi);
+        }
+
+
+
+
+    </script>
+
+    </body>
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+

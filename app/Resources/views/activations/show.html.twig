@@ -1,0 +1,109 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Activations</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ activation.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ activation.nom }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ activation.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Wilaya</th>
+                <td>{{ activation.wilaya }}</td>
+            </tr>
+            <tr>
+                <th>Tel</th>
+                <td>{{ activation.tel }}</td>
+            </tr>
+
+
+            <tr>
+                <th>Email</th>
+                <td>{{ activation.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form  method="POST" {{ form_start(edit_form) }}
+    <div class="row">
+        <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+
+            {{ form_label(edit_form.nom, "Nom  : ") }}
+            {{ form_widget(edit_form.nom,{'attr': {'class': 'form-control'}}) }}
+            {{ form_errors(edit_form.nom) }}
+
+            {{ form_label(edit_form.adresse, "Adrésse  : ") }}
+            {{ form_widget(edit_form.adresse,{'attr': {'class': 'form-control'}}) }}
+            {{ form_errors(edit_form.adresse) }}
+
+            {{ form_label(edit_form.wilaya, "Wilaya  : ") }}
+            {{ form_widget(edit_form.wilaya,{'attr': {'class': 'form-control'}}) }}
+            {{ form_errors(edit_form.wilaya) }}
+
+            {{ form_label(edit_form.reference, "Réference  : ") }}
+            {{ form_widget(edit_form.reference,{'attr': {'class': 'form-control'}}) }}
+            {{ form_errors(edit_form.reference) }}
+
+
+        </div>
+
+        <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+
+            {{ form_label(edit_form.tel, "Tel  : ") }}
+            {{ form_widget(edit_form.tel,{'attr': {'class': 'form-control'}}) }}
+            {{ form_errors(edit_form.tel) }}
+
+
+            {{ form_label(edit_form.date, "") }}
+            {{ form_widget(edit_form.date,{'attr': {'class': 'datetime'}}) }}
+            {{ form_errors(edit_form.date) }}
+
+
+
+            {{ form_label(edit_form.photo, " ") }}
+            <img src="{{ asset('scans/' ~ edit_form.photo.vars.data.path)}}" width="233">
+            {{ form_widget(edit_form.photo,{'attr': {'class': 'photo'}}) }}
+            {{ form_errors(edit_form.photo) }}
+
+
+
+        </div>
+        <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+            {{ form_label(edit_form.email, "Email  : ") }}
+            {{ form_widget(edit_form.email,{'attr': {'class': 'form-control'}}) }}
+            {{ form_errors(edit_form.email) }}
+
+            {{ form_label(edit_form.message, "Remarque  : ") }}
+            {{ form_widget(edit_form.message,{'attr': {'class': 'form-control'}}) }}
+            {{ form_errors(edit_form.message) }}
+
+
+            <button type="submit" class="btn btn-success">Modifier</button>
+
+        </div>
+        <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+
+            {{ form_label(edit_form.etat, "Activation  : ") }}
+            {{ form_widget(edit_form.etat,{'attr': {'class': 'form-control'}}) }}
+            {{ form_errors(edit_form.etat) }}
+        </div>
+
+
+    </div>
+
+    {{ form_end(edit_form) }}
+    {{ form_start(delete_form) }}
+    <input class="btn btn-danger"  type="submit" value="Supprimer le produit">
+    {{ form_end(delete_form) }}
+    </form>
+{% endblock %}

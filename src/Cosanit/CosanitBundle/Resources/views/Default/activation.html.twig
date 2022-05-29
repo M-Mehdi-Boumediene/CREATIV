@@ -1,0 +1,508 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7 "> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <title>Cosanit</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="content/shop/images/favicon.ico">
+    <!-- FONTS -->
+    <link rel='stylesheet' id='Roboto-css' href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,400italic,700'>
+    <link rel='stylesheet' id='Lato-css' href='http://fonts.googleapis.com/css?family=Lato:300'>
+
+    <link rel='stylesheet' id='Patua+One-css' href='http://fonts.googleapis.com/css?family=Patua+One:100,300,400,400italic,700'>
+
+    <!-- CSS -->
+    <link rel='stylesheet' id='global-css' href="{{ asset('vendors/bootstrap/dist/css/bootstrap.css') }}">
+    <link rel='stylesheet' id='global-css' href="{{ asset('css/global.css') }}">
+
+    <link rel='stylesheet' id='global-css' href="{{ asset('content/shop/css/structure.css') }}">
+
+    <link rel='stylesheet' id='global-css' href="{{ asset('content/shop/css/shop.css') }}">
+
+    <link rel='stylesheet' id='global-css' href="{{ asset('content/shop/css/custom.css') }}">
+
+<style>
+    .top_bar_left {
+        width: 1069px;
+    }
+    .starter-template {
+        padding: 40px 15px;
+        text-align: center;
+    }
+    #activations_message{
+        display: none;
+    }
+    #activations_etat{
+        display: none;
+    }
+    #activations_messagerie{
+        display: none;
+    }
+    .icheckbox_flat-green{
+        display: none;
+    }
+    #activations_date{
+        display: none;
+    }
+</style>
+
+</head>
+
+<!-- body -->
+<body class=" layout-full-width no-content-padding header-modern sticky-header sticky-white subheader-both-center">
+
+<!-- #Wrapper -->
+<!-- Main Theme Wrapper -->
+<div id="Wrapper">
+
+<!-- #Header_bg -->
+<!-- Header Wrapper -->
+    <div id="Header_wrapper" class="bg-parallax" data-stellar-background-ratio="0.5">
+
+        <!-- Header -->
+        <header id="Header">
+
+            <!-- Header Top -  Info Area -->
+            <div id="Action_bar">
+                <div class="container">
+                    <div class="column one">
+
+                        <!-- Header - contact info area-->
+                        <ul class="contact_details">
+                            <li class="slogan">
+                                Avez-vous des questions?
+                            </li>
+                            <li class="phone">
+                                <i class="icon-phone"></i><a>+213 (0)41 50 36 48</a>
+                            </li>
+                            <li class="mail">
+                                <i class="icon-mail-line"></i><a href="mailto:contact@cosanit.com">contact@cosanit.net</a>
+                            </li>
+                        </ul>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- .header_placeholder 4sticky -->
+
+
+            <!-- Header -  Logo and Menu area -->
+            <div id="Top_bar">
+
+                <div class="container">
+                    <div class="column one">
+
+                        <div class="top_bar_left clearfix">
+
+                            <!-- .logo -->
+                            <div class="logo">
+                                <a id="logo" href="{{ path('cosanit_homepage') }}" title="Cosanit">
+
+                                    <h3 style="font-weight: bolder; color:#fff; font-size:24px;font-family: 'Roboto', Arial, Tahoma, sans-serif;">SARL COSANIT</h3>
+                                    <h4 style="font-size: 10px; margin-top:-20px; color:#fff; font-family: 'Roboto', Arial, Tahoma, sans-serif;">DISTRIBUTEUR D'EQUIMENTS DE PLOMEBIES</h4>
+                                </a>
+                            </div>
+
+                            <!-- Main menu-->
+                            <div class="menu_wrapper">
+                                <nav id="menu">
+                                    <ul id="menu-main-menu" class="menu">
+                                        <li id="menu-item-2450">
+                                            <a href="{{ path('cosanit_services') }}"><span>Services</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ path('cosanit_produits') }}"><span>Produits</span></a>
+
+                                        </li>
+
+                                        <li class=" current_page_item">
+                                            <a href="{{ path('cosanit_activation') }}" ><span>Garantie</span></a>
+
+                                        </li>
+
+                                        <li>
+                                            <a href="{{ path('cosanit_contact') }}"><span>Contact</span></a>
+                                        </li>
+                                    </ul>
+                                </nav><a class="responsive-menu-toggle " href="#"><i class="icon-menu"></i></a>
+                            </div>
+
+                            <!-- Secondary menu area - only for certain pages -->
+                            <div class="secondary_menu_wrapper">
+                                <!-- #secondary-menu -->
+                            </div>
+
+                            <!-- Banner area - only for certain pages-->
+                            <div class="banner_wrapper"></div>
+
+
+
+                        </div>
+                        <div class="top_bar_right">
+                            <div class="top_bar_right_wrapper">
+                                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                                    <a href="{{ path('fos_user_security_logout') }}" class="button button_theme button_js action_button"><span class="button_label" style="color:#000000; ">Se déconnecter</span></a>
+                                {% else %}
+                                    <a href="{{ path('cosanit_connect') }}" class="button button_theme button_js action_button"><span class="button_label" style="color:#000000; background: #ffb520;  ">Se connecter</span></a>
+                                {% endif %}
+
+                                <!-- Shopping cart icon-->
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </header>
+    </div>
+
+<!--Subheader area - only for certain pages -->
+<div id="Subheader">
+    <div class="container">
+        <div class="column one">
+            <h1 class="title">Activer Votre Garantie</h1>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- #Content -->
+<!-- Main Content -->
+<div id="Content">
+<div class="content_wrapper clearfix">
+
+<!-- .sections_group -->
+<div class="sections_group">
+
+    <div class="entry-content" >
+        <div class="section sections_style_2" >
+            <div class="section_wrapper clearfix">
+                <div class="items_group clearfix">
+                    <!-- One Sixth (1/6) Column -->
+                    <div class="column one-sixth column_placeholder">
+                        <div class="placeholder">
+                            &nbsp;
+                        </div>
+                    </div>
+                    <!-- Two Third (2/3) Column -->
+                    <div class="column two-third column_column ">
+                        <div class="column_attr align_center" >
+
+                            {% for flash_message in app.session.flashBag.get('notice-mail') %}
+                                <div class="alert alert_success">
+                                    <div class="alert_icon">
+                                        <i class="icon-check"></i>
+                                    </div>
+                                    <div class="alert_wrapper">
+                                        {{ flash_message }}
+                                    </div><a href="#" class="close"><i class="icon-cancel"></i></a>
+                                </div>
+                            {% endfor %}
+
+                            {% for flash_message in app.session.flashBag.get('notice-mail-error') %}
+                                <div class="alert alert_error">
+                                    <div class="alert_icon">
+                                        <i class="icon-alert"></i>
+                                    </div>
+                                    <div class="alert_wrapper">
+                                        {{ flash_message }}
+                                    </div><a href="#" class="close"><i class="icon-cancel"></i></a>
+                                </div>
+
+
+                            {% endfor %}
+
+
+                            <h3>Merci de remplir le formulaire suivant</h3>
+                            <br>
+
+
+                            <form  method="POST" {{ form_start(form) }}
+
+
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    {{ form_start(form) }}
+                                    {{ form_label(form.nom, "Nom /raison social*  ") }}
+                                    {{ form_widget(form.nom,{'attr': {'class': 'form-control'}}) }}
+                                    {{ form_errors(form.nom) }}
+                                    <br>
+
+                                    {{ form_label(form.adresse, "Adrésse  ") }}
+                                    {{ form_widget(form.adresse,{'attr': {'class': 'form-control'}}) }}
+                                    {{ form_errors(form.adresse) }}
+                                    <br>
+                                    {{ form_label(form.wilaya, "Wilaya*   ") }}
+                                    {{ form_widget(form.wilaya,{'attr': {'class': 'form-control'}}) }}
+                                    {{ form_errors(form.wilaya) }}
+
+                                    {{ form_label(form.message, " ") }}
+                                    {{ form_widget(form.message,{'attr': {'class': 'form-control'}}) }}
+                                    {{ form_errors(form.message) }}
+
+                                    {{ form_label(form.etat, " ") }}
+                                    {{ form_widget(form.etat,{'attr': {'class': 'form-control'}}) }}
+                                    {{ form_errors(form.etat) }}
+
+                                    {{ form_label(form.messagerie, " ") }}
+                                    {{ form_widget(form.messagerie,{'attr': {'class': 'form-control'}}) }}
+                                    {{ form_errors(form.messagerie) }}
+
+                                    {{ form_label(form.date, " ") }}
+                                    {{ form_widget(form.date,{'attr': {'class': ''}}) }}
+                                    {{ form_errors(form.date) }}
+
+                                </div>
+                                <div class="col-md-4">
+
+                                    {{ form_label(form.tel, "Téléphone*   ") }}
+                                    {{ form_widget(form.tel,{'attr': {'class': 'form-control'}}) }}
+                                    {{ form_errors(form.tel) }}
+                                    <br>
+                                    {{ form_label(form.email, "Email*   ") }}
+                                    {{ form_widget(form.email,{'attr': {'class': 'form-control'}}) }}
+                                    {{ form_errors(form.email) }}
+                                    <br>
+                                    {{ form_label(form.reference, "Information Revendeur*") }}
+                                    {{ form_widget(form.reference,{'attr': {'class': 'form-control'}}) }}
+                                    {{ form_errors(form.reference) }}
+
+                                </div>
+                                <div class="col-md-4">
+
+                                    {{ form_label(form.serial, "Numéro de série :") }}
+                                    {{ form_widget(form.serial,{'attr': {'class': 'form-control'}}) }}
+                                    {{ form_errors(form.serial) }}
+
+
+                                    <br>
+                                    {{ form_label(form.photo, "Bon d'achat (en image) :") }}
+                                    {{ form_widget(form.photo,{'attr': {'class': ''}}) }}
+                                    {{ form_errors(form.photo) }}
+                                    <br>
+
+                                    <button type="submit" class="btn btn-success">Envoyer</button>
+
+
+                                </div>
+
+                            </div>
+
+                            {{ form_end(form) }}
+                            </form>
+
+
+                        </div>
+                    </div>
+                    <!-- Page devider -->
+                    <!-- One full width row-->
+                    <div class="column one column_divider ">
+                        <hr class="no_line" />
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="section the_content no_content">
+            <div class="section_wrapper">
+                <div class="the_content_wrapper"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- .four-columns - sidebar -->
+
+</div>
+</div>
+
+<!-- #Footer -->
+<!-- Footer-->
+<footer id="Footer" class="clearfix">
+
+    <div class="widgets_wrapper">
+        <div class="container">
+            <!-- One Third (1/3) Column -->
+            <div class="column one-third">
+                <!-- Text Area -->
+                <aside id="text-3" class="widget widget_text">
+                    <h4>Activer Votre Garantie</h4>
+                    <div class="textwidget">
+                        Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imper diet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu luctus et ac, laoreet enim.
+                    </div>
+                </aside>
+            </div>
+            <!-- One Third (1/3) Column -->
+            <div class="column one-third">
+                <!-- Text Area -->
+                <aside id="text-2" class="widget widget_text">
+                    <h4>Our mission</h4>
+                    <div class="textwidget">
+                        Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris.
+                    </div>
+                </aside>
+            </div>
+            <!-- One Third (1/3) Column -->
+            <div class="column one-third">
+                <!-- Text Area -->
+                <aside id="text-4" class="widget widget_text">
+                    <h4>Shortcut links</h4>
+                    <div class="textwidget">
+                        <ul class="flv_list_ul_46">
+                            <li>
+                                <a href="#">Velit mauris</a>
+                            </li>
+                            <li>
+                                <a href="#">Entum feuis</a>
+                            </li>
+                            <li>
+                                <a href="#">Aliquam massa </a>
+                            </li>
+                            <li>
+                                <a href="#">Egestas quam</a>
+                            </li>
+                        </ul>
+                        <ul class="flv_list_ul_46">
+                            <li>
+                                <a href="#">Aenean ligula</a>
+                            </li>
+                            <li>
+                                <a href="#">Dapibus at dolor</a>
+                            </li>
+                            <li>
+                                <a href="#">Molestie id</a>
+                            </li>
+                            <li>
+                                <a href="#">Vestibulum</a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+    <!-- Footer copyright-->
+    <div class="footer_copy">
+        <div class="container">
+            <div class="column one">
+                <a id="back_to_top" href="#" class="button button_left button_js"><span class="button_icon"><i class="icon-up-open-big"></i></span></a>
+
+                <!-- Copyrights -->
+                <div class="copyright">
+                    &copy; 2016 Cosanit - All Rights Reserved. by <a target="_blank" rel="nofollow" href="www.linkomweb.com">Linkom</a>
+                </div>
+
+                <!--Social info area-->
+                <ul class="social">
+                    <li class="facebook">
+                        <a href="#" title="Facebook"><i class="icon-facebook"></i></a>
+                    </li>
+                    <li class="twitter">
+                        <a href="#" title="Twitter"><i class="icon-twitter"></i></a>
+                    </li>
+                    <li class="linkedin">
+                        <a href="#" title="LinkedIn"><i class="icon-linkedin"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+</div><!-- #Wrapper -->
+
+<!-- JS -->
+<script type="text/javascript" src="{{ asset('js/jquery-2.1.4.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/mfn.menu.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.plugins.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.jplayer.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/animations/animations.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>
+
+
+
+<script>
+    //<![CDATA[
+    jQuery(window).load(function() {
+        var retina = window.devicePixelRatio > 1 ? true : false;
+        if (retina) {
+            var retinaEl = jQuery("#logo img.logo-main");
+            var retinaLogoW = retinaEl.width();
+            var retinaLogoH = retinaEl.height();
+            retinaEl.attr("src", "images/retina-shop.png").width(retinaLogoW).height(retinaLogoH);
+            var stickyEl = jQuery("#logo img.logo-sticky");
+            var stickyLogoW = stickyEl.width();
+            var stickyLogoH = stickyEl.height();
+            stickyEl.attr("src", "images/retina-shop.png").width(stickyLogoW).height(stickyLogoH);
+        }
+    });
+    //]]>
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

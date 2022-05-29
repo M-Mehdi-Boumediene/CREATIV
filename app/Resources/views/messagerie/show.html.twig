@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Messagerie</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ messagerie.id }}</td>
+            </tr>
+            <tr>
+                <th>Message</th>
+                <td>{{ messagerie.message }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_messagerie_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('admin_messagerie_edit', { 'id': messagerie.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

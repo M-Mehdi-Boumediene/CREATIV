@@ -1,0 +1,24 @@
+admin_serials_index:
+    path:     /
+    defaults: { _controller: "CosanitBundle:Serials:index" }
+    methods:  GET
+
+admin_serials_show:
+    path:     /{id}/show
+    defaults: { _controller: "CosanitBundle:Serials:show" }
+    methods:  GET
+
+admin_serials_new:
+    path:     /new
+    defaults: { _controller: "CosanitBundle:Serials:new" }
+    methods:  [GET, POST]
+
+admin_serials_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CosanitBundle:Serials:edit" }
+    methods:  [GET, POST]
+
+admin_serials_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CosanitBundle:Serials:delete" }
+    methods:  DELETE

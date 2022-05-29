@@ -1,0 +1,24 @@
+admin_apropos_index:
+    path:     /
+    defaults: { _controller: "CosanitBundle:Aproposblock:index" }
+    methods:  GET
+
+admin_apropos_show:
+    path:     /{id}/show
+    defaults: { _controller: "CosanitBundle:Aproposblock:show" }
+    methods:  GET
+
+admin_apropos_new:
+    path:     /new
+    defaults: { _controller: "CosanitBundle:Aproposblock:new" }
+    methods:  [GET, POST]
+
+admin_apropos_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CosanitBundle:Aproposblock:edit" }
+    methods:  [GET, POST]
+
+admin_apropos_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CosanitBundle:Aproposblock:delete" }
+    methods:  DELETE

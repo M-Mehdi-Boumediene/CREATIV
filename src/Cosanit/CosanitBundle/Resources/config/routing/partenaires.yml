@@ -1,0 +1,24 @@
+admin_partenaires_index:
+    path:     /
+    defaults: { _controller: "CosanitBundle:Partenaires:index" }
+    methods:  GET
+
+admin_partenaires_show:
+    path:     /{id}/show
+    defaults: { _controller: "CosanitBundle:Partenaires:show" }
+    methods:  GET
+
+admin_partenaires_new:
+    path:     /new
+    defaults: { _controller: "CosanitBundle:Partenaires:new" }
+    methods:  [GET, POST]
+
+admin_partenaires_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CosanitBundle:Partenaires:edit" }
+    methods:  [GET, POST]
+
+admin_partenaires_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CosanitBundle:Partenaires:delete" }
+    methods:  DELETE

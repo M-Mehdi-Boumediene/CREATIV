@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Messagerie list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Message</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for messagerie in messageries %}
+            <tr>
+                <td><a href="{{ path('admin_messagerie_show', { 'id': messagerie.id }) }}">{{ messagerie.id }}</a></td>
+                <td>{{ messagerie.message }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('admin_messagerie_show', { 'id': messagerie.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('admin_messagerie_edit', { 'id': messagerie.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_messagerie_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,673 @@
+
+{% extends 'base.html.twig' %}
+{% block ogurl %} {{ absolute_url(path('cosanit_immobilier')) }} {% endblock %}
+{% block ogimg %} {{ absolute_url(asset('img/gls.jpg')) }} {% endblock %}
+{% block title %}Immobilier Oran Alger | Location / Vente  Appartement, Villas - Algérie {% endblock %}
+{% block description %} Immobilier Oran Algérie Algé location & vente appratement F2 F3 F4 F5 F6, location / villa, duplex, loft Alger Oran algerie   {% endblock %}
+{% block canonical %}
+
+{% endblock %}
+{% block body %}
+<style>
+
+    .light nav.main_menu>ul>li>a, .light nav.main_menu>ul>li>a:hover, .light nav.main_menu>ul>li.active>a {
+        color: #000;
+    }
+    .home_header_search_box {
+        max-width: 747px;
+        margin: 0 auto;
+    }
+</style>
+    <div class="wrapper">
+        <div class="wrapper_inner">
+
+            <header class="page_header   regular  light  scroll_header_top_area" style=" position: absolute;">
+                <div class="header_inner clearfix">
+
+                    <div class="header_top_bottom_holder">
+                        <div class="header_bottom clearfix" style=" background-color:#fff; border-color:#fff;">
+                            <div class="container">
+                                <div class="container_inner clearfix">
+                                    <div class="header_inner_left">
+                                        <div class="mobile_menu_button">
+                                            <div class="mobile_menu_button_hamburger">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                        <div class="logo_wrapper">
+                                            <div class="q_logo"><a href="/" style="height: 75px; visibility: visible;"><img class="normal" src="{{ asset('img/logo2.svg') }}" alt="Logo" style="height: auto;"><img class="light" src="{{ asset('img/logo2.svg') }}" alt="Logo" style="height: auto;"><img class="dark" src="{{ asset('img/logo2.svg') }}" alt="Logo" style="height: auto;" ><img class="sticky" src="{{ asset('img/logo2.svg') }}" alt="Logo" style="height: auto;"></a></div>
+
+                                        </div>
+                                    </div>
+                                    <div class="header_inner_right">
+                                        <div class="side_menu_button_wrapper right">
+                                            <div class="side_menu_button">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a title="GLS immobilier contact" href="{{ path('cosanit_contact') }}" class="header-contactLink-mobile">Nous contacter</a>
+                                    <nav class="main_menu drop_down right">
+                                        <ul id="menu-main-navigation" class="">
+                                            <li id="nav-menu-item-70754" class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a href="{{ path('cosanit_homepage') }}" title="GlS Location & Vente Immobilier Algérie"  class=""><i class="menu_icon fa blank"></i><span>Accueil</span></a></li>
+
+                                            <li id="nav-menu-item-70754" class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a href="{{ path('cosanit_immobilier') }}" title="Location & Vente Immobilier Algérie"  class=""><i class="menu_icon fa blank"></i><span>Immobilier</span></a></li>
+                                            <li id="nav-menu-item-61438" class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a  href="{{ path('cosanit_achats') }}" title="Vente Immobilier  Algérie " class=""><i class="menu_icon fa blank"></i><span>Acheter</span></a></li>
+                                            <li id="nav-menu-item-70754" class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a href="{{ path('cosanit_ventes') }}  "title="Immobilier Algérie vendre"  class=""><i class="menu_icon fa blank"></i><span>Vendre</span></a></li>
+                                            <li id="nav-menu-item-3554598" class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a href="{{ path('cosanit_location') }} " title="Immobilier Location Algérie" class=""><i class="menu_icon fa blank"></i><span>Louer</span></a></li>
+                                            <li id="nav-menu-item-70763" class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a href="{{ path('cosanit_investissement') }}"  title="Immobilier Programe neuf Algérie" class=""><i class="menu_icon fa blank"></i><span>Programmes Neufs</span></a></li>
+                                            <li id="nav-menu-item-70777" class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a href="{{ path('cosanit_internationals') }} "  title="Immobilier International " class=""><i class="menu_icon fa blank"></i><span>International</span></a></li>
+
+                                            <li id="nav-menu-item-70761" class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a href="{{ path('cosanit_contact') }}" title="Global Lxury Services Contact " class=""><i class="menu_icon fa blank"></i><span>Nous contacter</span></a></li>
+                                        </ul>
+                                    </nav>
+                                    <nav class="mobile_menu">
+                                        <ul id="menu-main-navigation-1" class=""><li id="mobile-menu-item-61438" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{{ path('cosanit_achats') }}" title="Immobilier Achat Vente Algérie " class=""><span>Acheter</span><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></a></li>
+                                            <li id="mobile-menu-item-70754" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{{ path('cosanit_ventes') }}" title="Immobilier vendre Algérie "class=""><span>Vendre</span><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></a></li>
+                                            <li id="mobile-menu-item-3554598" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{{ path('cosanit_location') }}"  title="Immobilier Location Algérie " class=""><span>Louer</span><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></a></li>
+                                            <li id="mobile-menu-item-70763" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{{ path('cosanit_investissement') }}"title="Immobilier Programme Neuf Algérie "  class=""><span>Programmes Neufs</span><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></a></li>
+                                            <li id="mobile-menu-item-70777" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{{ path('cosanit_internationals') }}"title="Immobilier International"  class=""><span>International</span><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></a></li>
+                                            <li id="mobile-menu-item-8222" class="qtranxs-lang-menu qtranxs-lang-menu-en menu-item menu-item-type-custom menu-item-object-custom "><a title="Arabic" href="" class=""><span><img src="{{ asset('img/algeria.png') }}" alt="Arabic"></span><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></a></li>
+                                            <li id="mobile-menu-item-70761" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{{ path('cosanit_contact') }}"title="Global Lxury Services contact"  class=""><span>Nous contacter</span><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></a></li>
+                                        </ul>					</nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <a id="back_to_top" href="#" class="off">
+			<span class="fa-stack">
+				<i class="fa fa-angle-up " style=""></i>
+			</span>
+            </a>
+
+
+            <div class="content ">
+                <div class="content_inner  ">
+                    <style type="text/css">
+                        .header_top .left .inner > div,
+                        .header_top .left .inner > div:last-child,
+                        .header_top .right .inner > div:first-child,
+                        .header_top .right .inner > div,
+                        header .header_top .q_social_icon_holder,
+                        .header_menu_bottom
+                        { border-color:rgba(234, 234, 234, 0); }
+
+                    </style>
+
+                    <div class="title_outer title_without_animation" data-height="0">
+                        <div class="title title_size_small position_left has_background" style="background-size:1920px auto;background-image:url(https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/uploads/2016/03/hero-about.jpg);height:0px;">
+                            <div class="title_holder" style="     padding-top:0px;height:0px;">
+                                <div class="container">
+                                    <div class="container_inner clearfix">
+                                        <div class="container_inner clearfix">
+                                            <div class="title_subtitle_holder">
+                                                <div class="title_subtitle_holder_inner">
+
+                                                    <div class="home_header_box">
+                                                        <hgroup>
+                                                            <h1>Immobilier de prestige</h1>
+                                                            <h2>Global Luxury Services vous propose une sélection de biens immobiliers de prestige à Oran, à Alger et à l’international</h2>
+                                                        </hgroup>
+                                                    </div>
+
+                                                    <div class="home_header_search_box">
+                                                        <div class="mf-form">
+                                                            <div id="loader" ></div>
+
+                                                            {{ form_start(form, {'attr': {'id': 'prop-search', 'method': 'POST'} }) }}
+
+                                                            {{ form_widget(form.transaction,{'attr': {'class': 'transaction',}}) }}
+                                                            {{ form_errors(form.transaction) }}
+
+                                                            {{ form_widget(form.duree,{'attr': {'class': 'duree',}}) }}
+                                                            {{ form_errors(form.duree) }}
+
+                                                            {{ form_widget(form.categories,{'attr': {'class': 'ou',}}) }}
+                                                            {{ form_errors(form.categories) }}
+
+                                                            {{ form_widget(form.quoi,{'attr': {'class': 'Ngawass',}}) }}
+                                                            {{ form_errors(form.quoi) }}
+
+
+                                                            <input class="btn-search" type="submit" value="Rechercher">
+                                                            {{ form_end(form) }}
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="q_slider top_slider">
+                            <div class="q_slider_inner">
+                                <script data-cfasync="false" type="text/javascript">var lsjQuery = jQuery;</script><script data-cfasync="false" type="text/javascript"> lsjQuery(document).ready(function() { if(typeof lsjQuery.fn.layerSlider == "undefined") { lsShowNotice('layerslider_6','jquery'); } else { lsjQuery("#layerslider_6").layerSlider({responsive: true, pauseOnHover: false, firstSlide: 2, thumbnailNavigation: 'disabled', skinsPath: '{{ asset('Bannieres/') }}'}) } }); </script>
+                                <div id="layerslider_6" class="ls-wp-container ls-container ls-v5" style="width: 100%; height: 560px; margin: 0px auto; visibility: visible;">
+
+
+                                    {% for banner in banners %}
+
+                                        <div class="ls-slide" data-ls="transition2d:5;" style="width: 0px; height: 560px; visibility: visible; display: none; left: 0px; right: auto; top: 0px; bottom: auto;">
+                                            <img src="{{ asset('Bannieres/'~banner.path) }}" data-src="{{ asset('Bannieres/'~banner.path) }}" class="ls-bg ls" alt="128A1650" style="width: 1920px; height: 1280px; margin-left: -277px; margin-top: -360px; visibility: hidden;">
+                                            <div class="ls-gpuhack"></div>
+                                        </div>
+
+                                    {% endfor %}
+
+
+                                    <div class="ls-circle-timer" style="display: block;"><div class="ls-ct-left"><div class="ls-ct-rotate" style="transform: matrix(1, 0, 0, 1, 0, 0);"><div class="ls-ct-hider"><div class="ls-ct-half"></div></div></div></div><div class="ls-ct-right"><div class="ls-ct-rotate" style="transform: matrix(-0.99479, 0.10192, -0.10192, -0.99479, 0, 0);"><div class="ls-ct-hider"><div class="ls-ct-half"></div></div></div></div><div class="ls-ct-center"></div></div></div><div class="ls-loading-container" style="z-index: -1; display: none;"><div class="ls-loading-indicator"></div></div><a class="ls-nav-prev" href="#" style="display: none; visibility: visible;"></a><a class="ls-nav-next" href="#" style="display: none; visibility: visible;"></a><div class="ls-bottom-nav-wrapper" style="visibility: visible;"><a class="ls-nav-start ls-nav-start-active" href="#"></a><span class="ls-bottom-slidebuttons"><a href="#" class=""></a><a href="#" class="ls-nav-active"></a><a href="#" class=""></a><a href="#" class=""></a><a href="#" class=""></a><a href="#" class=""></a></span><a class="ls-nav-stop" href="#"></a></div><div class="ls-shadow"></div></div>				</div>
+                    </div>
+                    <div class="container">
+                        <div class="home_container_space clearfix">
+
+                            <div class="vc_row wpb_row vc_row-fluid grid_section" style=" text-align:left;"><div class=" section_inner clearfix"><div class="section_inner_margin clearfix"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper">
+                                                    <div class="wpb_text_column wpb_content_element ">
+                                                        <div class="wpb_wrapper">
+                                                            <div class="home-info less-padding" style="    padding: 0px 20px;">
+                                                                {% for apropos in apropos %}
+                                                                    <h2 class="red-text">{{ apropos.titre }}</h2>
+                                                                    <p>{{ apropos.text }}</p>
+                                                                    <div class="vc_col-lg-6 vc_col-md-12 vc_col-sm-12 vc_col-xs-12"><a class="btn-readmore" href="{{ path('cosanit_apropos') }}" title="A propos de GLS ">Qui sommes nous ?</a></div>
+                                                                    <div class="vc_col-lg-6 vc_col-md-12 vc_col-sm-12 vc_col-xs-12"><a class="btn-readmore btn-search" href="{{ path('cosanit_recrutement') }}" title="GLS Recrutement" target="_blank" rel="noopener">Nous recrutons</a></div>
+                                                                {% endfor %}
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                </div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper"><a href="{{ path('cosanit_produits_villes',{ville: 'oran'}) }}" title="Immobilier Oran" class="img-box mf_image_box mf-table <div class=" img-box="" mf_image_box="" img-box-large="" style="background-image: url({{ asset('photos_produits/f81bf09b30ee304735843b43f68a6cb2acb42ec8.jpeg') }}); height: 450px"> <div class="bkg-overlay mf-table"><div class="mf-table-cell"><h3 class="all-caps" style="    font-size: 30px;">Oran</h3><p></p>
+                                                                <p class="subtitle">Oran vous dévoile ses meilleurs atouts dans les plus beaux quartiers</p>
+                                                                <p class="learn-more">En savoir plus sur nos biens à Oran</p>
+                                                                <p></p></div></div></a></div></div></div></div></div></div>
+
+                            <div class="home-separator-4"></div>
+
+                            <div class="vc_row wpb_row vc_row-fluid grid_section" style=" text-align:left;"><div class=" section_inner clearfix">
+                                    <div class="section_inner_margin clearfix"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><a  href="{{ path('cosanit_internationals') }}" title="Immobilier International" class="img-box mf_image_box mf-table <div class=" img-box="" mf_image_box=""  style="background-image: url({{ asset('img/International.jpg') }}); "> <div class="bkg-overlay mf-table"><div class="mf-table-cell"><h3 class="all-caps">international</h3><p></p>
+                                                                <p class="subtitle">Découvrez Lyon, Alicante, Paris, Marseille…</p>
+                                                                <p class="learn-more">Voir les biens</p>
+                                                                <p></p></div></div></a></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner ">
+                                                <div class="wpb_wrapper"><a href="{{ path('cosanit_investissement') }}" title="Immobilier Programes Neufs" class="img-box mf_image_box mf-table <div class=" img-box="" mf_image_box="" style="background-image: url(https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/uploads/2015/07/shoootin-photo-15.jpg); "> <div class="bkg-overlay mf-table"><div class="mf-table-cell"><h3 class="all-caps">Programmes Neufs</h3><p></p>
+                                                                <p class="subtitle">Les programmes neufs les plus séduisants du marché</p>
+                                                                <p class="learn-more">Voir les biens</p>
+                                                                <p></p></div></div></a></div>
+                                            </div></div>
+                                        {% for type in types %}
+
+
+                                                <div class="wpb_column vc_column_container vc_col-sm-4">
+                                                    <div class="vc_column-inner ">
+                                                        <div class="wpb_wrapper">
+                                                            <a href="{{ path('cosanit_produits_types',{id: type.slug}) }}" title="Immobilier Vente {{ type.nom }}" class="img-box mf_image_box mf-table" style="    padding-bottom: 45px;">
+                                                                <div class="img-box mf_image_box " style="background-image: url({{ asset('photos_produits/'~type.photo[0].path) }}); ">
+
+                                                                    <div class="bkg-overlay mf-table"><div class="mf-table-cell">
+                                                                            <h3 class="all-caps" style="font-size: 30px;" >{{ type.nom }}</h3>
+                                                                            <p class="subtitle"  >{{ type.texte[:60] ~ '...'  }}</p>
+                                                                            <p class="learn-more">Voir les biens</p>
+                                                                        </div></div></div></a></div></div></div>
+
+                                        {% endfor %}
+
+
+                                    </div></div></div>
+
+                            <div class="vc_row wpb_row vc_row-fluid" style=" text-align:left;"><div class=" clearfix"><div class="wpb_column vc_column_container vc_col-sm-12">
+
+                                        <div class="home-separator-4"></div>
+
+                                        <!-- Title Row -->
+                                        <div class="vc_row wpb_row vc_row-fluid grid_section">
+                                            <div class="section_inner clearfix">
+                                                <div class="section_inner_margin clearfix">
+                                                    <div class="vc_col-sm-4 wpb_column vc_column_container ">
+                                                        <div class="wpb_wrapper">
+
+                                                            <div class="title-block left-title-block">
+
+                                                                <span class="results">
+
+                                                                    {{ exclusives|length }} Résultats
+
+                                                                </span>
+                                                                <a href="{{ path('cosanit_alert') }}"><span class="create-alert">Créer une alerte</span></a>
+
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="vc_col-sm-4 wpb_column vc_column_container ">
+                                                        <div class="wpb_wrapper">
+
+                                                            <div class="title-block center-title-block">
+                                                                <h2>Nos offres exclusives</h2>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="vc_col-sm-4 wpb_column vc_column_container ">
+                                                        <div class="wpb_wrapper">
+
+                                                            <div class="title-block right-title-block">
+
+                                                                <a href="{{ path('cosanit_search',{ 'ville': 'all','transaction': 'all','duree': 'all' ,'types': 'Array','exclusiv':'oui'}) }}"><span class="all-offers">Toutes les offres</span></a>
+
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Row with offers 2 -->
+                                        <div class="vc_row wpb_row vc_row-fluid grid_section">
+                                            <div class="section_inner clearfix">
+                                                <div class="section_inner_margin clearfix">
+
+                                                    {% for exclusive in exclusives %}
+
+                                                        <div class="vc_col-sm-4 vc_col-xs-6 wpb_column vc_column_container clearfix result-item">
+                                                            <div class="wpb_wrapper">
+
+                                                                <div class="offer-list-item">
+
+                                                                    <div class="oli-image" style="background-image:url({{ asset('photos_produits/')~ exclusive.image1[0].path }});">
+                                                                        <a title="{{ exclusive.type }} {{ exclusive.titre }}  Algérie" href="{{ path('cosanit_show', { 'id': exclusive.slug }) }}" rel="canonical">
+                                                                        </a>
+
+
+                                                                    </div>
+
+
+                                                                    <div class="oli-details oli-details--normal">
+                                                                        <div class="oli-caption">
+                                                                            <div class="oli-ref">Réf {{ exclusive.ref }}</div>
+                                                                            <div class="oli-photos-count">
+                                                                                {{ exclusive.image1|length }}   photos
+                                                                                </div>
+
+                                                                        </div>
+                                                                        <a title="{{ exclusive.type }} {{ exclusive.titre }}  Algérie" href="{{ path('cosanit_show', {'id': exclusive.slug }) }}" rel="canonical">
+                                                                            <h3 class="oli-title">
+                                                                                {{ exclusive.titre }}
+                                                                            </h3>
+                                                                        </a>
+                                                                        <a title="{{ exclusive.type }} {{ exclusive.titre }}  Algérie" href="{{ path('cosanit_show', {'id': exclusive.slug }) }}" rel="canonical">{% if exclusive.type == 'Location' %} Location {{ exclusive.duree }}{% else %} Vente {% endif %}</a>
+
+
+                                                                        <div class="oli-description">
+                                                                            {{ exclusive.type }}  {{ exclusive.types }}, <span class="mf-city">{{ exclusive.categories.nom }}</span>, {% if exclusive.surface %}{{ exclusive.surface }} m<sup>2</sup>  {% endif %}             <br>  {{ exclusive.text2 }}                 </div>
+
+
+
+                                                                        <div class="oli-price oli-price-euro lower">
+                                                                            {% if exclusive.prix %}
+                                                                                {{ exclusive.prix }}
+
+                                                                            {% else %}
+
+                                                                                Prix ​​sur demande
+                                                                            {% endif %}
+
+
+                                                                        </div>
+
+
+
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+
+                                                    {% endfor %}
+
+
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- Title Row -->
+                                        <div class="vc_row wpb_row vc_row-fluid grid_section">
+                                            <div class="section_inner clearfix">
+                                                <div class="section_inner_margin clearfix">
+                                                    <div class="vc_col-sm-4 wpb_column vc_column_container ">
+                                                        <div class="wpb_wrapper">
+
+                                                            <div class="title-block left-title-block">
+
+                                                                <span class="results">{{ produits|length }} Résultats</span>
+                                                                <a href="{{ path('cosanit_alert') }}"><span class="create-alert">Créer une alerte</span></a>
+
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="vc_col-sm-4 wpb_column vc_column_container ">
+                                                        <div class="wpb_wrapper">
+
+                                                            <div class="title-block center-title-block">
+                                                                <h2>Nos dernières annonces</h2>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="vc_col-sm-4 wpb_column vc_column_container ">
+                                                        <div class="wpb_wrapper">
+
+                                                            <div class="title-block right-title-block">
+
+                                                                <a href="{{ path('cosanit_search',{ 'ville': 'all','transaction': 'all','duree': 'all' ,'types': 'Array','exclusiv':'all'}) }}"><span class="all-offers">Toutes les offres</span></a>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Row with offers 2 -->
+                                        <div class="vc_row wpb_row vc_row-fluid grid_section">
+                                            <div class="section_inner clearfix">
+                                                <div class="section_inner_margin clearfix">
+
+                                                    {% for produit in produits %}
+
+                                                        <div class="vc_col-sm-4 vc_col-xs-6 wpb_column vc_column_container clearfix result-item">
+                                                            <div class="wpb_wrapper">
+
+                                                                <div class="offer-list-item">
+
+                                                                    <div class="oli-image" style="background-image:url({{ asset('photos_produits/')~ produit.image1[0].path }});">
+                                                                        <a title="{{ produit.type }} {{ produit.titre }} Algérie" href="{{ path('cosanit_show',{'id':produit.slug}) }}" rel="canonical">
+                                                                        </a>
+
+
+                                                                    </div>
+
+
+                                                                    <div class="oli-details oli-details--normal">
+                                                                        <div class="oli-caption">
+                                                                            <div class="oli-ref">Réf {{ produit.ref }}</div>
+                                                                            <div class="oli-photos-count">{{ produit.image1|length }} photos</div>
+
+                                                                        </div>
+                                                                        <a title="{{ produit.type }} {{ produit.titre }} {{ produit.categories }}" href="{{ path('cosanit_show', {'id': produit.slug }) }}" rel="canonical">
+                                                                            <h3 class="oli-title">
+                                                                                {{ produit.titre }}
+                                                                            </h3>
+                                                                        </a>
+                                                                        <a title="{{ produit.type }} {{ produit.titre }} {{ produit.categories}}" href="{{ path('cosanit_show', {'id': produit.slug }) }}" rel="canonical">{% if produit.type == 'Location' %} Location {{ produit.duree }} {% else %} Vente {% endif %}</a>
+
+                                                                        <div class="oli-description">
+                                                                            {{ produit.type }}  {{ produit.types }}, <span class="mf-city">{{ produit.categories.nom }}</span>, {% if produit.surface %}  {{ produit.surface }} m<sup>2</sup>  {% endif %}                     <br>  {{ produit.text2 }}           </div>
+
+
+                                                                        <div class="oli-price oli-price-euro lower">
+                                                                            {% if produit.prix %}
+                                                                                {{ produit.prix }}
+
+
+                                                                            {% else %}
+
+                                                                                Prix ​​sur demande
+                                                                            {% endif %}
+
+
+                                                                        </div>
+
+
+
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+
+                                                    {% endfor %}
+
+
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+
+                            <div class="vc_row wpb_row vc_row-fluid grid_section news social-blocks">
+                                <div class="section_inner clearfix">
+                                    <div class="section_inner_margin clearfix">
+                                        <div class="vc_col-lg-12 wpb_column vc_column_container ">
+                                            <h2 class="margin-top">Nos Réseaux Sociaux</h2>
+                                        </div>
+                                        <center>
+                                            <div class="vc_col-lg-3 vc_col-md-6 vc_col-sm-6 vc_col-xs-12 wpb_column vc_column_container ">
+
+                                                <a href="https://www.facebook.com/glsoran/" target="_blank" class="mf-col-inner news-item" style="background-image: url({{ asset('img/facebook.jpg') }})">
+                                                    <div class="readmore"><i class="fa fa-facebook fa-6" aria-hidden="true"></i></div>
+
+
+                                                    <div class="overlay"></div>
+                                                </a>
+
+                                            </div>
+
+
+                                            <div class="vc_col-lg-3 vc_col-md-6 vc_col-sm-6 vc_col-xs-12 wpb_column vc_column_container ">
+                                                <a href="https://www.instagram.com/globalluxuryservices/" target="_blank" class="mf-col-inner news-item" style="background-image: url({{ asset('img/instagram.jpg') }})">
+                                                    <div class="readmore">
+                                                        <i class="fa fa-instagram fa-6" aria-hidden="true"></i>
+                                                    </div>
+
+
+                                                    <div class="overlay"></div>
+                                                </a>
+                                            </div>
+                                            <div class="vc_col-lg-3 vc_col-md-6 vc_col-sm-6 vc_col-xs-12 wpb_column vc_column_container ">
+                                                <a href="https://www.pinterest.com/globalluxuryservices/" target="_blank" class="mf-col-inner news-item" style="background-image: url({{ asset('img/pinterest.jpg') }})">
+                                                    <div class="readmore">
+                                                        <i class="fa fa-pinterest fa-6" aria-hidden="true"></i>
+                                                    </div>
+
+
+                                                    <div class="overlay"></div>
+                                                </a>
+                                            </div>
+                                            <div class="vc_col-lg-3 vc_col-md-6 vc_col-sm-6 vc_col-xs-12 wpb_column vc_column_container ">
+                                                <a href="https://twitter.com/GLS_Oran" target="_blank" class="mf-col-inner news-item" style="background-image: url({{ asset('img/twitter.jpg') }})">
+                                                    <div class="readmore">
+                                                        <i class="fa fa-twitter fa-6" aria-hidden="true"></i>
+                                                    </div>
+
+
+                                                    <div class="overlay"></div>
+                                                </a>
+                                            </div>
+
+                                        </center>
+
+
+                                    </div><!-- section_inner_margin -->
+                                </div>
+                            </div><!-- news -->
+
+                            *
+                            <div class="home-separator-4"></div>
+                            <!-- Newsletter / Rcruitment -->
+                            <div class="vc_row wpb_row vc_row-fluid grid_section nl_rc">
+                                <div class="section_inner clearfix">
+                                    <div class="section_inner_margin clearfix">
+                                        <div class="vc_col-sm-6 wpb_column vc_column_container ">
+                                            <div class="wpb_wrapper">
+
+                                                <div class="newsletter-block mf-table">
+                                                    <div class="mf-table-cell" style="    text-align: center;">
+                                                        <h2>Newsletter</h2>
+                                                        <p>Recevez par email toutes les informations et <br> dernières annonces Global Luxury Services.</p>
+                                                        <!-- MailChimp for WordPress v2.3.18 - https://wordpress.org/plugins/mailchimp-for-wp/ --><div id="mc4wp-form-1" class="form mc4wp-form"><form method="post"><input class="nl-email" type="email" name="EMAIL" placeholder="Email" required="required">
+
+                                                                <input class="nl-btn" type="submit" value="OK"><div style="display: none;"><input type="text" name="_mc4wp_ho_b22713e89e30cb18669337f81df50424" value="" tabindex="-1" autocomplete="off"></div><input type="hidden" name="_mc4wp_timestamp" value="1518977793"><input type="hidden" name="_mc4wp_form_id" value="0"><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1"><input type="hidden" name="_mc4wp_form_submit" value="1"><input type="hidden" name="_mc4wp_form_nonce" value="9ef3b8b7a9"></form></div><!-- / MailChimp for WordPress Plugin -->	                	</div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="vc_col-sm-6 wpb_column vc_column_container ">
+                                            <div class="wpb_wrapper">
+                                                <div class="recruitment-block mf-table">
+                                                    <a  target="_blank" class="mf-table-cell">
+                                                        <h2>Découvrez notre<br> catalogue interactif</h2>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home-separator-4"></div>
+
+
+
+
+
+                        </div>
+                    </div>
+                    <div class="content_bottom">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <script type="text/javascript" src="https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js"></script>
+
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/themes/marcfoujols/js/select2.min.js'></script>
+
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/themes/marcfoujols/js/plugins.js'></script>
+    <script type='text/javascript' src='https://www.marcfoujols.com/wp-content/themes/marcfoujols/js/default_dynamic.php'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/themes/marcfoujols/js/default.min.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/themes/marcfoujols/js/marc_foujols.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/themes/marcfoujols/js/custom_js.php'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/themes/marcfoujols/js/select2-fr.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/themes/marcfoujols/js/i18n/fr.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/themes/marcfoujols/js/autoNumeric-min.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/themes/marcfoujols/js/cbpFWTabs.js'></script>
+
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/themes/marcfoujols/js/mf-search.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/themes/marcfoujols/js/modal/classie.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/themes/marcfoujols/js/modal/modalEffects.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/themes/marcfoujols/js/light-gallery/lightgallery-all.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/themes/marcfoujols/js/jquery.mousewheel.min.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-includes/js/comment-reply.min.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/plugins/js_composer-4.11/assets/js/dist/js_composer_front.min.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-includes/js/jquery/ui/core.min.js'></script>
+    <script type='text/javascript' src='https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-includes/js/jquery/ui/position.min.js'></script>
+    <script type="text/javascript" src="https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-content/plugins/popup-maker/assets/js/site.min.js?defer" defer="defer"></script>
+    <script type="text/javascript" src="https://4a1diu2l2oz9sztxw2o2majb-wpengine.netdna-ssl.com/wp-includes/js/wp-embed.min.js"></script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function(){
+
+            jQuery(".quoi").select2({
+                placeholder: "Quoi",
+                allowClear: false,
+                minimumResultsForSearch: Infinity
+            });
+            jQuery(".transaction").select2({
+
+                allowClear: false,
+                minimumResultsForSearch: Infinity
+            });
+
+            jQuery(".ou").select2({
+                placeholder: "Où",
+                allowClear: false,
+                minimumResultsForSearch: Infinity
+            });
+            jQuery(".duree").select2({
+                placeholder: "Durée",
+                allowClear: false,
+                minimumResultsForSearch: Infinity
+
+            });
+
+
+
+            jQuery('#searchban2_duree').next(".select2-container").css( { display: "none",width: "175px"  } );
+            jQuery(window).resize(function(){
+
+                if (jQuery(window).width() <= 480) {
+
+                    jQuery('#searchban2_duree').next(".select2-container").css( { display: "none",width: "100%"  } );
+
+
+                }else {
+                    jQuery('#searchban2_duree').next(".select2-container").css( { display: "none",width: "175px"  } );
+
+                }
+
+            });
+
+            jQuery('#searchban2_transaction').change(function() {
+                if(jQuery(this).val() == 'Location'){
+
+                    jQuery('#searchban2_duree').next(".select2-container").show('easing');
+                    jQuery('.home_header_search_box').css( {"max-width":"935px"} );
+
+                }
+
+                if(jQuery(this).val() == 'Vente'){
+
+                    jQuery('#searchban2_duree').next(".select2-container").hide();
+                    jQuery('.home_header_search_box').css( {"max-width":"747px"} );
+                }
+
+            });
+        })
+
+
+
+    </script>
+
+{% endblock %}

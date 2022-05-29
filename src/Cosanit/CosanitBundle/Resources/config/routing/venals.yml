@@ -1,0 +1,24 @@
+admin_venals_index:
+    path:     /
+    defaults: { _controller: "CosanitBundle:Venals:index" }
+    methods:  GET
+
+admin_venals_show:
+    path:     /{id}/show
+    defaults: { _controller: "CosanitBundle:Venals:show" }
+    methods:  GET
+
+admin_venals_new:
+    path:     /new
+    defaults: { _controller: "CosanitBundle:Venals:new" }
+    methods:  [GET, POST]
+
+admin_venals_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CosanitBundle:Venals:edit" }
+    methods:  [GET, POST]
+
+admin_venals_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CosanitBundle:Venals:delete" }
+    methods:  DELETE

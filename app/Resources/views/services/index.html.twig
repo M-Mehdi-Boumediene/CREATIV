@@ -1,0 +1,107 @@
+
+{% extends 'baseAdmin.html.twig' %}
+{% block body %}
+    <!-- page content -->
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>Services</h3>
+                </div>
+
+
+                <div class="title_right">
+                    <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                        <div class="input-group">
+
+                    <span class="input-group-btn">
+
+                    </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="x_panel" >
+
+
+
+
+
+                        <div class="x_title">
+                            <h4><a class="data btn btn-success btn-sm"  href="{{ path('admin_services_new') }}" >Nouveau service</a></h4>
+
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="x_content">
+
+
+
+
+                            <table id="datatable-buttons"  class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Titre</th>
+                                    <th>Texte</th>
+                                    <th>image</th>
+                                    <th>Action</th>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for service in services %}
+                                    <tr>
+                                        <td>{{ service.id }}</td>
+                                        <td>{{ service.titre }}</td>
+                                        <td>{{ service.texte|slice(0, 70) ~ '...' }}</td>
+                                        <td>{{ service.image.path }}</td>
+
+                                        <td>
+                                            <a  class="btn btn-info btn-xs" href="{{ path('admin_services_edit', { 'id' : service.id }) }}"><i class="fa fa-pencil" style="color: #ffffff;"></i> Modifier</a>
+                                            <a  data-toggle="modal" data-target="#delete" data-whatever="@mdo" href="" id="{{ service.id }}" class="modif btn btn-danger btn-xs" titre="{{ service.titre }}" texte="{{ service.texte| raw }}" path=""><i class="fa fa-times"></i> Supprimer</a>
+
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+
+
+
+
+                            <script type="text/javascript" src="{{ asset('vendors/jquery/dist/jquery.min.js') }}"></script>
+
+
+
+                            <script>
+                                $('#deletebannieres_id').val($('.modif').attr('id'))
+                            </script>
+
+
+
+                            <!-- price element -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="pull-right">
+            © 2018 ‐ J'@i l'impression Tout droits réservés.
+
+        </div>
+        <div class="clearfix"></div>
+    </footer>
+{% endblock %}
+
+
+
+

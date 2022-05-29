@@ -1,0 +1,24 @@
+admin_vols_index:
+    path:     /
+    defaults: { _controller: "CosanitBundle:Vols:index" }
+    methods:  GET
+
+admin_vols_show:
+    path:     /{id}/show
+    defaults: { _controller: "CosanitBundle:Vols:show" }
+    methods:  GET
+
+admin_vols_new:
+    path:     /new
+    defaults: { _controller: "CosanitBundle:Vols:new" }
+    methods:  [GET, POST]
+
+admin_vols_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CosanitBundle:Vols:edit" }
+    methods:  [GET, POST]
+
+admin_vols_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CosanitBundle:Vols:delete" }
+    methods:  DELETE

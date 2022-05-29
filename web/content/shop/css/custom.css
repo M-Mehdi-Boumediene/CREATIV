@@ -1,0 +1,210 @@
+
+#Top_bar .menu > li > a {
+    display: block;
+    line-height: 60px;
+    padding: 15px 0;
+    position: relative;
+    color: white;
+}
+
+#Header .top_bar_left, .header-classic #Top_bar, .header-stack #Top_bar, .header-split #Top_bar, .header-fixed #Top_bar, .header-below #Top_bar, #Header_creative, #Top_bar #menu {
+    background-color: rgba(68, 68, 68, 0.82);
+}
+
+
+#Footer {
+    background-color: rgba(56, 56, 56, 0.82);
+}
+
+@media only screen and (min-width: 1240px){}
+    #Top_bar.is-sticky {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: -60px;
+        height: 60px;
+        z-index: 701;
+        background-color: rgba(68, 68, 68, 0.82);
+
+    }
+#Top_bar .top_bar_right:before {
+    background-color: rgba(68, 68, 68, 0.82);
+}
+
+#Header .top_bar_right {
+    background-color: rgba(68, 68, 68, 0.82);
+}
+
+.icon_box .icon_wrapper {
+    width: 150px;
+    height: 140px;
+    text-align: center;
+    line-height: 110px;
+    font-size: 50px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto 15px;
+    border-width: 8px;
+    border-style: solid;
+    display: block;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    background-image: url(../images/stripes/stripes_3_b.png);
+}
+
+
+
+.icon_box .icon_wrapper, .icon_box a .icon_wrapper {
+    background-color: #424242;
+
+    font-size: 80px;
+}
+#Action_bar a {
+color:#424242;
+font-weight: bold;
+}
+#Action_bar .contact_details li {
+color:#424242;
+    font-weight: bold;
+}
+#Footer .footer_copy .social li a {
+    /* color: rgba(255,255,255,.3); */
+    font-size: 15px;
+    color: #ffb520;
+    line-height: 15px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+#Action_bar .social li a {
+    background-color: #424242;
+    font-size: 15px;
+    line-height: 15px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+a {
+
+  color:#424242;
+}
+
+.tp-caption{
+
+}
+#Subheader {
+    background-color: rgba(68, 68, 68, 0.82)
+}
+input[type="date"], input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], select, textarea {
+    padding: 10px;
+    outline: none;
+    margin: 0;
+    width: 230px;
+    max-width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    font-size: 13px;
+    border-width: 1px;
+    border-style: solid;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    border-color: #e2e2e2;
+}
+
+.image_frame .image_wrapper .image_links {
+    -webkit-transition: color 0.3s ease-in;
+    -moz-transition: color 0.3s ease-in;
+    -o-transition: color 0.3s ease-in;
+    -ms-transition: color 0.3s ease-in;
+    transition: color 0.3s ease-in;
+    background:#ffb520;
+
+}
+
+.one-third.column {
+    width: 31.334%;
+}
+
+
+.trailer_box .desc h2 {
+    color: #eaeaea;
+}
+.trailer_box .desc .line {
+    height: 1px;
+    width: 0;
+    margin: 0 auto;
+    background: #ffb520;
+    overflow: hidden;
+    display: block;
+}
+.trailer_box a:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    background: none;
+}
+
+.sections_style_3, div.sections_style_3 {
+    padding-top: 40px;
+    padding-bottom: 20px;
+
+}
+
+.image_frame .image_wrapper img:not(.ls-l) {
+    position: relative;
+
+    top: 0;
+    -webkit-transform: scaleY(1);
+    -moz-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    transform: scaleY(1);
+}
+
+
+input[type="text"]:focus, input[type="tel"]:focus, input[type="password"]:focus, input[type="email"]:focus, textarea:focus, select:focus {
+    background-color: #ffffff !important;
+    border-color: #e4e4e4;
+    color: #373737;
+}
+
+.form-control {
+    background: white;
+
+}
+
+
+input{
+    border: solid 1px #ababab;
+}
+
+#Wrapper, #Content {
+    background-color: #f1f1f1;
+}
+
+
+.image_frame:hover{
+
+    border-color: #e7e7e7;
+    min-height: 264px;
+    background: white;
+    line-height: 240px;
+
+}

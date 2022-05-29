@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Mentions list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Texte</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for mention in mentions %}
+            <tr>
+                <td><a href="{{ path('admin_mentions_show', { 'id': mention.id }) }}">{{ mention.id }}</a></td>
+                <td>{{ mention.texte }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('admin_mentions_show', { 'id': mention.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('admin_mentions_edit', { 'id': mention.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_mentions_new') }}">Create a new mention</a>
+        </li>
+    </ul>
+{% endblock %}

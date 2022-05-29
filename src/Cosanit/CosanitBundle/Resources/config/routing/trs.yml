@@ -1,0 +1,24 @@
+admin_trs_index:
+    path:     /
+    defaults: { _controller: "CosanitBundle:Trs:index" }
+    methods:  GET
+
+admin_trs_show:
+    path:     /{id}/show
+    defaults: { _controller: "CosanitBundle:Trs:show" }
+    methods:  GET
+
+admin_trs_new:
+    path:     /new
+    defaults: { _controller: "CosanitBundle:Trs:new" }
+    methods:  [GET, POST]
+
+admin_trs_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CosanitBundle:Trs:edit" }
+    methods:  [GET, POST]
+
+admin_trs_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CosanitBundle:Trs:delete" }
+    methods:  DELETE

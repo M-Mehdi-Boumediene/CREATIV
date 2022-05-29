@@ -1,0 +1,24 @@
+admin_docs_index:
+    path:     /
+    defaults: { _controller: "CosanitBundle:Docs:index" }
+    methods:  GET
+
+admin_docs_show:
+    path:     /{id}/show
+    defaults: { _controller: "CosanitBundle:Docs:show" }
+    methods:  GET
+
+admin_docs_new:
+    path:     /new
+    defaults: { _controller: "CosanitBundle:Docs:new" }
+    methods:  [GET, POST]
+
+admin_docs_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CosanitBundle:Docs:edit" }
+    methods:  [GET, POST]
+
+admin_docs_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CosanitBundle:Docs:delete" }
+    methods:  DELETE

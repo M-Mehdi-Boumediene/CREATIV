@@ -1,0 +1,24 @@
+admin_souscriptions_index:
+    path:     /
+    defaults: { _controller: "CosanitBundle:Souscriptions:index" }
+    methods:  GET
+
+admin_souscriptions_show:
+    path:     /{id}/show
+    defaults: { _controller: "CosanitBundle:Souscriptions:show" }
+    methods:  GET
+
+admin_souscriptions_new:
+    path:     /new
+    defaults: { _controller: "CosanitBundle:Souscriptions:new" }
+    methods:  [GET, POST]
+
+admin_souscriptions_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CosanitBundle:Souscriptions:edit" }
+    methods:  [GET, POST]
+
+admin_souscriptions_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CosanitBundle:Souscriptions:delete" }
+    methods:  DELETE

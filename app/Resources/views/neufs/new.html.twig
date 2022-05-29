@@ -1,0 +1,337 @@
+{% extends 'baseAdmin.html.twig' %}
+{% block body %}
+    <!-- page content -->
+    <div class="right_col" role="main">
+        <form action="{{ path('admin_neufs_new') }}" method="POST" {{ form_start(form) }}
+
+        <div class="">
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>Nouveau Projet</h3>
+                </div>
+
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+
+                    <div class="x_panel">
+
+                        <div class="x_content">
+                            <div class="row">
+
+                                <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                                    <label for="factures_type" class="required">Titre   </label>
+                                    {{ form_widget(form.titre,{'attr': {'class': 'form-control'}}) }}
+                                    {{ form_errors(form.titre) }}
+                                </div>
+                                <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                                    <label for="factures_type" class="required">date</label>
+                                    {{ form_widget(form.disponible,{'attr': {'class': 'form-control'}}) }}
+                                    {{ form_errors(form.disponible) }}
+                                </div>
+                                <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                                    <label for="factures_type" class="required">Sous titre   </label>
+                                    {{ form_widget(form.soustitre,{'attr': {'class': 'form-control'}}) }}
+                                    {{ form_errors(form.soustitre) }}
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="">
+
+            <div class="clearfix"></div>
+            <div class="x_panel">
+
+                <div class="x_content">
+
+                    <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                        <label for="factures_type" class="required">Description  </label>
+                        {{ form_widget(form.text2,{'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(form.text2) }}
+                    </div>
+                </div>
+
+
+
+
+
+
+
+            </div>
+            <div class="">
+
+                <div class="clearfix"></div>
+                <div class="x_panel">
+                    <div class="x_title">
+
+                        <h2>Photos</h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                            <ul class="tags"  data-prototype="{{ form_widget(form.image1.vars.prototype)|e('html_attr') }}">
+
+                                {{ form_widget(form.image1) }}
+                                {{ form_errors(form.image1) }}
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+
+
+
+                <br><br>
+
+                <button type="submit" class="btn btn-primary">Sauvegarder</button>
+                <a href="{{ path('admin_produits_index') }}"> ou Annuler</a>
+            </div>
+
+        </div>
+
+
+
+        </div>
+
+
+        {{ form_end(form) }}
+
+    </div>
+
+
+
+    <!-- /page content -->
+
+    <!-- footer content -->
+    <footer>
+        <div class="pull-right">
+            © 2021 ‐ SADJIACERAM Tout droits réservés.<br>
+            Développement web: <a href="https://creativdz.com" target="_blank">CREATIV</a>
+        </div>
+        <div class="clearfix"></div>
+    </footer>
+
+    <script type="text/javascript" src="{{ asset('vendors/jquery/dist/jquery.min.js') }}"></script>
+
+    <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAF2iP6B2-TwzV5QFeJJpnWlNSbVF__BeA&callback=initMap"   async defer>
+    </script>
+
+    <script>
+        function initMap() {
+            var latlng = new google.maps.LatLng(35.705447,-0.6357861000000185);
+            var map = new google.maps.Map(document.getElementById("gmap"),{
+                    zoom:10,
+                    center: latlng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+
+            });
+            var marker = new google.maps.Marker({
+                position: latlng,
+                map: map,
+                title: "Bougez ce curseur",
+                draggable: true
+            });
+            var geocoder = new google.maps.Geocoder();
+
+            google.maps.event.addListener(marker,'drag',function () {
+                setPosition(marker);
+
+            });
+
+            $('#neufs_name').keypress(function (e) {
+                if(e.keyCode == 13){
+
+                    var request = {
+                        address: $(this).val()
+
+                    }
+
+                    geocoder.geocode(request,function (results,status) {
+
+                        if(status == google.maps.GeocoderStatus.OK){
+
+                            var pos = results[0].geometry.location;
+                            map.setCenter(pos);
+                            marker.setPosition(pos);
+                            setPosition(marker);
+                        }
+                    });
+                    return false;
+
+
+                }
+
+            });
+        };
+
+        function setPosition(marker) {
+          var pos =  marker.getPosition();
+          $('#neufs_lat').val(pos.lat());
+            $('#neufs_lng').val(pos.lng());
+        }
+
+    </script>
+
+    <script>
+        var $collectionHolder;
+
+        // setup an "add a tag" link
+        var $addTagLink = $('<a href="#" class="add_tag_link">Ajouter photo</a>');
+        var $newLinkLi = $('<li></li>').append($addTagLink);
+
+        jQuery(document).ready(function() {
+            // Get the ul that holds the collection of tags
+            $collectionHolder = $('ul.tags');
+
+            // add the "add a tag" anchor and li to the tags ul
+            $collectionHolder.append($newLinkLi);
+
+            // count the current form inputs we have (e.g. 2), use that as the new
+            // index when inserting a new item (e.g. 2)
+            $collectionHolder.data('index', $collectionHolder.find(':input').length);
+
+            $addTagLink.on('click', function(e) {
+                // prevent the link from creating a "#" on the URL
+                e.preventDefault();
+
+                // add a new tag form (see next code block)
+                addTagForm($collectionHolder, $newLinkLi);
+            });
+        });
+
+        function addTagForm($collectionHolder, $newLinkLi) {
+            // Get the data-prototype explained earlier
+            var prototype = $collectionHolder.data('prototype');
+
+            // get the new index
+            var index = $collectionHolder.data('index');
+
+            // Replace '__name__' in the prototype's HTML to
+            // instead be a number based on how many items we have
+            var newForm = prototype.replace(/__name__/g, index);
+
+            // increase the index with one for the next item
+            $collectionHolder.data('index', index + 1);
+
+            // Display the form in the page in an li, before the "Add a tag" link li
+            var $newFormLi = $('<li></li>').append(newForm);
+            $newLinkLi.before($newFormLi);
+        }
+
+
+
+
+    </script>
+    <script>
+        var $collectionHolder2;
+
+        // setup an "add a tag" link
+        var $addTagLink2 = $('<a href="#" class="add_tag_link">Ajouter photo</a>');
+        var $newLinkLi2 = $('<div></div>').append($addTagLink2);
+
+        jQuery(document).ready(function() {
+            // Get the ul that holds the collection of tags
+            $collectionHolder2 = $('div.tags2');
+
+            // add the "add a tag" anchor and li to the tags ul
+            $collectionHolder2.append($newLinkLi2);
+
+            // count the current form inputs we have (e.g. 2), use that as the new
+            // index when inserting a new item (e.g. 2)
+            $collectionHolder2.data('index', $collectionHolder2.find(':input').length);
+
+            $addTagLink2.on('click', function(e) {
+                // prevent the link from creating a "#" on the URL
+                e.preventDefault();
+
+                // add a new tag form (see next code block)
+                addTagForm2($collectionHolder2, $newLinkLi2);
+            });
+
+            $collectionHolder2.find('.tags2').each(function() {
+                addTagFormDeleteLink2($(this));
+            });
+
+        });
+
+        function addTagForm2($collectionHolder2, $newLinkLi) {
+            // Get the data-prototype explained earlier
+            var prototype2 = $collectionHolder2.data('prototype');
+
+            // get the new index
+            var index2 = $collectionHolder2.data('index');
+
+            // Replace '__name__' in the prototype's HTML to
+            // instead be a number based on how many items we have
+            var newForm2 = prototype2.replace(/__name__/g, index2);
+
+            // increase the index with one for the next item
+            $collectionHolder2.data('index', index2 + 1);
+
+            // Display the form in the page in an li, before the "Add a tag" link li
+            var $newFormLi2 = $('<div></div>').append(newForm2);
+            $newLinkLi2.before($newFormLi2);
+
+            addTagFormDeleteLink2($newFormLi2);
+        }
+
+        function addTagFormDeleteLink2($tagFormLi2) {
+            var $removeFormA2 = $('<a href="#">delete this tag</a>');
+            $tagFormLi2.append($removeFormA2);
+
+            $removeFormA2.on('click', function(e) {
+                // prevent the link from creating a "#" on the URL
+                e.preventDefault();
+
+                // remove the li for the tag form
+                $tagFormLi2.remove();
+            });
+        }
+
+
+    </script>
+{% endblock %}
+
+
+
+
+

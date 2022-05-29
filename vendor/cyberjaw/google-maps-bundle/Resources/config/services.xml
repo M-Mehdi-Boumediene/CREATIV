@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <!-- google_maps form type -->
+        <service id="form.type.google_maps" class="CyberJaw\GoogleMapsBundle\Form\Type\GoogleMapsType">
+            <tag name="form.type" alias="google_maps"/>
+        </service>
+        <service id="google_maps.api_key" class="CyberJaw\GoogleMapsBundle\Service\GoogleApi">
+        </service>
+        <service id="google_maps.api_key.extension" class="CyberJaw\GoogleMapsBundle\Twig\ApiExtension">
+            <argument type="service" id="service_container"></argument>
+            <tag name="twig.extension"></tag>
+        </service>
+    </services>
+</container>

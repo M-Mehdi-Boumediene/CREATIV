@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Partenaire</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ partenaire.id }}</td>
+            </tr>
+            <tr>
+                <th>Countviews</th>
+                <td>{{ partenaire.countViews }}</td>
+            </tr>
+            <tr>
+                <th>Exclusive</th>
+                <td>{{ partenaire.exclusive }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ partenaire.titre }}</td>
+            </tr>
+            <tr>
+                <th>Text1</th>
+                <td>{{ partenaire.text1 }}</td>
+            </tr>
+            <tr>
+                <th>Text2</th>
+                <td>{{ partenaire.text2 }}</td>
+            </tr>
+            <tr>
+                <th>Text3</th>
+                <td>{{ partenaire.text3 }}</td>
+            </tr>
+            <tr>
+                <th>Alaune</th>
+                <td>{% if partenaire.alaune %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Slug</th>
+                <td>{{ partenaire.slug }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_partenaires_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('admin_partenaires_edit', { 'id': partenaire.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

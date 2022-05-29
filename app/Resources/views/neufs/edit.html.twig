@@ -1,0 +1,264 @@
+{% extends 'baseAdmin.html.twig' %}
+{% block body %}
+    <style>
+        .add_tag_link{
+            padding: 8px;
+            background: #00b180;
+            color: white;
+
+        }
+    </style>
+    <!-- page content -->
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>Modifier l'article</h3>
+                </div>
+
+
+                <div class="title_right">
+                    <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                        <div class="input-group">
+
+                    <span class="input-group-btn">
+
+                    </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    {{ form_start(edit_form) }}
+
+                    <div class="x_panel">
+                        <div class="x_title">
+
+
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="row">
+
+
+
+                                <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                                    <label for="factures_type" class="required">Titre   </label>
+                                    {{ form_widget(edit_form.titre,{'attr': {'class': 'form-control'}}) }}
+                                    {{ form_errors(edit_form.titre) }}
+                                </div>
+                                <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                                    <label for="factures_type" class="required">date</label>
+                                    {{ form_widget(edit_form.disponible,{'attr': {'class': 'form-control'}}) }}
+                                    {{ form_errors(edit_form.disponible) }}
+                                </div>
+                                <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                                    <label for="factures_type" class="required">Sous titre   </label>
+                                    {{ form_widget(edit_form.soustitre,{'attr': {'class': 'form-control'}}) }}
+                                    {{ form_errors(edit_form.soustitre) }}
+                                </div>
+
+                                <label for="factures_type" class="required">Description   </label>
+                                {{ form_widget(edit_form.text2,{'attr': {'class': 'form-control'}}) }}
+                                {{ form_errors(edit_form.text2) }}
+
+                            </div>
+
+
+
+
+
+                            <div class="row">
+                                <br>
+                                <div class="tags"  data-prototype="{{ form_widget(edit_form.image1.vars.prototype)|e('html_attr') }}">
+
+
+
+                                    {% for key, tag in edit_form.image1 %}
+                                        <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+
+                                            <div class="forms">
+                                                <img width="300"  src="{{ asset('photos_produits/' ~ neuf.image1[key].path)}}" />
+                                                {{ form_row(tag) }}
+                                            </div>
+                                            <div class="remove"></div>
+                                            <br>
+                                        </div>
+                                    {% endfor %}
+
+
+                                </div>
+
+
+
+
+                            </div>
+
+                            <br><br>
+                            <div class="del"></div>
+
+                            <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+
+
+
+
+                                <br><br>
+                                <button type="submit" class="btn btn-primary">Sauvegarder</button>
+                                <a href="{{ path('admin_produits_index') }}"> ou Annuler</a>
+                            </div>
+
+
+                        </div>
+                        {{ form_end(edit_form) }}
+
+
+
+                        <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                            {{ form_start(delete_form) }}
+                            <button type="submit" class="btn btn-danger pull-right ">Supprimer l'article </button>
+                            {{ form_end(delete_form) }}
+                        </div>
+
+
+
+                    </div>
+
+
+
+                </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- /page content -->
+
+    <!-- footer content -->
+    <footer>
+        <div class="pull-right">
+            © 2021 ‐ SADJIACERAM Tout droits réservés.<br>
+            Développement web: <a href="https://creativdz.com" target="_blank">CREATIV</a>
+        </div>
+        <div class="clearfix"></div>
+    </footer>
+
+
+    <script type="text/javascript" src="{{ asset('vendors/jquery/dist/jquery.min.js') }}"></script>
+
+
+    <script>
+        var $collectionHolder2;
+
+        // setup an "add a tag" link
+        var $addTagLink2 = $('<br><a href="#" class="add_tag_link"><i class="fa fa-plus"></i> Ajouter une photo</a> ');
+        var $newLinkLi2 = $('.del').append($addTagLink2);
+
+        jQuery(document).ready(function() {
+            // Get the ul that holds the collection of tags
+            $collectionHolder2 = $('div.tags');
+
+            // add the "add a tag" anchor and li to the tags ul
+            $('.del').append($newLinkLi2);
+
+            // count the current form inputs we have (e.g. 2), use that as the new
+            // index when inserting a new item (e.g. 2)
+            $collectionHolder2.data('index', $collectionHolder2.find(':input').length);
+
+            $addTagLink2.on('click', function(e) {
+                // prevent the link from creating a "#" on the URL
+                e.preventDefault();
+
+                // add a new tag form (see next code block)
+                addTagForm2($collectionHolder2, $newLinkLi2);
+
+
+            });
+
+            $collectionHolder2.find('.forms').each(function() {
+                addTagFormDeleteLink2($(this));
+            });
+
+
+        });
+
+        function addTagForm2($collectionHolder2, $newLinkLi2) {
+            // Get the data-prototype explained earlier
+            var prototype2 = $collectionHolder2.data('prototype');
+
+            // get the new index
+            var index2 = $collectionHolder2.data('index');
+
+            // Replace '__name__' in the prototype's HTML to
+            // instead be a number based on how many items we have
+            var newForm2 = prototype2.replace(/__name__/g, index2);
+
+            // increase the index with one for the next item
+            $collectionHolder2.data('index', index2 + 1);
+
+            // Display the form in the page in an li, before the "Add a tag" link li
+            var $newFormLi2 = $('<div></div>').append(newForm2);
+            $newLinkLi2.before($newFormLi2);
+
+            addTagFormDeleteLink2($newFormLi2);
+
+
+        }
+
+        function addTagFormDeleteLink2($tagFormLi2) {
+            var $removeFormA2 = $('<a class="suppphoto" href="#" style="color:#b23929;">Supprimer cette photo</a><br>');
+            $tagFormLi2.prepend($removeFormA2);
+
+            $removeFormA2.on('click', function(e) {
+                // prevent the link from creating a "#" on the URL
+                e.preventDefault();
+
+                // remove the li for the tag form
+                $tagFormLi2.remove();
+            });
+        }
+
+
+    </script>
+    <script>
+
+
+
+
+        $('#produits_type').change(function(){
+            if($(this).val() == 'Location'){ // or this.value == 'volvo'
+
+                $('#produits_duree').show();
+                $('label.lab').show();
+
+            }
+            if($(this).val() == 'Vente'){ // or this.value == 'volvo'
+
+                $('#produits_duree').hide();
+                $('label.lab').hide();
+
+            }
+            if($('#produits_type').val() == 'Vente'){ // or this.value == 'volvo'
+                $('#produits_type').val() == null;
+                $('#produits_duree').hide();
+                $('label.lab').hide();
+
+            }
+        });
+
+
+    </script>
+{% endblock %}
+
+
+
+
+

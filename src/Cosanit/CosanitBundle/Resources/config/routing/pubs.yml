@@ -1,0 +1,24 @@
+admin_pubs_index:
+    path:     /
+    defaults: { _controller: "CosanitBundle:Pubs:index" }
+    methods:  GET
+
+admin_pubs_show:
+    path:     /{id}/show
+    defaults: { _controller: "CosanitBundle:Pubs:show" }
+    methods:  GET
+
+admin_pubs_new:
+    path:     /new
+    defaults: { _controller: "CosanitBundle:Pubs:new" }
+    methods:  [GET, POST]
+
+admin_pubs_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CosanitBundle:Pubs:edit" }
+    methods:  [GET, POST]
+
+admin_pubs_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CosanitBundle:Pubs:delete" }
+    methods:  DELETE

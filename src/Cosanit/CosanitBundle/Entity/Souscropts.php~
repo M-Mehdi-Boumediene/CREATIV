@@ -1,0 +1,214 @@
+<?php
+
+namespace Cosanit\CosanitBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Souscropts
+ *
+ * @ORM\Table(name="souscropts")
+ * @ORM\Entity(repositoryClass="Cosanit\CosanitBundle\Repository\SouscroptsRepository")
+ */
+class Souscropts
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=255, nullable=true)
+     */
+    private $nom;
+
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="adresse", type="string", length=255, nullable=true)
+     */
+    private $adresse;
+
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=255, nullable=true)
+     */
+    private $email;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="npermis", type="string", nullable=true, length=255)
+     */
+    private $npermis;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="catpermis", type="string", nullable=true, length=255)
+     */
+    private $catpermis;
+
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="genre", type="string", nullable=true, length=255)
+     */
+    private $genre;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="wilaya", type="string", nullable=true, length=255)
+     */
+    private $wilaya;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="matricule", type="string", nullable=true, length=255)
+     */
+    private $matricule;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nserie", type="string", nullable=true, length=255)
+     */
+    private $nserie;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ntype", type="string", nullable=true, length=255)
+     */
+    private $ntype;
+
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="anneecircule", type="date", nullable=true, length=255)
+     */
+    private $anneecircule;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="marque", type="string", nullable=true, length=255)
+     */
+    private $marque;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="modele", type="string", nullable=true, length=255)
+     */
+    private $modele;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="usage", type="string", nullable=true, length=255)
+     */
+    private $usage;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="telephone", type="string", nullable=true, length=255)
+     */
+    private $telephone;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nbplace", type="string", nullable=true, length=255)
+     */
+    private $nbplace;
+
+
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="datepermis", nullable=true, type="date")
+     */
+    private $datepermis;
+
+
+
+    /**
+     * @ORM\OneToOne(targetEntity="Media", cascade={"all"})
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $photopermis;
+
+
+    /**
+     * @ORM\OneToOne(targetEntity="Media", cascade={"all"})
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $photocartegrise;
+
+
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nom
+     *
+     * @param string $nom
+     *
+     * @return Souscropts
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+
+        return $this;
+    }
+
+    /**
+     * Get nom
+     *
+     * @return string
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+}
+

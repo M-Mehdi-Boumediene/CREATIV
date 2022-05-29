@@ -1,0 +1,99 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block body %}
+    <script type="text/javascript" src="{{ asset('vendors/jquery/dist/jquery.min.js') }}"></script>
+<style>
+    textarea#textarea.form-control{
+        height: 113px;
+    }
+</style>
+
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>Bannieres</h3>
+                </div>
+
+
+                <div class="title_right">
+                    <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                        <div class="input-group">
+
+                    <span class="input-group-btn">
+
+                    </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="x_panel" >
+
+
+
+
+
+
+                        <div class="x_title">
+                            <h4>Èditer la Bannière </h4>
+
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+
+
+                            <img  src="{{ asset('Bannieres/') }}{{ banniere.path}}" width="100%" />
+
+
+                            <br><br>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                    {{ form_start(edit_form) }}
+                                    {{ form_label(edit_form.file, "Image (1500x835) ") }}
+                                    {{ form_widget(edit_form.file,{'attr': {'class': 'form-control text'}}) }}
+                                    {{ form_errors(edit_form.file) }}
+
+                                    {{ form_label(edit_form.titre, "Titre ") }}
+                                    {{ form_widget(edit_form.titre,{'attr': {'class': 'form-control text'}}) }}
+                                    {{ form_errors(edit_form.titre) }}
+
+                                    {{ form_label(edit_form.texte, "Texte ") }}
+                                    {{ form_widget(edit_form.texte,{'attr': {'class': 'form-control text'}}) }}
+                                    {{ form_errors(edit_form.texte) }}
+                                    <br>
+                                    <a href="{{ path('admin_bannieres_index') }}"><button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: rgb(156, 156, 156); color: #ffffff;">Annuler</button></a>
+                                    <button type="submit" class="btn btn-primary">Sauvegarder</button>
+                                    {{ form_end(edit_form) }}
+
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                    {{ form_start(delete_form) }}
+                                    <button type="submit" class="btn btn-danger pull-right ">Supprimer la bannière</button>
+                                    {{ form_end(delete_form) }}
+                                </div>
+
+
+
+                            </div>
+
+
+
+
+
+
+
+                            <!-- price element -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

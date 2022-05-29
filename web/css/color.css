@@ -1,0 +1,66 @@
+/* IMG BRAND SVG **************************************************/
+#brand-contract { background-image: url('/img/corporate/brand-contract.svg'); background-size: 211px 35px; width:211px; height:35px;}
+#brand-office { background-image: url('/img/corporate/brand-office.svg'); background-size: 249px 36px; width:249px; height:36px;}
+#brand-lavalle { background-image: url('/img/corporate/brand-lavalle.svg'); background-size: 279px 36px; width:279px; height:36px;}
+#brand-valplana { background-image: url('/img/corporate/brand-valplana.svg'); background-size: 249px 36px; width:249px; height:36px;}
+#brand-salotti { background-image: url('/img/corporate/brand-salotti.svg'); background-size: 183px 36px; width:183px; height:36px;}
+#brand-mobili { background-image: url('/img/corporate/brand-mobili.svg'); background-size: 183px 36px; width:183px; height:36px;}
+#brand-cucine { background-image: url('/img/corporate/brand-cucine.svg'); background-size: 196px 36px; width:196px; height:36px;}
+
+@media \0screen\,screen\9 { /* svg supportati da ie9 questo serve per ie dal 6 all'8*/
+    #brand-contract { background-image: url('/img/corporate/brand-contract.jpg'); background-size: 211px 35px; width:211px; height:35px;}
+    #brand-office { background-image: url('/img/corporate/brand-office.jpg'); background-size: 249px 36px; width:249px; height:36px;}
+    #brand-lavalle { background-image: url('/img/corporate/brand-lavalle.jpg'); background-size: 279px 36px; width:279px; height:36px;}
+    #brand-valplana { background-image: url('/img/corporate/brand-valplana.jpg'); background-size: 249px 36px; width:249px; height:36px;}
+    #brand-salotti { background-image: url('/img/corporate/brand-salotti.jpg'); background-size: 183px 36px; width:183px; height:36px;}
+    #brand-mobili { background-image: url('/img/corporate/brand-mobili.jpg'); background-size: 183px 36px; width:183px; height:36px;}
+    #brand-cucine { background-image: url('/img/corporate/brand-cucine.jpg'); background-size: 196px 36px; width:196px; height:36px;}
+}
+
+/* COLOR *********************************************************/
+.color { color:#ee1c23;}
+.color-cucine { color:#dc002e;}/*old d0112b*/
+.color-mobili { color:#007851;}
+.color-salotti { color:#999500;}
+.color-valplana { color:#9e925c;}
+.color-lavalle { color:#56c0d9;}
+.color-office { color:#9ab6d3;}
+.color-contract { color:#092e6e;}
+.color-store { color:#e95d0f;}
+
+.border-cucine { border-top:solid 1px #dc002e; border-bottom:solid 1px #dc002e;}/*old d0112b*/
+.border-mobili { border-top:solid 1px #007851; border-bottom:solid 1px #007851;}
+.border-salotti { border-top:solid 1px #999500; border-bottom:solid 1px #999500;}
+.border-valplana { border-top:solid 1px #9e925c; border-bottom:solid 1px #9e925c;}
+.border-lavalle { border-top:solid 1px #56c0d9; border-bottom:solid 1px #56c0d9;}
+.border-office { border-top:solid 1px #9ab6d3; border-bottom:solid 1px #9ab6d3;}
+.border-contract { border-top:solid 1px #092e6e; border-bottom:solid 1px #092e6e;}
+
+.bg-cucine { background:#520136;}/*old d0112b*/
+.bg-mobili { background:#014752;}
+.bg-salotti { background:#615e02;}
+.bg-valplana { background:#610202;}
+.bg-lavalle { background:#020e61;}
+.bg-office { background:#9ab6d3;}
+.bg-contract { background:#092e6e;}
+.bg-group {background:#9b9b9b;}
+.bg-store { background:#e95d0f;}
+
+/* potrebbe piacerti anche scheda prodotto brand */
+.dati-brand.bg-cucine:hover, .dati-brand.bg-cucine:hover h4, .dati-brand.bg-cucine:hover .plus { background:#dc002e; color:#fff;}
+.dati-brand.bg-mobili:hover, .dati-brand.bg-mobili:hover h4, .dati-brand.bg-mobili:hover .plus { background:#007851; color:#fff;}
+.dati-brand.bg-salotti:hover, .dati-brand.bg-salotti:hover h4, .dati-brand.bg-salotti:hover .plus { background:#999500; color:#fff;}
+.dati-brand.bg-valplana:hover, .dati-brand.bg-valplana:hover h4, .dati-brand.bg-valplana:hover .plus { background:#9e925c; color:#fff;}
+.dati-brand.bg-lavalle:hover, .dati-brand.bg-lavalle:hover h4, .dati-brand.bg-lavalle:hover .plus { background:#56c0d9; color:#fff;}
+.dati-brand.bg-office:hover, .dati-brand.bg-office:hover h4, .dati-brand.bg-office:hover .plus { background:#9ab6d3; color:#fff;}
+
+/* SECTION COLOR **************************************************/
+.bg-light-gray { background:#f6f6f6;}
+.bg-medium-gray { background:#9b9b9b;}
+.bg-dark-gray { background:#000;}
+.bg-lightmedium-gray { background:#868889;}
+.bg-gray { background:#e0e0e0;}
+.bg-black { background:#000;}
+.bg-white { background:#fff;}
+
+

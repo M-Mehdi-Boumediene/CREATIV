@@ -1,0 +1,29 @@
+.page-template-page-investment {
+  .filter-bar-inner {
+    padding-bottom: 10px;
+    &:after {
+      content:"";
+      display:table;
+      clear:both;
+    }
+  }
+
+  .filter-bar .select2-container .select2-selection--single .select2-selection__rendered {
+    height: 40px;
+    line-height: 38px;
+    padding-right: 40px;
+  }
+  .filter-bar .select2-selection {
+    height: 40px;
+    padding-top: 0;
+  }
+  .filter-bar .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 40px;
+  }
+  .btn-search {
+    border: 0;
+  }
+  .result-image-container {
+    transition: all .4s ease;
+  }
+}

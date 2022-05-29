@@ -1,0 +1,24 @@
+admin_types_index:
+    path:     /
+    defaults: { _controller: "CosanitBundle:Types:index" }
+    methods:  GET
+
+admin_types_show:
+    path:     /{id}/show
+    defaults: { _controller: "CosanitBundle:Types:show" }
+    methods:  GET
+
+admin_types_new:
+    path:     /new
+    defaults: { _controller: "CosanitBundle:Types:new" }
+    methods:  [GET, POST]
+
+admin_types_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CosanitBundle:Types:edit" }
+    methods:  [GET, POST]
+
+admin_types_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CosanitBundle:Types:delete" }
+    methods:  DELETE

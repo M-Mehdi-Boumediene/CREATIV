@@ -1,0 +1,1543 @@
+<?php
+
+namespace Cosanit\CosanitBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Neufs
+ *
+ * @ORM\Table(name="neufs")
+ * @ORM\Entity(repositoryClass="Cosanit\CosanitBundle\Repository\NeufsRepository")
+ */
+class Neufs
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="titre", type="string", length=255, nullable=true)
+     */
+    private $titre;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="soustitre", type="text", length=255, nullable=true)
+     */
+    private $soustitre;
+
+
+    /**
+     * @ORM\OneToOne(targetEntity="Media", cascade={"persist","remove"})
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $banniere1;
+
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="exclusive", type="string", length=255, nullable=true)
+     */
+    private $exclusive;
+
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="typebien", type="string", length=255, nullable=true)
+     */
+    private $typebien;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ref", type="string",length=255, nullable=true)
+     */
+    private $ref;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="type", type="string", length=255, nullable=true)
+     */
+    private $type;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="text1", type="text", nullable=true)
+     */
+    private $text1;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="text2", type="text", nullable=true)
+     */
+    private $text2;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prix", type="string", length=255, nullable=true)
+     */
+    private $prix;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="surface", type="string", length=255, nullable=true)
+     */
+    private $surface;
+
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="pieces", type="integer",  nullable=true)
+     */
+    private $pieces;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="chambres", type="integer", length=255, nullable=true)
+     */
+    private $chambres ;
+
+
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ascenseur", type="string", length=255, nullable=true)
+     */
+    private $ascenseur ;
+
+
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="gardien ", type="string", length=255, nullable=true)
+     */
+    private $gardien  ;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="interphone", type="string", length=255, nullable=true)
+     */
+    private $interphone ;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="sdb", type="string", length=255, nullable=true)
+     */
+    private $sdb ;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="chauffage", type="string", length=255, nullable=true)
+     */
+    private $chauffage ;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="construction", type="string", length=255, nullable=true)
+     */
+    private $construction;
+
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mecanisme", type="string", length=255, nullable=true)
+     */
+    private $mecanisme ;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="stationnement", type="string", length=255, nullable=true)
+     */
+    private $stationnement;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="annee", type="string", length=255, nullable=true)
+     */
+    private $annee;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="surfacet", type="string", length=255, nullable=true)
+     */
+    private $surfacet;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="saledebain", type="integer", length=255, nullable=true)
+     */
+    private $saledebain;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="terrasse", type="integer", length=255, nullable=true)
+     */
+    private $terrasse;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="disponible", type="date",  nullable=true)
+     */
+    private $disponible;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="garages", type="string", length=255, nullable=true)
+     */
+    private $garages;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="standing", type="string", length=255, nullable=true)
+     */
+    private $standing;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="anneeconst", type="string", length=255, nullable=true)
+     */
+    private $anneeconst;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="consommation", type="string", length=255, nullable=true)
+     */
+    private $consommation;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="etage", type="string", length=255, nullable=true)
+     */
+    private $etage;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="wc", type="integer",  nullable=true)
+     */
+    private $wc;
+
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cuisine", type="string", length=255, nullable=true)
+     */
+    private $cuisine;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="piscine", type="string", length=255, nullable=true)
+     */
+    private $piscine;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mandat", type="string", length=255, nullable=true)
+     */
+    private $mandat;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="rcs", type="string", length=255, nullable=true)
+     */
+    private $rcs;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Parents", cascade={"persist"})
+     *
+     */
+    protected $parents;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Categories", inversedBy="neufs", cascade={"persist"})
+     *
+     */
+    protected $categories;
+
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Types", cascade={"persist"})
+     *
+     */
+    protected $types;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Media", cascade={"all"})
+     * @ORM\JoinColumn(name="photos",nullable=true))
+     */
+    private $image1;
+
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Slideneufs", cascade={"all"})
+     * @ORM\JoinColumn(name="photos",nullable=true))
+     */
+    private $slides;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="alaune", type="boolean", nullable=true)
+     */
+    private $alaune;
+
+    protected $latitude;
+
+    protected $longitude;
+
+    protected $city;
+
+    protected $address;
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set titre
+     *
+     * @param string $titre
+     * @return Produits
+     */
+    public function setTitre($titre)
+    {
+        $this->titre = $titre;
+
+        return $this;
+    }
+
+    /**
+     * Get titre
+     *
+     * @return string
+     */
+    public function getTitre()
+    {
+        return $this->titre;
+    }
+
+    /**
+     * Set text1
+     *
+     * @param string $text1
+     * @return Produits
+     */
+    public function setText1($text1)
+    {
+        $this->text1 = $text1;
+
+        return $this;
+    }
+
+    /**
+     * Get text1
+     *
+     * @return string
+     */
+    public function getText1()
+    {
+        return $this->text1;
+    }
+
+    /**
+     * Set text2
+     *
+     * @param string $text2
+     * @return Produits
+     */
+    public function setText2($text2)
+    {
+        $this->text2 = $text2;
+
+        return $this;
+    }
+
+    /**
+     * Get text2
+     *
+     * @return string
+     */
+    public function getText2()
+    {
+        return $this->text2;
+    }
+
+    /**
+     * Set prix
+     *
+     * @param string $prix
+     * @return Produits
+     */
+    public function setPrix($prix)
+    {
+        $this->prix = $prix;
+
+        return $this;
+    }
+
+    /**
+     * Get prix
+     *
+     * @return string
+     */
+    public function getPrix()
+    {
+        return $this->prix;
+    }
+
+    /**
+     * Set photo1
+     *
+     * @param string $photo1
+     * @return Produits
+     */
+    public function setPhoto1($photo1)
+    {
+        $this->photo1 = $photo1;
+
+        return $this;
+    }
+
+    /**
+     * Get photo1
+     *
+     * @return string
+     */
+    public function getPhoto1()
+    {
+        return $this->photo1;
+    }
+
+    /**
+     * Set photo2
+     *
+     * @param string $photo2
+     * @return Produits
+     */
+    public function setPhoto2($photo2)
+    {
+        $this->photo2 = $photo2;
+
+        return $this;
+    }
+
+    /**
+     * Get photo2
+     *
+     * @return string
+     */
+    public function getPhoto2()
+    {
+        return $this->photo2;
+    }
+
+    /**
+     * Set photo3
+     *
+     * @param string $photo3
+     * @return Produits
+     */
+    public function setPhoto3($photo3)
+    {
+        $this->photo3 = $photo3;
+
+        return $this;
+    }
+
+    /**
+     * Get photo3
+     *
+     * @return string
+     */
+    public function getPhoto3()
+    {
+        return $this->photo3;
+    }
+
+    /**
+     * Set photo4
+     *
+     * @param string $photo4
+     * @return Produits
+     */
+    public function setPhoto4($photo4)
+    {
+        $this->photo4 = $photo4;
+
+        return $this;
+    }
+
+    /**
+     * Get photo4
+     *
+     * @return string
+     */
+    public function getPhoto4()
+    {
+        return $this->photo4;
+    }
+
+    /**
+     * Set lien
+     *
+     * @param string $lien
+     * @return Produits
+     */
+    public function setLien($lien)
+    {
+        $this->lien = $lien;
+
+        return $this;
+    }
+
+    /**
+     * Get lien
+     *
+     * @return string
+     */
+    public function getLien()
+    {
+        return $this->lien;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->categories = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+
+
+
+    /**
+     * Set image1
+     *
+     * @param \Cosanit\CosanitBundle\Entity\Media $image1
+     * @return Produits
+     */
+    public function setImage1(\Cosanit\CosanitBundle\Entity\Media $image1)
+    {
+        $this->image1 = $image1;
+
+        return $this;
+    }
+
+    /**
+     * Get image1
+     *
+     * @return \Cosanit\CosanitBundle\Entity\Media
+     */
+    public function getImage1()
+    {
+        return $this->image1;
+    }
+
+    /**
+     * Set image2
+     *
+     * @param \Cosanit\CosanitBundle\Entity\Media $image2
+     * @return Produits
+     */
+    public function setImage2(\Cosanit\CosanitBundle\Entity\Media $image2)
+    {
+        $this->image2 = $image2;
+
+        return $this;
+    }
+
+    /**
+     * Get image2
+     *
+     * @return \Cosanit\CosanitBundle\Entity\Media
+     */
+    public function getImage2()
+    {
+        return $this->image2;
+    }
+
+    /**
+     * Set image3
+     *
+     * @param \Cosanit\CosanitBundle\Entity\Media $image3
+     * @return Produits
+     */
+    public function setImage3(\Cosanit\CosanitBundle\Entity\Media $image3)
+    {
+        $this->image3 = $image3;
+
+        return $this;
+    }
+
+    /**
+     * Get image3
+     *
+     * @return \Cosanit\CosanitBundle\Entity\Media
+     */
+    public function getImage3()
+    {
+        return $this->image3;
+    }
+
+    /**
+     * Set image4
+     *
+     * @param \Cosanit\CosanitBundle\Entity\Media $image4
+     * @return Produits
+     */
+    public function setImage4(\Cosanit\CosanitBundle\Entity\Media $image4)
+    {
+        $this->image4 = $image4;
+
+        return $this;
+    }
+
+    /**
+     * Get image4
+     *
+     * @return \Cosanit\CosanitBundle\Entity\Media
+     */
+    public function getImage4()
+    {
+        return $this->image4;
+    }
+
+
+    /**
+     * Get alaune
+     *
+     * @return boolean
+     */
+    public function getAlaune()
+    {
+        return $this->alaune;
+    }
+
+    /**
+     * Set alaune
+     *
+     * @param boolean $alaune
+     * @return Produits
+     */
+    public function setAlaune($alaune)
+    {
+        $this->alaune = $alaune;
+
+        return $this;
+    }
+
+    /**
+     * Set parents
+     *
+     * @param \Cosanit\CosanitBundle\Entity\Parents $parents
+     * @return Produits
+     */
+    public function setParents(\Cosanit\CosanitBundle\Entity\Parents $parents = null)
+    {
+        $this->parents = $parents;
+
+        return $this;
+    }
+
+    /**
+     * Get parents
+     *
+     * @return \Cosanit\CosanitBundle\Entity\Parents
+     */
+    public function getParents()
+    {
+        return $this->parents;
+    }
+
+    /**
+     * Set surface
+     *
+     * @param string $surface
+     * @return Produits
+     */
+    public function setSurface($surface)
+    {
+        $this->surface = $surface;
+
+        return $this;
+    }
+
+    /**
+     * Get surface
+     *
+     * @return string
+     */
+    public function getSurface()
+    {
+        return $this->surface;
+    }
+
+    /**
+     * Set pieces
+     *
+     * @param string $pieces
+     * @return Produits
+     */
+    public function setPieces($pieces)
+    {
+        $this->pieces = $pieces;
+
+        return $this;
+    }
+
+    /**
+     * Get pieces
+     *
+     * @return string
+     */
+    public function getPieces()
+    {
+        return $this->pieces;
+    }
+
+    /**
+     * Set chambres
+     *
+     * @param string $chambres
+     * @return Produits
+     */
+    public function setChambres($chambres)
+    {
+        $this->chambres = $chambres;
+
+        return $this;
+    }
+
+    /**
+     * Get chambres
+     *
+     * @return string
+     */
+    public function getChambres()
+    {
+        return $this->chambres;
+    }
+
+    /**
+     * Set ascenseur
+     *
+     * @param string $ascenseur
+     * @return Produits
+     */
+    public function setAscenseur($ascenseur)
+    {
+        $this->ascenseur = $ascenseur;
+
+        return $this;
+    }
+
+    /**
+     * Get ascenseur
+     *
+     * @return string
+     */
+    public function getAscenseur()
+    {
+        return $this->ascenseur;
+    }
+
+    /**
+     * Set gardien
+     *
+     * @param string $gardien
+     * @return Produits
+     */
+    public function setGardien($gardien)
+    {
+        $this->gardien = $gardien;
+
+        return $this;
+    }
+
+    /**
+     * Get gardien
+     *
+     * @return string
+     */
+    public function getGardien()
+    {
+        return $this->gardien;
+    }
+
+    /**
+     * Set interphone
+     *
+     * @param string $interphone
+     * @return Produits
+     */
+    public function setInterphone($interphone)
+    {
+        $this->interphone = $interphone;
+
+        return $this;
+    }
+
+    /**
+     * Get interphone
+     *
+     * @return string
+     */
+    public function getInterphone()
+    {
+        return $this->interphone;
+    }
+
+    /**
+     * Set sdb
+     *
+     * @param string $sdb
+     * @return Produits
+     */
+    public function setSdb($sdb)
+    {
+        $this->sdb = $sdb;
+
+        return $this;
+    }
+
+    /**
+     * Get sdb
+     *
+     * @return string
+     */
+    public function getSdb()
+    {
+        return $this->sdb;
+    }
+
+    /**
+     * Set chauffage
+     *
+     * @param string $chauffage
+     * @return Produits
+     */
+    public function setChauffage($chauffage)
+    {
+        $this->chauffage = $chauffage;
+
+        return $this;
+    }
+
+    /**
+     * Get chauffage
+     *
+     * @return string
+     */
+    public function getChauffage()
+    {
+        return $this->chauffage;
+    }
+
+    /**
+     * Set mecanisme
+     *
+     * @param string $mecanisme
+     * @return Produits
+     */
+    public function setMecanisme($mecanisme)
+    {
+        $this->mecanisme = $mecanisme;
+
+        return $this;
+    }
+
+    /**
+     * Get mecanisme
+     *
+     * @return string
+     */
+    public function getMecanisme()
+    {
+        return $this->mecanisme;
+    }
+
+    /**
+     * Set stationnement
+     *
+     * @param string $stationnement
+     * @return Produits
+     */
+    public function setStationnement($stationnement)
+    {
+        $this->stationnement = $stationnement;
+
+        return $this;
+    }
+
+    /**
+     * Get stationnement
+     *
+     * @return string
+     */
+    public function getStationnement()
+    {
+        return $this->stationnement;
+    }
+
+    /**
+     * Set annee
+     *
+     * @param string $annee
+     * @return Produits
+     */
+    public function setAnnee($annee)
+    {
+        $this->annee = $annee;
+
+        return $this;
+    }
+
+    /**
+     * Get annee
+     *
+     * @return string
+     */
+    public function getAnnee()
+    {
+        return $this->annee;
+    }
+
+    /**
+     * Set surfacet
+     *
+     * @param string $surfacet
+     * @return Produits
+     */
+    public function setSurfacet($surfacet)
+    {
+        $this->surfacet = $surfacet;
+
+        return $this;
+    }
+
+    /**
+     * Get surfacet
+     *
+     * @return string
+     */
+    public function getSurfacet()
+    {
+        return $this->surfacet;
+    }
+
+    /**
+     * Set garages
+     *
+     * @param string $garages
+     * @return Produits
+     */
+    public function setGarages($garages)
+    {
+        $this->garages = $garages;
+
+        return $this;
+    }
+
+    /**
+     * Get garages
+     *
+     * @return string
+     */
+    public function getGarages()
+    {
+        return $this->garages;
+    }
+
+    /**
+     * Set standing
+     *
+     * @param string $standing
+     * @return Produits
+     */
+    public function setStanding($standing)
+    {
+        $this->standing = $standing;
+
+        return $this;
+    }
+
+    /**
+     * Get standing
+     *
+     * @return string
+     */
+    public function getStanding()
+    {
+        return $this->standing;
+    }
+
+    /**
+     * Set consommation
+     *
+     * @param string $consommation
+     * @return Produits
+     */
+    public function setConsommation($consommation)
+    {
+        $this->consommation = $consommation;
+
+        return $this;
+    }
+
+    /**
+     * Get consommation
+     *
+     * @return string
+     */
+    public function getConsommation()
+    {
+        return $this->consommation;
+    }
+
+    /**
+     * Set piscine
+     *
+     * @param string $piscine
+     * @return Produits
+     */
+    public function setPiscine($piscine)
+    {
+        $this->piscine = $piscine;
+
+        return $this;
+    }
+
+    /**
+     * Get piscine
+     *
+     * @return string
+     */
+    public function getPiscine()
+    {
+        return $this->piscine;
+    }
+
+    /**
+     * Set mandat
+     *
+     * @param string $mandat
+     * @return Produits
+     */
+    public function setMandat($mandat)
+    {
+        $this->mandat = $mandat;
+
+        return $this;
+    }
+
+    /**
+     * Get mandat
+     *
+     * @return string
+     */
+    public function getMandat()
+    {
+        return $this->mandat;
+    }
+
+    /**
+     * Set rcs
+     *
+     * @param string $rcs
+     * @return Produits
+     */
+    public function setRcs($rcs)
+    {
+        $this->rcs = $rcs;
+
+        return $this;
+    }
+
+    /**
+     * Get rcs
+     *
+     * @return string
+     */
+    public function getRcs()
+    {
+        return $this->rcs;
+    }
+
+    /**
+     * Set type
+     *
+     * @param string $type
+     * @return Produits
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * Set ref
+     *
+     * @param \number $ref
+     * @return Produits
+     */
+    public function setRef( $ref)
+    {
+        $this->ref = $ref;
+
+        return $this;
+    }
+
+    /**
+     * Get ref
+     *
+     * @return \number
+     */
+    public function getRef()
+    {
+        return $this->ref;
+    }
+
+    /**
+     * Set typebien
+     *
+     * @param string $typebien
+     * @return Produits
+     */
+    public function setTypebien($typebien)
+    {
+        $this->typebien = $typebien;
+
+        return $this;
+    }
+
+    /**
+     * Get typebien
+     *
+     * @return string
+     */
+    public function getTypebien()
+    {
+        return $this->typebien;
+    }
+
+    /**
+     * Set disponible
+     *
+     * @param \DateTime $disponible
+     * @return Produits
+     */
+    public function setDisponible($disponible)
+    {
+        $this->disponible = $disponible;
+
+        return $this;
+    }
+
+    /**
+     * Get disponible
+     *
+     * @return \DateTime
+     */
+    public function getDisponible()
+    {
+        return $this->disponible;
+    }
+
+    /**
+     * Set saledebain
+     *
+     * @param integer $saledebain
+     * @return Produits
+     */
+    public function setSaledebain($saledebain)
+    {
+        $this->saledebain = $saledebain;
+
+        return $this;
+    }
+
+    /**
+     * Get saledebain
+     *
+     * @return integer
+     */
+    public function getSaledebain()
+    {
+        return $this->saledebain;
+    }
+
+    /**
+     * Set terrasse
+     *
+     * @param integer $terrasse
+     * @return Produits
+     */
+    public function setTerrasse($terrasse)
+    {
+        $this->terrasse = $terrasse;
+
+        return $this;
+    }
+
+    /**
+     * Get terrasse
+     *
+     * @return integer
+     */
+    public function getTerrasse()
+    {
+        return $this->terrasse;
+    }
+
+    /**
+     * Set construction
+     *
+     * @param string $construction
+     * @return Produits
+     */
+    public function setConstruction($construction)
+    {
+        $this->construction = $construction;
+
+        return $this;
+    }
+
+    /**
+     * Get construction
+     *
+     * @return string
+     */
+    public function getConstruction()
+    {
+        return $this->construction;
+    }
+
+    /**
+     * Set anneeconst
+     *
+     * @param string $anneeconst
+     * @return Produits
+     */
+    public function setAnneeconst($anneeconst)
+    {
+        $this->anneeconst = $anneeconst;
+
+        return $this;
+    }
+
+    /**
+     * Get anneeconst
+     *
+     * @return string
+     */
+    public function getAnneeconst()
+    {
+        return $this->anneeconst;
+    }
+
+    /**
+     * Set cuisine
+     *
+     * @param string $cuisine
+     * @return Produits
+     */
+    public function setCuisine($cuisine)
+    {
+        $this->cuisine = $cuisine;
+
+        return $this;
+    }
+
+    /**
+     * Get cuisine
+     *
+     * @return string
+     */
+    public function getCuisine()
+    {
+        return $this->cuisine;
+    }
+
+    /**
+     * Set etage
+     *
+     * @param string $etage
+     * @return Produits
+     */
+    public function setEtage($etage)
+    {
+        $this->etage = $etage;
+
+        return $this;
+    }
+
+    /**
+     * Get etage
+     *
+     * @return string
+     */
+    public function getEtage()
+    {
+        return $this->etage;
+    }
+
+    /**
+     * Set wc
+     *
+     * @param integer $wc
+     * @return Produits
+     */
+    public function setWc($wc)
+    {
+        $this->wc = $wc;
+
+        return $this;
+    }
+
+    /**
+     * Get wc
+     *
+     * @return integer
+     */
+    public function getWc()
+    {
+        return $this->wc;
+    }
+
+    /**
+     * Add image1
+     *
+     * @param \Cosanit\CosanitBundle\Entity\Media $image1
+     * @return Produits
+     */
+    public function addImage1(\Cosanit\CosanitBundle\Entity\Media $image1)
+    {
+        $this->image1[] = $image1;
+
+        return $this;
+    }
+
+    /**
+     * Remove image1
+     *
+     * @param \Cosanit\CosanitBundle\Entity\Media $image1
+     */
+    public function removeImage1(\Cosanit\CosanitBundle\Entity\Media $image1)
+    {
+        $this->image1->removeElement($image1);
+    }
+
+    /**
+     * Set exclusive
+     *
+     * @param string $exclusive
+     * @return Produits
+     */
+    public function setExclusive($exclusive)
+    {
+        $this->exclusive = $exclusive;
+
+        return $this;
+    }
+
+    /**
+     * Get exclusive
+     *
+     * @return string
+     */
+    public function getExclusive()
+    {
+        return $this->exclusive;
+    }
+
+    /**
+     * Set types
+     *
+     * @param \Cosanit\CosanitBundle\Entity\Types $types
+     * @return Produits
+     */
+    public function setTypes(\Cosanit\CosanitBundle\Entity\Types $types = null)
+    {
+        $this->types = $types;
+
+        return $this;
+    }
+
+    /**
+     * Get types
+     *
+     * @return \Cosanit\CosanitBundle\Entity\Types
+     */
+    public function getTypes()
+    {
+        return $this->types;
+    }
+
+    /**
+     * Set categories
+     *
+     * @param \Cosanit\CosanitBundle\Entity\Categories $categories
+     * @return Produits
+     */
+    public function setCategories(\Cosanit\CosanitBundle\Entity\Categories $categories = null)
+    {
+        $this->categories = $categories;
+
+        return $this;
+    }
+
+    /**
+     * Get categories
+     *
+     * @return \Cosanit\CosanitBundle\Entity\Categories
+     */
+    public function getCategories()
+    {
+        return $this->categories;
+    }
+
+    /**
+     * Set soustitre
+     *
+     * @param string $soustitre
+     *
+     * @return Neufs
+     */
+    public function setSoustitre($soustitre)
+    {
+        $this->soustitre = $soustitre;
+
+        return $this;
+    }
+
+    /**
+     * Get soustitre
+     *
+     * @return string
+     */
+    public function getSoustitre()
+    {
+        return $this->soustitre;
+    }
+
+    /**
+     * Set banniere1
+     *
+     * @param \Cosanit\CosanitBundle\Entity\Media $banniere1
+     *
+     * @return Neufs
+     */
+    public function setBanniere1(\Cosanit\CosanitBundle\Entity\Media $banniere1)
+    {
+        $this->banniere1 = $banniere1;
+
+        return $this;
+    }
+
+    /**
+     * Get banniere1
+     *
+     * @return \Cosanit\CosanitBundle\Entity\Media
+     */
+    public function getBanniere1()
+    {
+        return $this->banniere1;
+    }
+
+    /**
+     * Add slide
+     *
+     * @param \Cosanit\CosanitBundle\Entity\Slideneufs $slide
+     *
+     * @return Neufs
+     */
+    public function addSlide(\Cosanit\CosanitBundle\Entity\Slideneufs $slide)
+    {
+        $this->slides[] = $slide;
+
+        return $this;
+    }
+
+    /**
+     * Remove slide
+     *
+     * @param \Cosanit\CosanitBundle\Entity\Slideneufs $slide
+     */
+    public function removeSlide(\Cosanit\CosanitBundle\Entity\Slideneufs $slide)
+    {
+        $this->slides->removeElement($slide);
+    }
+
+    /**
+     * Get slides
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getSlides()
+    {
+        return $this->slides;
+    }
+}

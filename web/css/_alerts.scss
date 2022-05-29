@@ -1,0 +1,244 @@
+.content-alert {
+  margin: 30px 0 70px 0;
+
+  .title-container {
+    margin-bottom: 40px;
+
+    h1 {
+      font-size: 36px;
+      font-weight: 400;
+      color: $red;
+      margin-bottom: 10px;
+    }
+
+  }
+}
+
+.alert-form {
+
+  .deal {
+    width: 40%;
+    margin-bottom: 20px;
+  }
+
+  .city {
+    margin-bottom: 20px;
+  }
+
+  .vc_row-categories {
+
+    .vc_col-md-5 {
+      margin-bottom: 20px;
+    }
+  }
+
+  .big-input {
+    margin-bottom: 20px;
+    border: 1px solid #dfdfdf;
+  }
+
+  .rooms {
+
+    .vc_col-md-1 {
+      padding: 0;
+      margin-right: 15px;
+      width: 12%;
+      @media(max-width: $screen-sm) {
+        margin-right: 0px;
+        margin-left: 15px;
+      }
+    }
+
+    .big-checkbox {
+      label {
+        height: 40px;
+        line-height: 40px;
+        min-width: 80px;
+
+        &:before {
+          top: 12px;
+        }
+      }
+    }
+  }
+
+  .submit-container {
+    border-top: 1px solid $gray-light;
+    padding-top: 20px;
+    margin-top: 25px;
+  }
+}
+
+body .register-form-wrap, .my_account_page {
+  padding-bottom: 40px;
+
+  hr {
+    height: 1px;
+    background-color: #e7e7e7;
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .separator-value {
+    font-weight: bold;
+    background-color: #f0f0f0;
+    border: 1px solid #dfdfdf;
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .alert-label {
+    margin-bottom: 40px;
+  }
+  .separator-label {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #262626;
+  }
+  .gender {
+    display: inline-block;
+    &:not(:first-child) {
+      margin-left: -1px;
+    }
+  }
+}
+.feup-pure-form-aligned .feup-pure-control-group,
+.feup-pure-control-group {
+  margin-bottom: 20px;
+  padding: 0;
+
+  .ewd-feup-field-label {
+    display: none;
+  }
+  .home-separator-2 {
+    display: none;
+  }
+
+
+  .ewd-feup-text-input {
+    height: 50px;
+    font-size: 16px;
+    padding: 0 15px;
+    width: 100%;
+    border-radius: 0;
+    border: 1px solid #dfdfdf;
+    color: #7b7b7b;
+    transition: all .3s ease;
+    max-width: 346px;
+    margin: 0;
+    &:focus {
+      outline: 0;
+      border-color: #000;
+    }
+  }
+
+  .feup-pure-button {
+    cursor: pointer;
+    height: 60px;
+    background-color: #c1002c;
+    color: #ffffff;
+    border: none;
+    display: block;
+    font-size: 16px;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0 15px;
+    box-sizing:border-box;
+    min-width: 262px;
+    transition: all .3s ease;
+    margin-bottom: 30px;
+    &:hover {
+      background-color: $red-light;
+    }
+  }
+}
+
+.finalize-alert-wrapper {
+  h1 {
+    font-size: 30px;
+    color: #c1002c;
+    margin: 40px 0;
+  }
+
+  .sub-title {
+    margin-bottom: 30px !important;
+  }
+  .well {
+    background-color: #f7f7f7;
+    padding: 60px 66px;
+    margin-bottom: 60px;
+  }
+
+  .alert-content {
+    float: left;
+  }
+
+  .alert-subtitle {
+    font-size: 16px;
+    color: #7b7b7b;
+    margin-bottom: 15px;
+  }
+
+  .alert-title {
+    font-size: 30px;
+    color: #262626;
+    margin-bottom: 30px;
+  }
+
+  .alert-results {
+    font-weight: bold;
+    font-size: 16px;
+    color: #c1002c;
+    margin-bottom: 0;
+  }
+
+  .btn-default {
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 50px;
+    background-color: #f0f0f0;
+    color: #7b7b7b;
+    text-transform: uppercase;
+    font-size: 14px;
+    border: 1px solid #dfdfdf;
+    float: right;
+    transition: all .3s ease;
+
+    &:hover {
+      background-color: #e6e6e6;
+    }
+  }
+  .separator-value {
+    font-weight: bold;
+    background-color: #f0f0f0;
+    border: 1px solid #dfdfdf;
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .alert-label {
+    margin-bottom: 40px;
+  }
+  .separator-label {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #262626;
+  }
+  hr {
+    height: 1px;
+    background-color: #e7e7e7;
+    border: none;
+    margin-top: 30px;
+  }
+}

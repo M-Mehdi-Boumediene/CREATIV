@@ -1,0 +1,24 @@
+admin_dc50_index:
+    path:     /
+    defaults: { _controller: "CosanitBundle:Dc50:index" }
+    methods:  GET
+
+admin_dc50_show:
+    path:     /{id}/show
+    defaults: { _controller: "CosanitBundle:Dc50:show" }
+    methods:  GET
+
+admin_dc50_new:
+    path:     /new
+    defaults: { _controller: "CosanitBundle:Dc50:new" }
+    methods:  [GET, POST]
+
+admin_dc50_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CosanitBundle:Dc50:edit" }
+    methods:  [GET, POST]
+
+admin_dc50_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CosanitBundle:Dc50:delete" }
+    methods:  DELETE

@@ -1,0 +1,24 @@
+admin_rc5_index:
+    path:     /
+    defaults: { _controller: "CosanitBundle:Rc5:index" }
+    methods:  GET
+
+admin_rc5_show:
+    path:     /{id}/show
+    defaults: { _controller: "CosanitBundle:Rc5:show" }
+    methods:  GET
+
+admin_rc5_new:
+    path:     /new
+    defaults: { _controller: "CosanitBundle:Rc5:new" }
+    methods:  [GET, POST]
+
+admin_rc5_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CosanitBundle:Rc5:edit" }
+    methods:  [GET, POST]
+
+admin_rc5_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CosanitBundle:Rc5:delete" }
+    methods:  DELETE

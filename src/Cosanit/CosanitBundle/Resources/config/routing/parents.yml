@@ -1,0 +1,24 @@
+admin_parents_index:
+    path:     /
+    defaults: { _controller: "CosanitBundle:Parents:index" }
+    methods:  GET
+
+admin_parents_show:
+    path:     /{id}/show
+    defaults: { _controller: "CosanitBundle:Parents:show" }
+    methods:  GET
+
+admin_parents_new:
+    path:     /new
+    defaults: { _controller: "CosanitBundle:Parents:new" }
+    methods:  [GET, POST]
+
+admin_parents_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CosanitBundle:Parents:edit" }
+    methods:  [GET, POST]
+
+admin_parents_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CosanitBundle:Parents:delete" }
+    methods:  DELETE

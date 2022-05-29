@@ -1,0 +1,73 @@
+<?php
+
+namespace Cosanit\CosanitBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Rc15
+ *
+ * @ORM\Table(name="rc15")
+ * @ORM\Entity(repositoryClass="Cosanit\CosanitBundle\Repository\Rc15Repository")
+ */
+class Rc15
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="taux3mois", type="float", nullable=true)
+     */
+    private $taux3mois;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="valeur3mois", type="float", nullable=true)
+     */
+    private $valeur3mois;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="taux6mois", type="float", nullable=true)
+     */
+    private $taux6mois;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="valeur6mois", type="float", nullable=true)
+     */
+    private $valeur6mois;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="taux1an", type="float", nullable=true)
+     */
+    private $taux1an;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="valeur1an", type="float", nullable=true)
+     */
+    private $valeur1an;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Categories", inversedBy="rc15", cascade={"persist"})
+     * @ORM\JoinColumn(name="cat_id", referencedColumnName="id")
+     */
+    private $categories;
+
+}
+

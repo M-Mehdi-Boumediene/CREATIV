@@ -1,0 +1,24 @@
+admin_bris_index:
+    path:     /
+    defaults: { _controller: "CosanitBundle:Bris:index" }
+    methods:  GET
+
+admin_bris_show:
+    path:     /{id}/show
+    defaults: { _controller: "CosanitBundle:Bris:show" }
+    methods:  GET
+
+admin_bris_new:
+    path:     /new
+    defaults: { _controller: "CosanitBundle:Bris:new" }
+    methods:  [GET, POST]
+
+admin_bris_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CosanitBundle:Bris:edit" }
+    methods:  [GET, POST]
+
+admin_bris_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CosanitBundle:Bris:delete" }
+    methods:  DELETE

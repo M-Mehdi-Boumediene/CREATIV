@@ -1,0 +1,24 @@
+admin_medias_index:
+    path:     /
+    defaults: { _controller: "CosanitBundle:Media:index" }
+    methods:  GET
+
+admin_medias_show:
+    path:     /{id}/show
+    defaults: { _controller: "CosanitBundle:Media:show" }
+    methods:  GET
+
+admin_medias_new:
+    path:     /new
+    defaults: { _controller: "CosanitBundle:Media:new" }
+    methods:  [GET, POST]
+
+admin_medias_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CosanitBundle:Media:edit" }
+    methods:  [GET, POST]
+
+admin_medias_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CosanitBundle:Media:delete" }
+    methods:  DELETE

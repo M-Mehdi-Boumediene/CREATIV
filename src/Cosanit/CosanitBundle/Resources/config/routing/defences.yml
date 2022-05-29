@@ -1,0 +1,24 @@
+admin_defences_index:
+    path:     /
+    defaults: { _controller: "CosanitBundle:Defences:index" }
+    methods:  GET
+
+admin_defences_show:
+    path:     /{id}/show
+    defaults: { _controller: "CosanitBundle:Defences:show" }
+    methods:  GET
+
+admin_defences_new:
+    path:     /new
+    defaults: { _controller: "CosanitBundle:Defences:new" }
+    methods:  [GET, POST]
+
+admin_defences_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CosanitBundle:Defences:edit" }
+    methods:  [GET, POST]
+
+admin_defences_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CosanitBundle:Defences:delete" }
+    methods:  DELETE

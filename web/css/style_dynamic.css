@@ -1,0 +1,180 @@
+
+
+
+
+
+.wrapper{
+    background-color:#454545;     }
+
+.header_bottom,
+.header_top {
+    background-color: rgba(255,255,255,0);
+}
+
+
+.header_bottom,
+.header_top {
+    border-bottom: 0;
+}
+
+.header_bottom {
+    box-shadow: none;
+}
+
+.header_top .right .inner > div:first-child,
+.header_top .right .inner > div,
+.header_top .left .inner > div:last-child,
+.header_top .left .inner > div {
+    border: none;
+}
+
+
+
+header.scrolled .header_bottom,
+header.scrolled .header_top {
+    background-color: rgba(255,255,255,0) !important;
+}
+
+
+header.scrolled .header_bottom,
+header.scrolled .header_top {
+    border-bottom: 0;
+}
+
+header.scrolled .header_bottom {
+    box-shadow: none;
+}
+
+header.scrolled .header_top .right .inner > div:first-child,
+header.scrolled .header_top .right .inner > div,
+header.scrolled .header_top .left .inner > div:last-child,
+header.scrolled .header_top .left .inner > div {
+    border: none;
+}
+
+
+header.sticky .header_bottom{
+    background-color: rgba(255,255,255,0) !important;
+}
+
+
+.header_top,
+.header_top .header-widget.widget_nav_menu ul ul{
+    background-color: rgba(0,0,0,0);
+}
+header.sticky .header_top{
+    background-color: rgba(0,0,0,0);
+}
+
+
+
+.content{
+    margin-top: -86px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h1{
+    font-family: 'Lato', sans-serif;
+}
+.title h1{
+    font-family: 'Lato', sans-serif;
+}
+.title .separator{
+
+}
+.title h6,
+.title
+{
+
+}
+h2,
+h2 a{
+    font-family: 'Lato', sans-serif;
+}
+h3,h3 a{
+    font-family: 'Lato', sans-serif;
+}
+h4,
+h4 a{
+    font-family: 'Lato', sans-serif;
+}
+h5,
+h5 a{
+    font-family: 'Lato', sans-serif;
+}
+h6{
+    font-family: 'Lato', sans-serif;
+}
+
+
+p{
+    font-family: 'Lato', sans-serif;
+}
+.breadcrumb a,
+.filter_holder ul li span,
+blockquote h5,
+.q_social_icon_holder i.simple_social,
+.header-widget.widget_nav_menu ul.menu li a,
+.side_menu a,
+.side_menu li,
+.side_menu span,
+.side_menu p,
+.side_menu .widget.widget_rss li a.rsswidget,
+.side_menu #wp-calendar caption,
+.side_menu #wp-calendar th,
+.side_menu #wp-calendar td,
+aside .widget #lang_sel_list li a,
+aside .widget #lang_sel li a,
+aside .widget #lang_sel_click li a,
+section.side_menu #lang_sel_list li a,
+section.side_menu #lang_sel li a,
+section.side_menu #lang_sel_click li a,
+footer #lang_sel_list li a,
+footer #lang_sel li a,
+footer #lang_sel_click li a,
+footer #lang_sel_list.lang_sel_list_horizontal a,
+footer #lang_sel_list.lang_sel_list_vertical a,
+.side_menu #lang_sel_list.lang_sel_list_horizontal a,
+.side_menu #lang_sel_list.lang_sel_list_vertical a,
+#lang_sel_footer a{
+}
+.header_top #lang_sel > ul > li > a,
+.header_top #lang_sel_click > ul > li> a,
+footer #lang_sel ul li a,
+footer #lang_sel ul ul a,
+footer #lang_sel_click ul li a,
+footer #lang_sel_click ul ul a,
+footer #lang_sel_click ul ul a span,
+section.side_menu #lang_sel ul li a,
+section.side_menu #lang_sel ul ul a,
+section.side_menu #lang_sel ul ul a:visited,
+section.side_menu #lang_sel_click > ul > li > a,
+section.side_menu #lang_sel_click ul ul a,
+section.side_menu #lang_sel_click ul ul a:visited{
+}
+.blog_holder article .post_description,
+.latest_post_inner .post_infos{
+    font-family: 'Lato', sans-serif;
+}
+
+
+.footer_top .widget_recent_entries > ul > li:after,
+.footer_top .widget_pages ul li:after,
+.footer_top .widget_meta > ul > li:after,
+.footer_top .widget_nav_menu ul li:after,
+.footer_top .widget_recent_comments > ul > li:after {
+    border-color:#464646;
+}
+

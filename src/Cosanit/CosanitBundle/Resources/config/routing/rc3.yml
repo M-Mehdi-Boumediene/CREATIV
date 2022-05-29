@@ -1,0 +1,24 @@
+admin_rc3_index:
+    path:     /
+    defaults: { _controller: "CosanitBundle:Rc3:index" }
+    methods:  GET
+
+admin_rc3_show:
+    path:     /{id}/show
+    defaults: { _controller: "CosanitBundle:Rc3:show" }
+    methods:  GET
+
+admin_rc3_new:
+    path:     /new
+    defaults: { _controller: "CosanitBundle:Rc3:new" }
+    methods:  [GET, POST]
+
+admin_rc3_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CosanitBundle:Rc3:edit" }
+    methods:  [GET, POST]
+
+admin_rc3_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CosanitBundle:Rc3:delete" }
+    methods:  DELETE

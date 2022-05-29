@@ -1,0 +1,24 @@
+admin_messagerie_index:
+    path:     /
+    defaults: { _controller: "CosanitBundle:Messagerie:index" }
+    methods:  GET
+
+admin_messagerie_show:
+    path:     /{id}/show
+    defaults: { _controller: "CosanitBundle:Messagerie:show" }
+    methods:  GET
+
+admin_messagerie_new:
+    path:     /new
+    defaults: { _controller: "CosanitBundle:Messagerie:new" }
+    methods:  [GET, POST]
+
+admin_messagerie_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CosanitBundle:Messagerie:edit" }
+    methods:  [GET, POST]
+
+admin_messagerie_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CosanitBundle:Messagerie:delete" }
+    methods:  DELETE

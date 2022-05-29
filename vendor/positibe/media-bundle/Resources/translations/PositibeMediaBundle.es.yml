@@ -1,0 +1,20 @@
+input:
+  upload: Añadir archivo
+  upload_image: Añadir imagen
+  unlink: Remover archivo
+  add: Añadir archivos
+  remove: Remover
+  preview: Vista previa de
+  path: Ruta relativa al archivo
+  name: Nombre del archivo
+  configure: Configurar archivo
+gallery_has_media:
+    form:
+        media: Imagen:
+        title: Título:
+        body: Descripción:
+        position: Posición
+        title_help: Nombre del archivo
+gallery:
+    form:
+        gallery_has_medias: Imágenes:

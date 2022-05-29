@@ -1,0 +1,24 @@
+admin_dc20_index:
+    path:     /
+    defaults: { _controller: "CosanitBundle:Dc20:index" }
+    methods:  GET
+
+admin_dc20_show:
+    path:     /{id}/show
+    defaults: { _controller: "CosanitBundle:Dc20:show" }
+    methods:  GET
+
+admin_dc20_new:
+    path:     /new
+    defaults: { _controller: "CosanitBundle:Dc20:new" }
+    methods:  [GET, POST]
+
+admin_dc20_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CosanitBundle:Dc20:edit" }
+    methods:  [GET, POST]
+
+admin_dc20_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CosanitBundle:Dc20:delete" }
+    methods:  DELETE

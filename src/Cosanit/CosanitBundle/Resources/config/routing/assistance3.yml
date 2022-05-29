@@ -1,0 +1,24 @@
+admin_assistance3_index:
+    path:     /
+    defaults: { _controller: "CosanitBundle:Assistance3:index" }
+    methods:  GET
+
+admin_assistance3_show:
+    path:     /{id}/show
+    defaults: { _controller: "CosanitBundle:Assistance3:show" }
+    methods:  GET
+
+admin_assistance3_new:
+    path:     /new
+    defaults: { _controller: "CosanitBundle:Assistance3:new" }
+    methods:  [GET, POST]
+
+admin_assistance3_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CosanitBundle:Assistance3:edit" }
+    methods:  [GET, POST]
+
+admin_assistance3_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CosanitBundle:Assistance3:delete" }
+    methods:  DELETE
