@@ -125,17 +125,10 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
         $banners = $em->getRepository('CosanitBundle:Bannieres')->findAll();
         $apropos = $em->getRepository('CosanitBundle:Apropos')->findAll();
-        $produits = $em->getRepository('CosanitBundle:Produits')->findByAll();
-        $cuisines = $em->getRepository('CosanitBundle:Produits')->findByCuisine();
-        $portes = $em->getRepository('CosanitBundle:Produits')->findByPorte();
-        $bureaux = $em->getRepository('CosanitBundle:Produits')->findByBureau();
 
-        $allcuisines = $em->getRepository('CosanitBundle:Produits')->findByCuisineAll();
-        $allportes = $em->getRepository('CosanitBundle:Produits')->findByPorteAll();
-        $allbureaux = $em->getRepository('CosanitBundle:Produits')->findByBureauAll();
+
 
         $neufs = $em->getRepository('CosanitBundle:Neufs')->findAll();
-        $exclusive = $em->getRepository('CosanitBundle:Produits')->findByExclusive();
         $categories= $em->getRepository('CosanitBundle:Categories')->findAll();
         $parents= $em->getRepository('CosanitBundle:Parents')->findAll();
         $parents2= $em->getRepository('CosanitBundle:Parents')->findAll();
@@ -209,14 +202,6 @@ class DefaultController extends Controller
 
             'apropos' => $apropos,
             'neufs' =>$neufs,
-            'produits' =>$produits,
-            'cuisines'=>$cuisines,
-            'allcuisines'=>$allcuisines,
-            'portes'=>$portes,
-            'allportes'=>$allportes,
-            'bureaux'=>$bureaux,
-            'allbureaux'=>$allbureaux,
-            'exclusives' =>$exclusive,
             'categories' =>$categories,
             'parents' =>$parents,
             'parents2' =>$parents2,
