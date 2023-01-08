@@ -6,12 +6,12 @@ cosanit_homepage:
     methods:  [GET, POST]
 
 cosanit_devis:
-    path:     /devis-prix-création-site-web-algérie-2022
+    path:     /devis-prix-création-site-web
     defaults: { _controller: CosanitBundle:Default:devis }
     methods:  [GET, POST]
 
 cosanit_devisid:
-    path:     /devis-prix-site-web-{id}-algérie-2022
+    path:     /devis-prix-site-web-{id}-
     defaults: { _controller: CosanitBundle:Default:devisid }
     methods:  [GET, POST]
 
