@@ -19,15 +19,15 @@
             
                 <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1600px; height: 600px; overflow: hidden; z-index: 0;">
                     
-                       {% for produit in produits %}
-              {% for image in produit.image1 %}
+                       
+                {% for banniere in banners %}
 
-             <div style="width: 1600px; height: 600px; top: 0px; left: 0; position: absolute; overflow: hidden; transform: perspective(2000px);"><img u="image" src="{{ asset('photos_produits/'~image.path) }}" alt="pack web présence" border="0" style="width: 1600px; height: 600px; top: 0px; left: 0px; transform: perspective(2000px); position: absolute;">
+             <div style="width: 1600px; height: 600px; top: 0px; left: 0; position: absolute; overflow: hidden; transform: perspective(2000px);"><img u="image" src="{{ asset('Bannieres/'~banniere.path) }}" alt="pack web présence" border="0" style="width: 1600px; height: 600px; top: 0px; left: 0px; transform: perspective(2000px); position: absolute;">
                 
                     </div>
        
             {% endfor %}
-              {% endfor %}
+           
             
 
           
@@ -42,6 +42,44 @@
       
     </div>
 </div>
+    <div id="slider" data-timer="3000">
+
+                {% for banniere in banners %}
+               
+                
+                <div class="slider-item" id="slider-item-{{ banniere.id }}">
+                <img src="{{ asset('Bannieres/'~banniere.path) }}" alt="">
+                </div>
+                 {% endfor %}
+
+      
+        <div class="slider-item" id="slider-item-2">
+            <img src="asset/tmp/slider/33.jpg" alt="">
+        </div>
+        <div class="slider-item" id="slider-item-3">
+        <img src="asset/tmp/slider/44.jpg" alt="">
+        </div>
+        <div class="slider-item" id="slider-item-4">
+            <img src="asset/tmp/slider/55.jpg" alt="">
+        </div>
+        <div class="slider-item" id="slider-item-5">
+            <img src="asset/tmp/slider/66.jpg" alt="">
+        </div>
+        <div class="slider-item" id="slider-item-6">
+            <img src="asset/tmp/slider/idg-slides-accueil-2020-logos-747-986.jpg" alt="">
+        </div>
+
+        <div class="slider-item" id="slider-item-7">
+            <img src="asset/tmp/slider/3.jpg" alt="">
+        </div>
+
+        <div class="slider-item" id="slider-item-8">
+            <img src="asset/tmp/slider/idg-slides-accueil-2020-flyers-227-172.jpg" alt="">
+        </div>
+
+
+
+    </div>
 
 
     <div class="index-1">
