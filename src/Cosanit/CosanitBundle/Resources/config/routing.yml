@@ -22,7 +22,7 @@ cosanit_produits:
 
 
 cosanit_produits_categorie:
-  path:     /algérie/2022/{id}/
+  path:     /{id}/
   defaults: { _controller: CosanitBundle:Default:produitscategorie }
   methods:  [GET, POST]
 
