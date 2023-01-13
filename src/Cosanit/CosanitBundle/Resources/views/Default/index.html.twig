@@ -11,44 +11,37 @@
   
 <div class="header-overflow" id="header-overflow"></div>
 <main>
-    <div id="slider" data-timer="3000">
+    <div class="module-slide">
+    <div id="slider1_container" style="position: relative; margin: 0px auto; top: 0px; left: 0px; width: 1349px; height: 505.875px; overflow: hidden;">
 
+        <div style="position: absolute; top: 0px; left: 0px; width: 1600px; height: 600px; transform-origin: 0px 0px; transform: scale(0.843125);">
+            <div class="" style="position: relative; margin: 0px auto; top: 0px; left: 0px; width: 1600px; height: 600px; overflow: visible;">
+            
+                <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1600px; height: 600px; overflow: hidden; z-index: 0;">
+                    
+                       
                 {% for banniere in banners %}
-               
+
+             <div style="width: 1600px; height: 600px; top: 0px; left: 0; position: absolute; overflow: hidden; transform: perspective(2000px);"><img u="image" src="{{ asset('Bannieres/'~banniere.path) }}" alt="pack web présence" border="0" style="width: 1600px; height: 600px; top: 0px; left: 0px; transform: perspective(2000px); position: absolute;">
                 
-                <div class="slider-item" id="slider-item-{{ banniere.id }}">
-                <img src="{{ asset('Bannieres/'~banniere.path) }}" alt="">
+                    </div>
+       
+            {% endfor %}
+           
+            
+
+          
                 </div>
-                 {% endfor %}
+             
+            </div>
+        </div><span u="arrowleft" class="jssora21l" style="width: 55px; height: 55px; top: 225.438px; left: 8px; display: none;"></span><span u="arrowright" class="jssora21r" style="width: 55px; height: 55px; top: 225.438px; right: 8px; display: none;"></span>
+        <div
+            u="navigator" class="jssorb17" style="position: absolute; bottom: 16px; right: 6px; width: 121px; height: 16px; left: 614px;">
 
+            <div u="prototype" style="position: absolute; width: 16px; height: 16px; left: 0px; top: 0px;" class="av"></div>
       
-        <div class="slider-item" id="slider-item-2">
-            <img src="asset/tmp/slider/33.jpg" alt="">
-        </div>
-    <div class="slider-item" id="slider-item-3">
-        <img src="asset/tmp/slider/44.jpg" alt="">
     </div>
-        <div class="slider-item" id="slider-item-4">
-            <img src="asset/tmp/slider/55.jpg" alt="">
-        </div>
-        <div class="slider-item" id="slider-item-5">
-            <img src="asset/tmp/slider/66.jpg" alt="">
-        </div>
-        <div class="slider-item" id="slider-item-6">
-            <img src="asset/tmp/slider/idg-slides-accueil-2020-logos-747-986.jpg" alt="">
-        </div>
-
-        <div class="slider-item" id="slider-item-7">
-            <img src="asset/tmp/slider/3.jpg" alt="">
-        </div>
-
-        <div class="slider-item" id="slider-item-8">
-            <img src="asset/tmp/slider/idg-slides-accueil-2020-flyers-227-172.jpg" alt="">
-        </div>
-
-
-
-    </div>
+</div>
 
 
     <div class="index-1">
@@ -58,6 +51,10 @@
                 <div class="index-1-middle-title"><span>Notre</span> entreprise</div>
             </div>
    
+        
+
+          
+        </div>
             {% for apropos in apropos %}
 
             {{ apropos.text1|raw }}
@@ -135,7 +132,68 @@
             </div>
         </div>
     </div>
+    <div class="galerie galerie-module-exemple">
+<div class="galerie-title galerie-title-module-exemple">Nos de réalisations</div>
+<div class="galerie-content">
+    <div class="galerie-content-items" style="height:500px ;"> 
+                                    <a href="{{asset('site2.jpg')}}" class="galerie-content-item galerie-content-item-1 image-popup" title="exemple de réalisation pour les site e-commerce">
+                <img src="https://fullpagescreencapture.com/screen/cdba0bac676774b25abb64588d2ef7e7.jpg
+                " alt="exemple de réalisation pour les site e-commerce" class="galerie-content-item-img">
+                <span class="galerie-content-item-background">
+                    <span class="galerie-content-item-text">
+                        <span class="galerie-content-item-text-categorie">Site e-commerce</span>
+                                                        <span class="galerie-content-item-text-description">Site e-commerce pour NDWI</span>
+                                                </span>
+                </span>
+                <span class="galerie-content-item-border"></span>
+            </a>
+                                        <a href="{{asset('site1.jpg')}}" class="galerie-content-item galerie-content-item-2 image-popup" title="exemple de réalisation pour les site e-commerce">
+                <img src="https://fullpagescreencapture.com/screen/1af0e58755a528aba44f9387da11c26f.jpg" alt="exemple de réalisation pour les site e-commerce" class="galerie-content-item-img">
+                <span class="galerie-content-item-background">
+                    <span class="galerie-content-item-text">
+                        <span class="galerie-content-item-text-categorie">Site e-commerce</span>
+                                                        <span class="galerie-content-item-text-description">Site e-commerce pour le site de Loulou B</span>
+                                                </span>
+                </span>
+                <span class="galerie-content-item-border"></span>
+            </a>
+                                        <a href="{{asset('site3.png')}}" class="galerie-content-item galerie-content-item-3 image-popup" title="réalisation d'un site e-commerce ben's beauty bugs">
+                <img src="{{asset('site3.png')}}" alt="réalisation d'un site e-commerce ben's beauty bugs" class="galerie-content-item-img">
+                <span class="galerie-content-item-background">
+                    <span class="galerie-content-item-text">
+                        <span class="galerie-content-item-text-categorie">Site e-commerce</span>
+                                                        <span class="galerie-content-item-text-description">réalisation d'un site e-commerce ben's beauty bugs</span>
+                                                </span>
+                </span>
+                <span class="galerie-content-item-border"></span>
+            </a>
+                                        <a href="{{asset('site4.png')}}" class="galerie-content-item galerie-content-item-4 image-popup" title="site de vente en ligne rc drone modelisme">
+                <img src="{{asset('site4.png')}}" alt="site de vente en ligne rc drone modelisme" class="galerie-content-item-img">
+                <span class="galerie-content-item-background">
+                    <span class="galerie-content-item-text">
+                        <span class="galerie-content-item-text-categorie">Site e-commerce</span>
+                                                        <span class="galerie-content-item-text-description">site de vente en ligne rc drone modelisme</span>
+                                                </span>
+                </span>
+                <span class="galerie-content-item-border"></span>
+            </a>
+                                        <a href="/asset/tmp/exemple/site-e-commerce-895-611.jpg" class="galerie-content-item galerie-content-item-5 image-popup" title="site de vente Crealisse">
+                <img src="/asset/tmp/exemple/600x600/site-e-commerce-895-611.jpg" alt="site de vente Crealisse" class="galerie-content-item-img">
+                <span class="galerie-content-item-background">
+                    <span class="galerie-content-item-text">
+                        <span class="galerie-content-item-text-categorie">Site e-commerce</span>
+                                                        <span class="galerie-content-item-text-description">site de vente Créalisse</span>
+                                                </span>
+                </span>
+                <span class="galerie-content-item-border"></span>
+            </a>
+                                </div>
+</div>
 
+<div class="module-exemples">
+    <a href="/galerie/site-internet.php" class="module-exemples-link">EN VOIR PLUS</a>
+</div>
+</div>
     </main>
 
     <div class="bubble-question" id="bubble-question">
