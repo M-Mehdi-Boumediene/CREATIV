@@ -468,13 +468,13 @@
                           h_align: "center",
                           v_align: "bottom",
                           h_offset: 0,
-                          v_offset: 30,
+                          v_offset: 0,
                           space: 5,
                           tmp: '<span class="tp-bullet-img-wrap"> <span class="tp-bullet-image"></span></span><span class="tp-bullet-title"></span>'
                       }
                   },
                   viewPort: {
-                      enable: true,
+                      enable: false,
                       outof: "pause",
                       visible_area: "80%"
                   },
@@ -486,16 +486,16 @@
                       type: "mouse",
                       origo: "slidercenter",
                       speed: 2000,
-                      levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50],
+                      levels: [1, 2, 3, 4, 5],
                   },
                   shadow: 0,
                   spinner: "on",
-                  stopLoop: "off",
+                  stopLoop: "on",
                   stopAfterLoops: -1,
                   stopAtSlide: -1,
-                  shuffle: "oonff",
+                  shuffle: "on",
                   autoHeight: "on",
-                  hideThumbsOnMobile: "off",
+                  hideThumbsOnMobile: "on",
                   hideSliderAtLimit: 0,
                   hideCaptionAtLimit: 0,
                   hideAllCaptionAtLilmit: 0,
@@ -503,7 +503,7 @@
                   fallbacks: {
                       simplifyAll: "on",
                       nextSlideOnWindowFocus: "off",
-                      disableFocusListener: false,
+                      disableFocusListener: true,
                   }
               });
           }
