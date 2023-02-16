@@ -515,19 +515,13 @@
 
                   sliderLayout: "fullscreen",
                   dottedOverlay: "none",
-                  delay: 7000,
+                  delay: 8000,
                   navigation: {
                       keyboardNavigation: "off",
                       keyboard_direction: "horizontal",
                       mouseScrollNavigation: "off",
                       onHoverStop: "on",
-                      touch: {
-                          touchenabled: "on",
-                          swipe_threshold: 75,
-                          swipe_min_touches: 1,
-                          swipe_direction: "horizontal",
-                          drag_block_vertical: false
-                      },
+                    
                       arrows: {
                           style: "zeus",
                           enable: true,
@@ -567,38 +561,12 @@
                           tmp: '<span class="tp-bullet-img-wrap"> <span class="tp-bullet-image"></span></span><span class="tp-bullet-title"></span>'
                       }
                   },
-                  viewPort: {
-                      enable: true,
-                      outof: "pause",
-                      visible_area: "100%"
-                  },
+                 
                   responsiveLevels: [1240, 1024, 778, 480],
                   gridwidth: [1240, 1024, 778, 480],
                   gridheight: [600, 600, 500, 800],
-                  lazyType: "all",
-                  parallax: {
-                      type: "mouse",
-                      origo: "slidercenter",
-                      speed: 2000,
-                      levels: [1, 2, 3, 4, 5],
-                  },
-                  shadow: 0,
-                  spinner: "on",
-                  stopLoop: "on",
-                  stopAfterLoops: -1,
-                  stopAtSlide: -1,
-                  shuffle: "on",
-                  autoHeight: "on",
-                  hideThumbsOnMobile: "on",
-                  hideSliderAtLimit: 0,
-                  hideCaptionAtLimit: 0,
-                  hideAllCaptionAtLilmit: 0,
-                  debugMode: false,
-                  fallbacks: {
-                      simplifyAll: "on",
-                      nextSlideOnWindowFocus: "off",
-                      disableFocusListener: true,
-                  }
+           
+            
               });
           }
       }); /*ready*/
