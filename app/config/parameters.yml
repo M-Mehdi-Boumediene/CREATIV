@@ -4,7 +4,7 @@ parameters:
     database_port: null
     database_name: creativweb
     database_user: root
-    database_password:
+    database_password: null
     mailer_transport: smtp
     mailer_host: mail.sadjiaceram.com
     mailer_user: contact@sadjiaceram.com
