@@ -36,7 +36,7 @@
 	
 
               <!-- START REVOLUTION SLIDER 5.0.7 auto mode -->
-              <div id="rev_slider_4_1" class="rev_slider " style="display:none;" data-version="5.0.7" style="height:900px !important;">
+              <div id="rev" class="rev_slider " style="display:none;" data-version="5.0.7" style="height:900px !important;">
                   <ul>
       
                      
@@ -521,10 +521,10 @@
       var tpj = jQuery;
       var revapi4;
       tpj(document).ready(function() {
-          if (tpj("#rev_slider_4_1").revolution == undefined) {
-              revslider_showDoubleJqueryError("#rev_slider_4_1");
+          if (tpj("#rev").revolution == undefined) {
+              revslider_showDoubleJqueryError("#rev");
           } else {
-              revapi4 = tpj("#rev_slider_4_1").show().revolution({
+              revapi4 = tpj("#rev").show().revolution({
                   sliderType: "standard",
 
                   sliderLayout: "fullscreen",
