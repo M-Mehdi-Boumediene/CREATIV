@@ -8,47 +8,315 @@
 {% block body %}
 
 
-  
 <div class="header-overflow" id="header-overflow"></div>
+  <style>
+
+
+    @media only screen and (min-device-width : 1240px) and (max-device-width : 1366px){
+.pack{
+    min-width:400px !important;
+    max-width:400px !important;
+    width:400px !important;
+    height:400px !important;
+}
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+.pack{
+
+    min-width:260px !important;
+    max-width:260px !important;
+    width:260px !important;
+    height:260px !important;
+
+
+}
+}
+    </style>
 <main>
-    <div id="slider" data-timer="3000">
+	
 
-                {% for banniere in banners %}
-               
-                
-                <div class="slider-item" id="slider-item-{{ banniere.id }}">
-                <img src="{{ asset('Bannieres/'~banniere.path) }}" alt="">
-                </div>
-                 {% endfor %}
-
+              <!-- START REVOLUTION SLIDER 5.0.7 auto mode -->
+              <div id="rev" class="rev_slider " style="display:none;" data-version="5.0.7" style="height:900px !important;">
+                  <ul>
       
-        <div class="slider-item" id="slider-item-2">
-            <img src="asset/tmp/slider/33.jpg" alt="">
-        </div>
-    <div class="slider-item" id="slider-item-3">
-        <img src="asset/tmp/slider/44.jpg" alt="">
-    </div>
-        <div class="slider-item" id="slider-item-4">
-            <img src="asset/tmp/slider/55.jpg" alt="">
-        </div>
-        <div class="slider-item" id="slider-item-5">
-            <img src="asset/tmp/slider/66.jpg" alt="">
-        </div>
-        <div class="slider-item" id="slider-item-6">
-            <img src="asset/tmp/slider/idg-slides-accueil-2020-logos-747-986.jpg" alt="">
-        </div>
+                     
+   
 
-        <div class="slider-item" id="slider-item-7">
-            <img src="asset/tmp/slider/3.jpg" alt="">
-        </div>
+                   <li data-index="rs-1" data-slotamount="1"  data-saveperformance="off" data-title="" data-description="">
+                        <!-- MAIN IMAGE -->
+                    <img src="{{asset('ban1.jpg')}}"  alt="" data-bgposition="center center"  class="rev-slidebg" data-no-retina>
+                       
 
-        <div class="slider-item" id="slider-item-8">
-            <img src="asset/tmp/slider/idg-slides-accueil-2020-flyers-227-172.jpg" alt="">
-        </div>
+	
+                    
+                        <!-- LAYERS -->
 
 
+                         <div class="tp-caption Gym-Display tp-resizeme " id="slide-1-layer-1" data-x="['150','-50','-50','10']" data-y="['50','-80','-80','-30']" data-voffset="['-200','-200','-200','-200']" data-fontsize="['50','50','50','30']" data-width="100%" data-height="auto" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial; font-weight: 200;">
+                         <img src="{{asset('p11.svg')}}" class="pack"> 
+                         
+                          </div>
+                                      
 
-    </div>
+
+                 
+                        <h2 class="tp-caption Gym-Display tp-resizeme" id="slide-1-layer-1" data-x="['600','600','600','40']" data-hoffset="['-30','-30','-30','-30']" data-y="['0','-50','-50','270']" data-voffset="['0','0','0','0']" data-fontsize="['60','60','60','40']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 700;">LE PACK
+                        </h2>
+                        <h3 class="tp-caption Gym-Display tp-resizeme" id="slide-1-layer-1" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['70','-70','-70','305']" data-voffset="['0','0','0','0']" data-fontsize="['60','60','60','40']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 700;"> ÉCONOMIQUE
+                        </h3>
+
+                         <p class="tp-caption Gym-Display tp-resizeme" id="slide-1-layer-1" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['120','-20','-20','340']" data-voffset="['0','0','0','0']" data-fontsize="['20','20','20','25']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;">  pour un site web simple et rapide.
+                        </p>
+
+                            <p class="tp-caption Gym-Display tp-resizeme" id="slide-1-layer-1" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['190','-20','-20','400']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="100%" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200; max-width:600px !important;  min-width:444px !important;width:400px !important;     line-height: 30px;"> ✔ Nom de domaine et hébergement INCLUT. 
+                        </p>
+
+                        <p class="tp-caption Gym-Display tp-resizeme" id="slide-1-layer-1" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['200','-20','-20','410']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;"> ✔  1 page web (Site OnePage).
+                        </p>
+
+
+                        <p class="tp-caption Gym-Display tp-resizeme" id="slide-1-layer-1" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['230','-20','-20','440']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;"> ✔  1 Adresse mail (Pro).
+                        </p>
+
+                          <p class="tp-caption Gym-Display tp-resizeme" id="slide-1-layer-1" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['260','-20','-20','470']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;"> ✔ Formulaire de contact.
+                        </p>
+
+                              <p class="tp-caption Gym-Display tp-resizeme" id="slide-1-layer-1" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['290','-20','-20','520']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: bold;"> PRIX: 3 500 DA/Mois Ou 35 000 DA
+
+                        </p>
+                    
+                        <div class="tp-caption Gym-Display tp-resizeme" id="slide-1-layer-1" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['430','70','70','680']" data-voffset="['0','0','0','0']" data-fontsize="['17','17','17','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 400; margin-top:0px;width: 100%;    line-height: 20px; "> <span style="background: white;color:#c49800; padding: 15px;    display: block; text-align:center;    line-height: 20px;">  Commander  </span> 
+                        </div>
+                     
+           
+                    </li>
+
+                                    
+                    <li data-index="rs-2" data-slotamount="2"    data-saveperformance="off" data-title="" data-description="">
+                        <!-- MAIN IMAGE -->
+                        <img src="{{asset('ban2.jpg')}}" alt="" data-bgposition="center center"  class="rev-slidebg" data-no-retina>
+                      
+                        <!-- LAYERS -->
+
+
+                           <div class="tp-caption Gym-Display tp-resizeme " id="slide-2-layer-2" data-x="['150','-50','-50','-10']" data-y="['50','-80','-80','-30']" data-voffset="['-200','-200','-200','-200']" data-fontsize="['50','50','50','30']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial; font-weight: 200;">
+                         <img src="{{asset('p2.svg')}}" class="pack"> 
+                         
+                          </div>
+                      
+                 
+                        <h2 class="tp-caption Gym-Display tp-resizeme" id="slide-2-layer-2" data-x="['600','600','600','40']" data-hoffset="['-30','-30','-30','-30']" data-y="['0','-50','-50','270']" data-voffset="['0','0','0','0']" data-fontsize="['60','60','60','40']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 700;">LE PACK
+                        </h2>
+
+                        <h3 class="tp-caption Gym-Display tp-resizeme" id="slide-2-layer-2" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['70','-70','-70','305']" data-voffset="['0','0','0','0']" data-fontsize="['60','60','60','40']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 700;">    SITE VITRINE
+                        </h3>
+
+                         <p class="tp-caption Gym-Display tp-resizeme" id="slide-2-layer-2" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['120','-20','-20','340']" data-voffset="['0','0','0','0']" data-fontsize="['20','20','20','25']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;">  pour une vitrine sur le web.
+                        </p>
+                  
+                     
+                        <p class="tp-caption Gym-Display tp-resizeme" id="slide-2-layer-2" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['190','-20','-20','400']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="100%" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200; max-width:600px !important;  min-width:444px !important;width:400px !important;     line-height: 30px;"> ✔ Nom de domaine et hébergement INCLUT. 
+                        </p>
+
+               
+
+                        <p class="tp-caption Gym-Display tp-resizeme" id="slide-2-layer-2" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['200','-20','-20','410']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;"> ✔  5 pages web.
+                        </p>
+
+
+                        <p class="tp-caption Gym-Display tp-resizeme" id="slide-2-layer-2" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['230','-20','-20','440']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;"> ✔  5 Adresses mail.
+                        </p>
+
+                        <p class="tp-caption Gym-Display tp-resizeme" id="slide-2-layer-2" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['260','-20','-20','470']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;"> ✔  Structure web personnalisée.
+                        </p>
+                        
+                         <p class="tp-caption Gym-Display tp-resizeme" id="slide-2-layer-2" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['290','-20','-20','500']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;"> ✔  Version mobile.
+                        </p>
+
+                
+                        <p class="tp-caption Gym-Display tp-resizeme" id="slide-2-layer-2" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['320','-20','-20','530']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;"> ✔  Statistiques.
+                        </p>
+
+                         <p class="tp-caption Gym-Display tp-resizeme" id="slide-2-layer-2" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['350','-20','-20','570']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;"> <b>PRIX:</b> <b>4500 DA/Mois</b> ou <b>60 000 DA</b>
+                        </p>
+
+                        <p class="tp-caption Gym-Display tp-resizeme" id="slide-2-layer-2" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['500','70','70','720']" data-voffset="['0','0','0','0']" data-fontsize="['17','17','17','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 400; margin-top:0px;width: 100%;    line-height: 20px; "> <span style="background: white;color:#c49800; padding: 15px;    display: block; text-align:center;    line-height: 20px;"> Commander </span> 
+                        </p>
+                     
+                    </li>
+
+                                         
+                   <li data-index="rs-3" data-slotamount="3"  data-saveperformance="off" data-title="" data-description="">
+                        <!-- MAIN IMAGE -->
+                        <img src="{{asset('ban03.jpg')}}"  alt="" data-bgposition="center center"  class="rev-slidebg" data-no-retina>
+                       
+
+	
+                    
+                        <!-- LAYERS -->
+
+
+                         <div class="tp-caption Gym-Display tp-resizeme" id="slide-3-layer-3" data-x="['150','-50','-50','-10']" data-hoffset="['50','-300','-300','-300']" data-y="['50','-50','-80','-30']" data-voffset="['-200','-200','-200','-200']" data-fontsize="['50','50','50','30']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial; font-weight: 200;">
+                         <img src="{{asset('p3.svg')}}"  class="pack"> 
+                         
+                          </div>
+                      
+                
+
+
+                 
+                        <h2 class="tp-caption Gym-Display tp-resizeme" id="slide-3-layer-3" data-x="['600','600','600','40']" data-hoffset="['-30','-30','-30','-30']" data-y="['0','-50','-50','260']" data-voffset="['0','0','0','0']" data-fontsize="['60','60','60','40']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 700;">LE PACK
+                        </h2>
+                        <h2 class="tp-caption Gym-Display tp-resizeme" id="lide-3-layer-3" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['70','-70','-70','300']" data-voffset="['0','0','0','0']" data-fontsize="['60','60','60','40']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 700;">    LE PLUS COMPLET
+                        </h2>
+                         <h3 class="tp-caption Gym-Display tp-resizeme" id="lide-3-layer-3" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['120','-20','-20','340']" data-voffset="['0','0','0','0']" data-fontsize="['20','20','20','25']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;">  pour vous imposer sur la toile.
+                        </h3>
+                  
+                                 <p class="tp-caption Gym-Display tp-resizeme" id="slide-3-layer-3" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['190','-20','-20','400']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="100%" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200; max-width:600px !important;  min-width:444px !important;width:400px !important;     line-height: 30px;"> ✔ Nom de domaine et hébergement INCLUT. 
+                        </p>
+
+               
+
+                        <p class="tp-caption Gym-Display tp-resizeme" id="slide-3-layer-3" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['200','-20','-20','410']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;"> ✔  10 pages web.
+                        </p>
+
+
+                        <p class="tp-caption Gym-Display tp-resizeme" id="slide-3-layer-3" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['230','-20','-20','440']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;"> ✔  5 Adresses mail.
+                        </p>
+
+                        <p class="tp-caption Gym-Display tp-resizeme" id="slide-3-layer-3" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['260','-20','-20','470']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;"> ✔  Structure web personnalisée.
+                        </p>
+                        
+                         <p class="tp-caption Gym-Display tp-resizeme" id="slide-3-layer-3" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['290','-20','-20','530']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;"> ✔  Site responsive.
+                        </p>
+
+                
+                        <p class="tp-caption Gym-Display tp-resizeme" id="slide-3-layer-3" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['320','-20','-20','500']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;"> ✔  Référencement.
+                        </p>
+                     
+                         <p class="tp-caption Gym-Display tp-resizeme" id="slide-3-layer-3" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['350','-20','-20','560']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;"> ✔  Module actualités.
+                        </p>
+
+                        <p class="tp-caption Gym-Display tp-resizeme" id="slide-3-layer-3" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['380','-20','-20','590']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;"> ✔  Pages administrable.
+                        </p>
+                 
+                        <p class="tp-caption Gym-Display tp-resizeme" id="slide-3-layer-3" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['420','-20','-20','630']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;"> <b>PRIX:</b> <b>4500 DA/Mois</b> ou <b>60 000 DA</b>
+                        </p>
+
+                        <p class="tp-caption Gym-Display tp-resizeme" id="slide-3-layer-3" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['560','70','70','770']" data-voffset="['0','0','0','0']" data-fontsize="['17','17','17','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 400; margin-top:0px;width: 100%;    line-height: 20px; "> <span style="background: white;color:#c49800; padding: 15px;    display: block; text-align:center;    line-height: 20px;"> Commander </span> 
+                        </p>
+                     
+                    </li>
+
+                     <li data-index="rs-4" data-slotamount="4"   data-saveperformance="off" data-title="" data-description="">
+                        <!-- MAIN IMAGE -->
+                        <img src="{{asset('ban04.jpg')}}" alt="" data-bgposition="center center"  class="rev-slidebg" data-no-retina>
+                       
+
+	
+                    
+                        <!-- LAYERS -->
+
+
+                         <div class="tp-caption Gym-Display tp-resizeme" id="slide-3-layer-3" data-x="['150','-50','-50','-10']" data-hoffset="['50','-300','-300','-300']" data-y="['50','-50','-50','-30']" data-voffset="['-200','-200','-200','-200']" data-fontsize="['50','50','50','30']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial; font-weight: 200;">
+                         <img src="{{asset('p4.svg')}}"  class="pack" > 
+                         
+                          </div>
+                      
+                
+
+
+                 
+                        <div class="tp-caption Gym-Display tp-resizeme" id="slide-4-layer-4" data-x="['600','600','600','40']" data-hoffset="['-30','-30','-30','-30']" data-y="['50','-50','-50','320']" data-voffset="['0','0','0','0']" data-fontsize="['60','60','60','40']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 700;">LE PACK
+                        </div>
+                        <div class="tp-caption Gym-Display tp-resizeme" id="slide-4-layer-4" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['110','-70','-70','370']" data-voffset="['0','0','0','0']" data-fontsize="['60','60','60','40']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 700;">    E-COMMERCE
+                        </div>
+                         <div class="tp-caption Gym-Display tp-resizeme" id="slide-4-layer-4" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['150','-20','-20','420']" data-voffset="['0','0','0','0']" data-fontsize="['20','20','20','25']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;">  pour booster vos ventes en ligne.
+                        </div>
+                  
+                   
+                        <p class="tp-caption Gym-Display tp-resizeme" id="slide-4-layer-4" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['140','-20','-20','400']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="100%" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200; max-width:600px !important;  min-width:444px !important;width:400px !important;     line-height: 30px;"> ✔ Nom de domaine et hébergement INCLUT. 
+                        </p>
+
+               
+
+                        <p class="tp-caption Gym-Display tp-resizeme" id="slide-4-layer-4" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['150','-20','-20','410']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;"> ✔  10 pages web.
+                        </p>
+
+
+                        <p class="tp-caption Gym-Display tp-resizeme" id="slide-4-layer-4" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['180','-20','-20','440']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;"> ✔  5 Adresses mail.
+                        </p>
+
+                        <p class="tp-caption Gym-Display tp-resizeme" id="slide-4-layer-4" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['210','-20','-20','470']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;"> ✔  Structure web personnalisée.
+                        </p>
+                        
+                         <p class="tp-caption Gym-Display tp-resizeme" id="slide-4-layer-4" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['240','-20','-20','530']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;"> ✔  Site responsive.
+                        </p>
+
+                
+                        <p class="tp-caption Gym-Display tp-resizeme" id="slide-4-layer-4" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['270','-20','-20','500']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;"> ✔  Référencement.
+                        </p>
+                     
+                         <p class="tp-caption Gym-Display tp-resizeme" id="slide-4-layer-4" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['300','-20','-20','560']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;"> ✔  Module actualités.
+                        </p>
+
+                        <p class="tp-caption Gym-Display tp-resizeme" id="slide-4-layer-4" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['330','-20','-20','590']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;"> ✔  Pages administrable.
+                        </p>
+                 
+                        <p class="tp-caption Gym-Display tp-resizeme" id="slide-4-layer-4" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['350','-20','-20','630']" data-voffset="['0','0','0','0']" data-fontsize="['16','16','20','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;"> <b>PRIX:</b> <b>4500 DA/Mois</b> ou <b>60 000 DA</b>
+                        </p>
+
+                        <p class="tp-caption Gym-Display tp-resizeme" id="slide-4-layer-4" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['500','70','70','770']" data-voffset="['0','0','0','0']" data-fontsize="['17','17','17','21']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 400; margin-top:0px;width: 100%;    line-height: 20px; "> <span style="background: white;color:#c49800; padding: 15px;    display: block; text-align:center;    line-height: 20px;"> Commander </span> 
+                        </p>
+                 
+
+                     
+                    </li>
+        
+                    <li data-index="rs-5" data-slotamount="5" data-saveperformance="off" data-title="" data-description="">
+                        <!-- MAIN IMAGE -->
+                        <img src="{{asset('ban5.jpg')}}" alt="" data-bgposition="center center"  class="rev-slidebg" data-no-retina>
+                       
+
+	
+                    
+                        <!-- LAYERS -->
+
+
+                         <div class="tp-caption Gym-Display tp-resizeme " id="slide-2-layer-2" data-x="['150','-50','-50','-10']" data-hoffset="['50','-300','-300','-300']" data-y="['50','-50','-50','-30']" data-voffset="['-200','-200','-200','-200']" data-fontsize="['50','50','50','30']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial; font-weight: 200;">
+                         <img src="{{asset('p5.svg')}}"  class="pack" > 
+                         
+                          </div>
+                      
+                
+
+
+                 
+                        <div class="tp-caption Gym-Display tp-resizeme" id="slide-5-layer-5" data-x="['600','600','600','40']" data-hoffset="['-30','-30','-30','-30']" data-y="['0','-50','-50','320']" data-voffset="['0','0','0','0']" data-fontsize="['60','60','60','40']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 700;">LE PACK
+                        </div>
+                        <div class="tp-caption Gym-Display tp-resizeme" id="slide-5-layer-5" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['70','-70','-70','370']" data-voffset="['0','0','0','0']" data-fontsize="['60','60','60','40']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 700;">    Á VOTRE IMAGE
+                        </div>
+                         <div class="tp-caption Gym-Display tp-resizeme" id="slide-5-layer-5" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['120','-20','-20','420']" data-voffset="['0','0','0','0']" data-fontsize="['20','20','20','25']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 200;">  pour vos besoins spécifiques.
+                        </div>
+                  
+                        <div class="tp-caption Gym-Display tp-resizeme" id="slide-5-layer-5" data-x="['600','600','600','40']" data-hoffset="['0','0','0','0']" data-y="['200','70','70','490']" data-voffset="['0','0','0','0']" data-fontsize="['17','17','17','20']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="750" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-family: Arial;  font-weight: 400; margin-top:0px;width: 100%;    line-height: 20px; "> <span style="background: white;color:#c49800; padding: 15px;    display: block; text-align:center;    line-height: 20px;"> Voir plus de détails </span> 
+                        </div>
+                     
+                  
+
+                 
+
+                     
+                    </li>
+      
+                  </ul>
+                  <div class="tp-static-layers"></div>
+                  <div class="tp-bannertimer" style="height: 7px; background-color: rgba(255, 255, 255, 0.25);"></div>
+              </div>
+          
+          
+
+</div>
 
 
     <div class="index-1">
@@ -58,6 +326,10 @@
                 <div class="index-1-middle-title"><span>Notre</span> entreprise</div>
             </div>
    
+        
+
+          
+        </div>
             {% for apropos in apropos %}
 
             {{ apropos.text1|raw }}
@@ -85,7 +357,7 @@
                     <div class="index-3-item-active-content">
                         <h2 class="index-3-item-title">{{ categorie.nom }}</h2>
                         <h3 class="index-3-item-subtitle">{{ categorie.titre }}</h3>
-                        <h4 class="index-3-item-text">{{ categorie.nom }}</h4>
+                        <h4 class="index-3-item-text">{{ categorie.texte }}</h4>
                         <div class="index-3-item-plus">En savoir +</div>
                     </div>
                 </div>
@@ -93,7 +365,6 @@
 
         {% endfor %}
 
-          
         </div>
     </div>
 
@@ -135,7 +406,71 @@
             </div>
         </div>
     </div>
+    <div class="galerie galerie-module-exemple">
+<div class="galerie-title galerie-title-module-exemple">Nos de réalisations</div>
+<div class="galerie-content">
+    <div class="galerie-content-items" style="height:500px ;"> 
+                                    <a href="{{asset('site4.jpg')}}" class="galerie-content-item galerie-content-item-1 image-popup" title="exemple de réalisation pour les site e-commerce">
+                <img src="{{asset('site4.png')}}" alt="exemple de réalisation pour les site e-commerce" class="galerie-content-item-img">
+                <span class="galerie-content-item-background">
+                    <span class="galerie-content-item-text">
+                        <span class="galerie-content-item-text-categorie">Site catalogue</span>
+                                                        <span class="galerie-content-item-text-description">Site E-commerce pour sanaa so chic
+                                                            
+                                             
+                                                </span>
+                                               
+                </span>
+           
+                <span class="galerie-content-item-border"></span>
+            </a>
+                                        <a href="{{asset('site1.jpg')}}" class="galerie-content-item galerie-content-item-2 image-popup" title="exemple de réalisation pour les site e-commerce">
+                <img src="https://fullpagescreencapture.com/screen/1af0e58755a528aba44f9387da11c26f.jpg" alt="exemple de réalisation pour les site e-commerce" class="galerie-content-item-img">
+                <span class="galerie-content-item-background">
+                    <span class="galerie-content-item-text">
+                        <span class="galerie-content-item-text-categorie">Site e-commerce</span>
+                                                        <span class="galerie-content-item-text-description">Site e-commerce pour le site de Loulou B</span>
+                                                </span>
+                </span>
+                <span class="galerie-content-item-border"></span>
+            </a>
+                                        <a href="{{asset('site3.png')}}" class="galerie-content-item galerie-content-item-3 image-popup" title="réalisation d'un site e-commerce ben's beauty bugs">
+                <img src="{{asset('site3.png')}}" alt="réalisation d'un site e-commerce ben's beauty bugs" class="galerie-content-item-img">
+                <span class="galerie-content-item-background">
+                    <span class="galerie-content-item-text">
+                        <span class="galerie-content-item-text-categorie">Site e-commerce</span>
+                                                        <span class="galerie-content-item-text-description">réalisation d'un site e-commerce ben's beauty bugs</span>
+                                                </span>
+                </span>
+                <span class="galerie-content-item-border"></span>
+            </a>
+                                        <a href="https://fullpagescreencapture.com/screen/cdba0bac676774b25abb64588d2ef7e7.jpg" class="galerie-content-item galerie-content-item-4 image-popup" title="site de vente en ligne rc drone modelisme">
+                <img src="https://fullpagescreencapture.com/screen/cdba0bac676774b25abb64588d2ef7e7.jpg" alt="site de vente en ligne rc drone modelisme" class="galerie-content-item-img">
+                <span class="galerie-content-item-background">
+                    <span class="galerie-content-item-text">
+                        <span class="galerie-content-item-text-categorie">Site e-commerce</span>
+                                                        <span class="galerie-content-item-text-description">Dite de vente en ligne pour sanaa so chic</span>
+                                                </span>
+                </span>
+                <span class="galerie-content-item-border"></span>
+            </a>
+                                        <a href="/asset/tmp/exemple/site-e-commerce-895-611.jpg" class="galerie-content-item galerie-content-item-5 image-popup" title="site de vente Crealisse">
+                <img src="/asset/tmp/exemple/600x600/site-e-commerce-895-611.jpg" alt="site de vente Crealisse" class="galerie-content-item-img">
+                <span class="galerie-content-item-background">
+                    <span class="galerie-content-item-text">
+                        <span class="galerie-content-item-text-categorie">Site e-commerce</span>
+                                                        <span class="galerie-content-item-text-description">site de vente Créalisse</span>
+                                                </span>
+                </span>
+                <span class="galerie-content-item-border"></span>
+            </a>
+                                </div>
+</div>
 
+<div class="module-exemples">
+    <a href="/galerie/site-internet.php" class="module-exemples-link">EN VOIR PLUS</a>
+</div>
+</div>
     </main>
 
     <div class="bubble-question" id="bubble-question">
@@ -164,5 +499,122 @@
             </div>
         </div>
     </div>
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+      <script type="text/javascript" src="{{asset('plugins/rs-plugin/js/jquery.themepunch.tools.min.js')}}"></script>
+  <script type="text/javascript" src="{{asset('plugins/rs-plugin/js/jquery.themepunch.revolution.min.js')}}"></script>
+  <script type="text/javascript" src="{{asset('plugins/rs-plugin/js/extensions/revolution.extension.video.min.js')}}"></script>
+  <script type="text/javascript" src="{{asset('plugins/rs-plugin/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
+  <script type="text/javascript" src="{{asset('plugins/rs-plugin/js/extensions/revolution.extension.actions.min.js')}}"></script>
+  <script type="text/javascript" src="{{asset('plugins/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js')}}"></script>
+
+  <script type="text/javascript" src="{{asset('plugins/rs-plugin/js/extensions/revolution.extension.navigation.min.js')}}"></script>
+  <script type="text/javascript" src="{{asset('plugins/rs-plugin/js/extensions/revolution.extension.migration.min.js')}}"></script>
+  <script type="text/javascript" src="{{asset('plugins/rs-plugin/js/extensions/revolution.extension.parallax.min.js')}}"></script>
+  <script type="text/javascript" src="{{asset('plugins/rs-plugin/js/extensions/revolution.extension.carousel.min.js')}}"></script>
+
+
+  <script type="text/javascript">
+      var tpj = jQuery;
+      var revapi4;
+      tpj(document).ready(function() {
+          if (tpj("#rev").revolution == undefined) {
+              revslider_showDoubleJqueryError("#rev");
+          } else {
+              revapi4 = tpj("#rev").show().revolution({
+                  sliderType: "standard",
+
+                  sliderLayout: "fullscreen",
+                  dottedOverlay: "none",
+                  delay: 8000,
+                  navigation: {
+                      keyboardNavigation: "off",
+                      keyboard_direction: "horizontal",
+                      mouseScrollNavigation: "off",
+                      onHoverStop: "on",
+                      touch: {
+                          touchenabled: "on",
+                          swipe_threshold: 75,
+                          swipe_min_touches: 1,
+                          swipe_direction: "horizontal",
+                          drag_block_vertical: false
+                      },
+                      arrows: {
+                          style: "zeus",
+                          enable: true,
+                          hide_onmobile: false,
+                          hide_under: 100,
+                          hide_onleave: true,
+                          hide_delay: 200,
+                          hide_delay_mobile: 1200,
+                          tmp: '<div class="tp-title-wrap"> 	<div class="tp-arr-imgholder"></div> </div>',
+                          left: {
+                              h_align: "left",
+                              v_align: "center",
+                              h_offset: 30,
+                              v_offset: 0
+                          },
+                          right: {
+                              h_align: "right",
+                              v_align: "center",
+                              h_offset: 30,
+                              v_offset: 0
+                          }
+                      },
+                      bullets: {
+                          enable: false,
+                          hide_onmobile: false,
+                          hide_under: 600,
+                          style: "metis",
+                          hide_onleave: false,
+                          hide_delay: 200,
+                          hide_delay_mobile: 1200,
+                          direction: "horizontal",
+                          h_align: "center",
+                          v_align: "bottom",
+                          h_offset: 0,
+                          v_offset: 0,
+                          space: 5,
+                          tmp: '<span class="tp-bullet-img-wrap"> <span class="tp-bullet-image"></span></span><span class="tp-bullet-title"></span>'
+                      }
+                  },
+                  viewPort: {
+                      enable: true,
+                      outof: "pause",
+                      visible_area: "100%"
+                  },
+                  responsiveLevels: [1240, 1024, 778, 480],
+                  gridwidth: [1240, 1024, 778, 480],
+                  gridheight: [600, 600, 500, 800],
+                  lazyType: "all",
+                  parallax: {
+                      type: "mouse",
+                      origo: "slidercenter",
+                      speed: 2000,
+                      levels: [1, 2, 3, 4, 5],
+                  },
+                  shadow: 0,
+                  spinner: "on",
+                  stopLoop: "on",
+                  stopAfterLoops: -1,
+                  stopAtSlide: -1,
+                  shuffle: "on",
+                  autoHeight: "on",
+                  hideThumbsOnMobile: "on",
+                  hideSliderAtLimit: 0,
+                  hideCaptionAtLimit: 0,
+                  hideAllCaptionAtLilmit: 0,
+                  debugMode: false,
+                  fallbacks: {
+                      simplifyAll: "on",
+                      nextSlideOnWindowFocus: "off",
+                      disableFocusListener: true,
+                  }
+              });
+          }
+      }); /*ready*/
+  </script>
 
 {% endblock %}

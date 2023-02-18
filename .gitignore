@@ -1,3 +1,4 @@
+
 # Cache and logs (Symfony2)
 /app/cache/*
 /app/logs/*
@@ -20,7 +21,7 @@
 !var/log/.gitkeep
 
 # Parameters
-/app/config/parameters.yml
+/app/config/parameters.yml/
 /app/config/parameters.ini
 
 # Managed by Composer
@@ -34,7 +35,7 @@
 # Assets and user uploads
 /web/bundles/
 /web/uploads/
-
+/web/
 # PHPUnit
 /app/phpunit.xml
 /phpunit.xml
@@ -50,3 +51,4 @@
 
 # Embedded web-server pid file
 /.web-server-pid
+

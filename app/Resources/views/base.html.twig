@@ -17,32 +17,14 @@
 		<meta name="msapplication-navbutton-color" content="#000">
 		<meta name="apple-mobile-web-app-status-bar-style" content="#000">
 		<link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
-
+    <!-- Revolution Slider -->
+	   <link rel="stylesheet" type="text/css" href="{{asset('plugins/rs-plugin/fonts/font-awesome/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('plugins/rs-plugin/css/settings.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('plugins/rs-plugin/css/layers.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('plugins/rs-plugin/css/navigation.css')}}">
 		<script type="application/ld+json">
 			{
-																																																																																																																																																												    "@context": "https://schema.org",
-																																																																																																																																																												    "@type": "Organization",
-																																																																																																																																																												    "name": "CREATIV",
-																																																																																																																																																												    "logo": "https://www.creativdz.com/asset/img/logo.png",
-																																																																																																																																																												    "url": "https://www.creativdz.com",
-																																																																																																																																																												    "alternateName": "Développement web et communication digitale Algérie"
-																																																																																																																																																												,"description": "Confiez la création de votre site web, application, charte graphique, à CREATIV et profitez d'une étude gratuite",
-																																																																																																																																																												
-																																																																																																																																																												    "address": {
-																																																																																																																																																												        "@type": "PostalAddress",
-																																																																																																																																																												        "streetAddress": "12 rue Bel hocine rachid Oran",
-																																																																																																																																																												        "postalCode": "31000",
-																																																																																																																																																												        "addressLocality": "Oran",
-																																																																																																																																																												        "addressRegion": "Algérie"
-																																																																																																																																																												    },
-																																																																																																																																																												    "contactPoint": [
-																																																																																																																																																												        {
-																																																																																																																																																												            "@type": "ContactPoint",
-																																																																																																																																																												            "contactType": "Customer service",
-																																																																																																																																																												            "telephone": "+213 553 04 82 76",
-																																																																																																																																																												            "availableLanguage": "French",
-																																																																																																																																																												            "email": "contact@creativdz.com"
-																																																																																																																																																												        }
+																																																																																																																																																												    "@context": "https://schema.org",																																																																																																																																																								        }
 																																																																																																																																																												    ]
 																																																																																																																																																												}
 		</script>
@@ -65,6 +47,16 @@
 			.menu {
 				background: #000;
 			}
+			.header-content {
+				
+    height: -60px !important;
+	}
+	.menu-items {
+		width:60% !important;
+		float:right;
+		margin-top: -20px;
+		
+}
 		</style>
 	</head>
 	<body>
@@ -176,6 +168,14 @@
 			.header-layout-6 .read-more-nav .socials a:hover {
 				color: white;
 			}
+			.index-3-item-9 .index-3-item-active {
+    background: hsl(152deg 54% 34% / 90%) !important;
+}
+
+ .mfp-img{
+	max-height:100% !important;
+ }
+
 		</style>
 	</body>
 </html></head><div id="fb-root"></div><script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v5.0&appId=2426167164288678&autoLogAppEvents=1"></script><body>
@@ -434,8 +434,9 @@
 		<div class="footer-content">
 			<div class="footer-cols">
 				<div class="footer-col">
-
+			<div class="footer-col-icon"><i class="fas fa-home" aria-hidden=""></i></div>
 					<div class="footer-col-title">
+				
 						<span>Notre</span>
 						société</div>
 					<a href="societe-2.html" class="footer-col-link">Qui sommes-nous ?</a><br>
@@ -450,7 +451,7 @@
 					<a href="nous-contacter/mentions-legales.html" class="footer-col-link">Mentions légales</a>
 				</div>
 				<div class="footer-col">
-
+			<div class="footer-col-icon"><i class="fas fa-thumbs-up" aria-hidden=""></i></div>
 					<div class="footer-col-title">
 						<span>Nos</span>
 						services</div>
@@ -465,7 +466,7 @@
 
 				</div>
 				<div class="footer-col">
-
+			<div class="footer-col-icon"><i class="fas fa-shopping-cart" aria-hidden=""></i></div>
 					<div class="footer-col-title">
 						<span>Nos</span>
 						produits</div>
@@ -497,7 +498,7 @@
 
 				</div>
 				<div class="footer-col">
-
+			<div class="footer-col-icon"><i class="fas fa-comments" aria-hidden=""></i></div>
 					<div class="footer-col-title">
 						<span>Nous</span>
 						contacter</div>
