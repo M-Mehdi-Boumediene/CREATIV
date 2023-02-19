@@ -342,8 +342,8 @@
           
 
             {% endfor %}
-
-      {{ 'about_us'|trans }}
+{% set message = '<h3>about_us</h3>' %}
+      {{ message|trans|raw }}
             
         </div>
     </div>
