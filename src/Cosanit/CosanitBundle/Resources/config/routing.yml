@@ -1,7 +1,7 @@
 
 
 cosanit_homepage:
-    path:     /{_locale}
+    path:     /
     defaults: { _controller: CosanitBundle:Default:index }
     methods:  [GET, POST]
 
