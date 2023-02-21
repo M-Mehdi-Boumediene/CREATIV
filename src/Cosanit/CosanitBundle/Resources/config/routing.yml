@@ -2,7 +2,6 @@
 
 cosanit_homepage:
     path:     /
-      permanent: true
     defaults: { _controller: CosanitBundle:Default:index, _locale: fr }
     methods:  [GET, POST]
     requirements:
