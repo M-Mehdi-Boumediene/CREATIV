@@ -4,6 +4,8 @@ cosanit_homepage:
     path:     /
     defaults: { _controller: CosanitBundle:Default:index }
     methods:  [GET, POST]
+    requirements:
+      _locale:  en|fr
 
 
 cosanit_devis:
