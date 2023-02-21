@@ -1,12 +1,11 @@
 
 
 cosanit_homepage:
-    path:     /?{_locale}
+    path:     /
     defaults: { _controller: CosanitBundle:Default:index }
     methods:  [GET, POST]
     requirements:
       _locale:  en|fr
-
 cosanit_devis:
     path:     /devis-prix-création-site-web
     defaults: { _controller: CosanitBundle:Default:devis }
