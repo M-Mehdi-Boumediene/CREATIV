@@ -2,7 +2,7 @@
 
 cosanit_homepage:
     path:     /{_locale}/
-    defaults: { _controller: CosanitBundle:Default:index, _locale: fr }
+    defaults: { _controller: CosanitBundle:Default:index, _locale: en }
     methods:  [GET, POST]
     requirements:
       _locale:  en|fr
