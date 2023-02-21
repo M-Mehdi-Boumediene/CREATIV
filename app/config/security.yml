@@ -22,6 +22,7 @@ security:
             anonymous:    true
 
     access_control:
+        - { path: ^/%locale%, role: ROLE_ADMIN }
         - { path: /login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: /register/confirmed, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: /search, role: IS_AUTHENTICATED_ANONYMOUSLY }
